@@ -3,12 +3,11 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	padding: 0 1vw;
 	margin: 0;
-	background: #FAFAFA;
+	background: #121212;
 	font-family: 'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
-	color: #444;
+	color: #FAFAFA;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -24,7 +23,7 @@ html, body {
 
 a {
 	text-decoration: none;
-	color: #333;
+	color: #e9ebee;
 }
 
 .loading {
