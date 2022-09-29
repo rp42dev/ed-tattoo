@@ -11,6 +11,7 @@ const blogs = (props) => {
 		<main classList="container mt-5">
 			<div class={style.pageBlogs}>
 				<h1 class={style.pageTitle}>My Work</h1>
+				
 				<main class={style.pageContent}>
 					{getBlogsListing(data, isLoading)}
 				</main>

@@ -25,51 +25,6 @@
   text-decoration: underline;
 }
 
-.blogbody pre code {
-  display: block;
-  max-width: 100%;
-  color: rgb(57, 58, 52);
-  font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  font-size: 0.95em;
-  line-height: 1.2em;
-  tab-size: 4;
-  hyphens: none;
-  overflow-x: scroll;
-}
-
-code.inline {
-  display: inline;
-  max-width: none;
-  background: #ddd;
-  padding: 0px 4px;
-}
-
-.blogbody pre pre {
-  max-width: 100%;
-  overflow: scroll;
-  color: rgb(57, 58, 52);
-  font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  font-size: 0.95em;
-  line-height: 1.2em;
-  tab-size: 4;
-  hyphens: none;
-  padding: 1em;
-  margin: 0.5em 0px;
-  overflow: auto;
-  border: 1px solid rgb(221, 221, 221);
-  background-color: white;
-}
-
 .blogsubtitle {
   color: #aaa;
   display: block;
