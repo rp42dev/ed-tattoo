@@ -43,7 +43,6 @@
     "parse-md": "^2.0.4",
     "preact": "^10.4.6",
     "preact-cli-plugin-netlify": "^1.6.0",
-    "preact-material-components": "^1.6.1",
     "preact-render-to-string": "^5.1.10",
     "preact-router": "^3.0.1",
     "styled-components": "^5.3.6"

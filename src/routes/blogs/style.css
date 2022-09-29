@@ -1,5 +1,14 @@
 .pageBlogs {
-  padding: 0 5%;
+  text-align: center;
+}
+
+.pageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 2rem;
 }
 
 .pageTitle {

@@ -1,0 +1,16 @@
+.cardMedia{
+
+    width: 100%;
+     max-width: 400px;
+     height: 600px;
+}
+
+.cardMedia img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
