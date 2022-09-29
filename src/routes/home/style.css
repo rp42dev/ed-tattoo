@@ -30,6 +30,10 @@
 	}
 }
 
+.s {
+	@apply text-gray-700;
+}
+
 .overlay {
 	position: absolute;
 	top: 0;
@@ -51,4 +55,16 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.content h1 {
+	font-size: 4rem;
+	color: #fff;
+	text-align: center;
+}
+
+.content p {
+	font-size: 1.5rem;
+	color: #fff;
+	text-align: center;
 }
