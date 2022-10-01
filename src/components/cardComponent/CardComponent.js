@@ -6,9 +6,12 @@ const CardComponent = (props) => {
 
     return (
         <div>
-            <div classList="card">
-                <div class={style.cardMedia}>
-                    {details.cover && <img class={style.cardImage} src={details.cover} />}
+            <div classList="card border-0 shadow">
+                <div classList={style.cardMedia}>
+                    {details.cover && <img classList="rounded card-img" src={details.cover}  />}
+                </div>
+                <div classList={style.imgOverlay}>
+                    <h5 classList="card-title">{details.title}</h5>
                 </div>
             </div>
         </div>

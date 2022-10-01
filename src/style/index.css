@@ -12,16 +12,17 @@ html, body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-	padding: 5% 10%;
-}
-
 * {
 	box-sizing: border-box;
 }
 
 #app {
 	height: 100%;
+}
+
+main {
+	max-width: 2000px;
+	margin: 0;
 }
 
 a {

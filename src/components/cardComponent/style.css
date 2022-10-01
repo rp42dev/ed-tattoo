@@ -1,7 +1,7 @@
 .cardMedia {
     width: 100%;
-    max-width: 400px;
-    height: 600px;
+    max-width: 350px;
+    height: 450px;
 }
 
 .cardMedia img {
@@ -12,4 +12,21 @@
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+.imgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.2s ease;
+}
+
+.imgOverlay:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
 }

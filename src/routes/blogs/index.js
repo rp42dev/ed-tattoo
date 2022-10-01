@@ -5,17 +5,20 @@ import CardComponent from '../../components/cardComponent/CardComponent';
 
 import style from './style';
 
+
 const blogs = (props) => {
+
 	const [data, isLoading] = usePrerenderData(props);
 	return (
-		<main classList="container mt-5">
-			<div class={style.pageBlogs}>
-				<h1 class={style.pageTitle}>My Work</h1>
-				
-				<main class={style.pageContent}>
+		<main classList="mx-auto my-5 px-1 px-sm-4">
+				<div class="text-center mb-4">
+					<h1 class={style.pageTitle}>My Work</h1>
+				</div>
+
+				<div class={style.pageContent}>
 					{getBlogsListing(data, isLoading)}
-				</main>
-			</div>
+				</div>
+			
 		</main>
 	);
 };

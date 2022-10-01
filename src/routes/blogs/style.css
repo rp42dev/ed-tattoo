@@ -3,11 +3,12 @@
 }
 
 .pageContent {
+  width: 100%;
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
   gap: 2rem;
 }
 
@@ -15,7 +16,8 @@
   position: relative;
   display: inline-block;
   font-weight: 500;
-  font-family: serif;
+  margin-top: 4rem;
+  font-size: 3rem;
 }
 
 .pageTitle:after {
@@ -81,4 +83,5 @@ h2 {
   .preview {
     width: 100%;
   }
+
 }
