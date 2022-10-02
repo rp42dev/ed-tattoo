@@ -3,6 +3,7 @@
 }
 
 .pageTitle {
+  font-size: 3rem;
   position: relative;
   display: inline-block;
   font-weight: 500;
@@ -31,6 +32,7 @@
 
 .pageContact .formWrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .pageContact form {
@@ -38,9 +40,18 @@
 }
 
 .pageContact button {
-  padding: 8px;
-  font-size: 1rem;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  background: transparent;
   border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pageContact button:hover {
+  background: #fff;
+  color: #000;
 }
 
 @media all and (max-width: 728px) {

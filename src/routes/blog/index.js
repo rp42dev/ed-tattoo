@@ -1,17 +1,21 @@
 import { h } from 'preact';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import Markdown from 'markdown-to-jsx';
+import Header from '../../components/goBack';
 
 import style from './style';
 
 const blogs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	return (
+		<>
+			<Header />
 		<main classList="container mt-5">
 			<article class={style.blogcontainer}>
 				{getBlogBody(data, isLoading)}
 			</article>
 		</main>
+		</>
 	);
 };
 

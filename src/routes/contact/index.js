@@ -1,9 +1,12 @@
 import { h } from 'preact';
 import style from './style';
+import Header from '../../components/galleryNav';
 
 const photographs = (props) => {
 	return (
-		<main classList="container mt-5">
+		<>
+			<Header />
+		<main classList="mx-auto my-5 pt-5 px-1 px-sm-4">
 			<div class={style.pageContact}>
 				<h1 class={style.pageTitle}>Contact me</h1>
 				<div class={style.formWrapper}>
@@ -25,12 +28,13 @@ const photographs = (props) => {
 							<textarea name="message" placeholder="Message" />
 						</p>
 						<p>
-							<button type="submit">Send</button>
+							<button type="submit"><i class="h1 fa-solid fa-paper-plane"></i></button>
 						</p>
 					</form>
 				</div>
 			</div>
 		</main>
+		</>
 	);
 };
 

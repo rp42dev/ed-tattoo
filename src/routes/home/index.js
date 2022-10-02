@@ -31,11 +31,11 @@ const Home = (props) => {
 				<div class={style.overlay}>
 					<div class={style.text}>
 						<h1>Ed Tattoo</h1>
-						<p>Healthcare is a right, not a privilege.</p>
+						<p>Best Tattoo Artist in the world</p>
 
 						<div class={style.buttonContainer}>
-							<a href="/blogs" class={style.button}>Learn More</a>
-							<a href="/contact" class={style.button}>Contact Us</a>
+							<a href="/blogs" class={style.button}><i class="h1 fa-solid fa-camera"></i></a>
+							<a href="/contact" class={style.button}><i class="h1 fa-solid fa-paper-plane"></i></a>
 						</div>
 					</div>
 				</div>

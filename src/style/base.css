@@ -1,0 +1,30 @@
+:root {
+    --color-primary: #e9ebee;
+    --color-secondary: #121212;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: var(--color-secondary);
+    font-weight: 400;
+    color: var(--color-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    max-width: 2000px;
+    margin: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary)
+}
