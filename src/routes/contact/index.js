@@ -6,15 +6,12 @@ const photographs = (props) => {
 	return (
 		<>
 			<Header />
-		<main classList="mx-auto my-5 pt-5 px-1 px-sm-4">
+		<main>
 			<div class={style.pageContact}>
 				<h1 class={style.pageTitle}>Contact me</h1>
 				<div class={style.formWrapper}>
 					<p class={style.pageBody}>
-						<div>Hi!</div>
-						<div>If you are interested in my work and are looking to contact me for a contract please use the following form to contact me.</div>
-						<div>&nbsp;</div>
-						<div>Cheers 🍻</div>
+						<div>If you have any questions or comments, please feel free to contact me.</div>
 					</p>
 					<form name="contact" method="POST" data-netlify="true" action="/contact/success" data-netlify-honeypot="bot-field">
 						<input type="hidden" name="form-name" value="contact" />

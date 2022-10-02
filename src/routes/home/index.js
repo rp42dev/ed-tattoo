@@ -30,8 +30,14 @@ const Home = (props) => {
 				</video>
 				<div class={style.overlay}>
 					<div class={style.text}>
-						<h1>Ed Tattoo</h1>
-						<p>Best Tattoo Artist in the world</p>
+
+						<div><h1>Ed Tattoo</h1></div>
+
+						<div><p>
+							Hi I'm Ed, I'm a tattoo artist based in the Oslo. 
+							I specialise in black and grey realism and 
+							I'm always looking to expand my portfolio.
+						</p></div>
 
 						<div class={style.buttonContainer}>
 							<a href="/blogs" class={style.button}><i class="h1 fa-solid fa-camera"></i></a>
@@ -42,17 +48,17 @@ const Home = (props) => {
 			</div>
 
 			{/* Card section */}
-			<div class={style.pageSection}>
+			<main>
 				<div class={style.title}>
-					<h2>Our Services</h2>
-					<p>Healthcare is a right, not a privilege.</p>
+					<h2>Latest Posts</h2>
 				</div>
+					<p>Check out my latest posts</p>
 				<div class={style.cardContainer}>
 
 					{getBlogsListing(data, isLoading)}
 
 				</div>
-			</div>
+			</main>
 		</div>
 	);
 };
@@ -75,9 +81,9 @@ function getBlogsListing(data, isLoading) {
 				{blogs.edges.map((blog, index) => {
 					if (index < 3) {
 						return (
-						<Link href={`/blog/${blog.id}`}>
-							<CardComponent details={blog.details} />
-						</Link>
+							<Link href={`/blog/${blog.id}`}>
+								<CardComponent details={blog.details} />
+							</Link>
 						);
 					}
 				})}

@@ -13,7 +13,7 @@ const blogs = (props) => {
 	return (
 		<>
 			<Header />
-			<main classList="mx-auto my-5 pt-5 px-1 px-sm-4">
+			<main>
 				<div class={style.pageContent}>
 					{getBlogsListing(data, isLoading)}
 				</div>
