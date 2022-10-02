@@ -10,7 +10,7 @@ const blogs = (props) => {
 	return (
 		<>
 			<Header />
-		<main classList="container mt-5">
+		<main classList="mx-auto my-5 pt-5 px-1 px-sm-4">
 			<article class={style.blogcontainer}>
 				{getBlogBody(data, isLoading)}
 			</article>
@@ -39,7 +39,7 @@ function getBlogBody(data, isLoading) {
 		const { details, content } = data.data;
 		return (
 			<div>
-				<div className="title text-center"><h1 class={style.blogtitle}>{details.title}</h1></div>
+				<div className="title"><h1 class={style.blogtitle}>{details.title}</h1></div>
 				
 				{ details.subtitle && <caption class={style.blogsubtitle}>{details.subtitle}</caption> }
 				{ details.cover && <div class={style.blogcover} style={`background-image:url(${details.cover})`} /> }
