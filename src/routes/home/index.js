@@ -61,26 +61,13 @@ const Home = (props) => {
 
 				</div>
 			</main>
-		<script>
-			let play = document.getElementById("video");
-			video.play();		
-		</script>
 		</div>
 
 	);
 };
 
 function getBlogsListing(data, isLoading) {
-	if (isLoading) {
-		return (
-			<article class={style.loadingPlaceholder}>
-				<h2 class={`${style.blogtitle} loading`}>&nbsp;</h2>
-				<div class={`${style.loadingBody} loading`}>&nbsp;</div>
-				<div class={`${style.loadingBody} loading`}>&nbsp;</div>
-				<div class={`${style.loadingBody} loading`}>&nbsp;</div>
-			</article>
-		);
-	}
+
 	if (data && data.data) {
 		const { data: blogs } = data;
 		return (
