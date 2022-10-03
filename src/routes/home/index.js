@@ -26,6 +26,7 @@ const Home = (props) => {
 		<div class={style.home}>
 			<div class={style.videoContainer}>
 				<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
+					<source src="../../assets/bg.mp4" type="video/mp4" /> 
 					<source src="../../assets/bg.webm" type="video/webm" />
 				</video>
 				
