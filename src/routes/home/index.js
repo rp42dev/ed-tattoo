@@ -25,7 +25,7 @@ const Home = (props) => {
 	return (
 		<div class={style.home}>
 			<div class={style.videoContainer}>
-				<video autoPlay muted loop>
+				<video autoPlay muted loop playsinline>
 					<source src="../../assets/bg.webm" type="video/webm" />
 				</video>
 				<div class={style.overlay}>
