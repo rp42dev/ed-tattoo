@@ -25,9 +25,10 @@ const Home = (props) => {
 	return (
 		<div class={style.home}>
 			<div class={style.videoContainer}>
-				<video autoPlay muted loop playsinline>
+				<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
 					<source src="../../assets/bg.webm" type="video/webm" />
 				</video>
+				
 				<div class={style.overlay}>
 					<div class={style.text}>
 
@@ -59,7 +60,12 @@ const Home = (props) => {
 
 				</div>
 			</main>
+		<script>
+			let play = document.getElementById("video");
+			video.play();		
+		</script>
 		</div>
+
 	);
 };
 
