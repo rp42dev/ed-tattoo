@@ -1,12 +1,12 @@
 import { h } from 'preact';
 import style from './style';
-import Header from '../../components/galleryNav';
+import Header from '../../components/goBack';
 
 const photographs = (props) => {
 	return (
 		<>
-			<Header />
-		<main>
+		<main classList="h-100">
+			<Header link='/' />
 			<div class={style.pageContact}>
 				<h1 class={style.pageTitle}>Contact me</h1>
 				<div class={style.formWrapper}>

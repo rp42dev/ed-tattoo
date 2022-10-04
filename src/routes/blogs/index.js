@@ -2,7 +2,7 @@ import { h } from 'preact';
 import { Link } from 'preact-router';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import CardComponent from '../../components/cardComponent/CardComponent';
-import Header from '../../components/galleryNav';
+import Header from '../../components/goBack';
 
 import style from './style';
 
@@ -12,8 +12,8 @@ const blogs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	return (
 		<>
-			<Header />
 			<main>
+				<Header link='/' />
 				<div class={style.pageContent}>
 					{getBlogsListing(data, isLoading)}
 				</div>

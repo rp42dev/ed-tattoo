@@ -11,18 +11,19 @@ html,
 body {
     height: 100%;
     width: 100%;
-    margin: 0;
     background-color: var(--color-secondary);
     font-weight: 400;
     color: var(--color-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
+
 main {
-    height: 100%;
-    max-width: 2000px;
-    padding: 6rem 1rem 4rem 1rem;
+    max-width: 2400px;
+    margin: auto;
+    padding: 6rem 1rem 1rem 1rem;
 }
 
 a {
@@ -30,9 +31,9 @@ a {
     color: var(--color-primary)
 }
 
-@media screen and (min-width: 879px) {
+@media screen and (min-width: 768px) {
     main {
-        padding: 8rem 4rem 4rem 4rem;
+        padding: 6rem 2rem 2rem 2rem;
     }
 }
 

@@ -48,42 +48,9 @@ const Home = (props) => {
 					</div>
 				</div>
 			</div>
-
-			{/* Card section */}
-			<main>
-				<div class={style.title}>
-					<h2>Latest Posts</h2>
-				</div>
-					<p>Check out my latest posts</p>
-				<div class={style.cardContainer}>
-
-					{getBlogsListing(data, isLoading)}
-
-				</div>
-			</main>
 		</div>
 
 	);
 };
-
-function getBlogsListing(data, isLoading) {
-
-	if (data && data.data) {
-		const { data: blogs } = data;
-		return (
-			<>
-				{blogs.edges.map((blog, index) => {
-					if (index < 3) {
-						return (
-							<Link href={`/blog/${blog.id}`}>
-								<CardComponent details={blog.details} />
-							</Link>
-						);
-					}
-				})}
-			</>
-		);
-	}
-}
 
 export default Home;

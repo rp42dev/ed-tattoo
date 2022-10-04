@@ -29,10 +29,10 @@ function processImages() {
                     
                     if (size.size === 900) {
                         // create thumbnail image with 900px width and 1200px height
-                        sizing = { width: size.size, height: 1200, options: { fit: 'inside' } };
+                        sizing = { width: size.size, height: 1200 };
                     } else {
                         // create full size image with 1920px width and 1080px height
-                        sizing = { width: size.size, height: 1080, fit: sharp.fit.inside, withoutEnlargement: true };
+                        sizing = { width: size.size };
                     }
 
                     // ro jpeg
