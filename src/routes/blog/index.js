@@ -21,28 +21,21 @@ const blogs = (props) => {
 
 
 function getBlogBody(data, isLoading) {
-	if (isLoading) {
-		return (
-			<div class={style.loadingPlaceholder}>
-				<h1 class={`${style.blogtitle} loading`} >&nbsp;</h1>
-				<caption class={`${style.blogsubtitle} loading`}>&nbsp;</caption>
-				<div class={style.blogbody}>
-					<div class={`${style.loadingBody} loading`} />
-					<div class={`${style.loadingBody} loading`} />
-					<div class={`${style.loadingBody} loading`} />
-				</div>
-			</div>
-		);
-	}
 
 	if (data && data.data) {
 		const { details, content } = data.data;
+	
+		const jpg = '../'+ details.cover
+		const webp = jpg + '.webp';
 		return (
 			<div>
 				<div className="title"><h1 class={style.blogtitle}>{details.title}</h1></div>
 				
-				{ details.subtitle && <caption class={style.blogsubtitle}>{details.subtitle}</caption> }
-				{ details.cover && <div class={style.blogcover} style={`background-image:url(${details.cover})`} /> }
+				{details.cover && <picture class={style.blogcover}>
+					<source srcset={webp} type="image/webp" />
+					<source srcset={jpg} type="image/jpeg" />
+					<img src={jpg} alt={details.title} />
+				</picture>}
 				<div class={style.blogbody}>
 					<Markdown options={{ forceBlock: true }}>{content}</Markdown>
 				</div>

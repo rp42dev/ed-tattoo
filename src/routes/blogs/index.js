@@ -23,16 +23,7 @@ const blogs = (props) => {
 };
 
 function getBlogsListing(data, isLoading) {
-	if (isLoading) {
-		return (
-			<article class={style.loadingPlaceholder}>
-				<h2 class={`${style.blogtitle} loading`}>&nbsp;</h2>
-				<div class={`${style.loadingBody} loading`}>&nbsp;</div>
-				<div class={`${style.loadingBody} loading`}>&nbsp;</div>
-				<div class={`${style.loadingBody} loading`}>&nbsp;</div>
-			</article>
-		);
-	}
+
 	if (data && data.data) {
 		const { data: blogs } = data;
 		return (
