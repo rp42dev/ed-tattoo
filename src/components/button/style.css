@@ -1,0 +1,21 @@
+.button {
+	display: grid;
+	place-items: center;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	color: var(--color-primary-dark);
+	cursor: pointer;
+	background-color: var(--color-cherries-light);
+	margin: .2rem;
+	transition: all 0.3s ease;
+}
+
+.button i {
+	font-size: var(--font-size-xlarge);
+}
+
+.button:hover {
+	background: var(--color-primary-dark);
+	color: var(--color-secondary);
+}

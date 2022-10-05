@@ -37,8 +37,8 @@ module.exports = () => {
 	pages.push({
 		url: '/blogs/',
 		seo: {
-			title: 'Gallery',
-			description: 'Gallery page of my website',
+			title: 'Blogs',
+			description: 'Blogs page of my website',
 		},
 		data: blogs
 	});

@@ -3,6 +3,7 @@
 .home {
 	height: 100%;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 .videoContainer {
@@ -29,13 +30,20 @@
 	background-position: center right;
 }
 
+.container {
+	width: 100%;
+	max-width: 1920px;
+	margin: auto;
+}
+
+
 .overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(70deg, rgba(18, 18, 18), rgba(18, 18, 18, .7) 50%, rgba(18, 18, 18, 0.2) 100%);
+	background: linear-gradient(90deg, rgba(18, 18, 18) 40%, rgba(18, 18, 18, .5) 80%, rgba(18, 18, 18, 0.2) 100%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -55,66 +63,102 @@
 	background-position: center center;
 }
 
+/* About section */
 
-/* Landing content */
-.text {
-	position: relative;
-	z-index: 3;
+.aboutSection {
 	width: 100%;
-	max-width: 560px;
-	padding: 0 1rem;
 	height: 100%;
-	max-height: 300px;
-	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.aboutSection .about {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-content: space-between;
+	justify-content: center;
+	align-items: flex-start;
 }
 
-.text h1 {
-	font-size: 4rem;
-	font-weight: 700;
-	margin: 0;
-}
-
-.text p {
-	font-size: 1.2rem;
-	font-weight: 300;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.buttonContainer {
+.aboutSection .cardSection {
+	height: 100%;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	align-content: space-between;
-}
-
-.button {
-	padding: 10px 20px;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	color: #fff;
-	background-color: rgba(18, 18, 18, 0.5);
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.button:hover {
-	background: #fff;
-	color: #000;
-}
-
-/* Card section */
-.pageSection {
-	padding: 3rem 0;
-}
-
-.cardContainer {
-	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
-	gap: 2rem;
+}
+
+.aboutSection .cardSection .card:nth-child(1) {
+	position: relative;
+	z-index: 2;
+	transform: translate(-60px, -80px) rotate(25deg);
+}
+
+.aboutSection .cardSection .card {
+	position: relative;
+	z-index: 1;
+	width: 170px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(25deg) translate(-100px, 90px);
+	border-radius: 50%/20%;
+}
+
+
+.aboutSection .cardSection .card .cardImage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%/20%;
+}
+
+.aboutSection .cardSection .card .cardImage::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg, rgba(18, 18, 18), rgba(18, 18, 18, .7) 10%, rgba(18, 18, 18, 0) 100%);
+	background-size: cover;
+	background-position: center center;
+}
+
+
+.aboutSection .cardSection .card .cardImage img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%/20%;
+}
+
+@media screen and (max-width: 768px) {
+	.aboutSection {
+		flex-direction: column;
+	}
+	.aboutSection .about {
+		width: 100%;
+		height: 50%;
+	}
+	.aboutSection .cardSection {
+		width: 100%;
+		height: 50%;
+	}
+	.aboutSection .cardSection .card {
+		width: 150px;
+		height: 450px;
+		transform: rotate(25deg) translate(-20px, 50px);
+	}
+	.aboutSection .cardSection .card:nth-child(1) {
+		transform: translate(20px, -50px) rotate(25deg);
+	}
 }

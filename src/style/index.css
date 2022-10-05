@@ -1,28 +1,57 @@
-@import url("https://fonts.googleapis.com/css?family=Courgette&text=Jane%20Doe");
-@import 'base.css';
+@import './variables.css';
 
 #app {
 	height: 100%;
 }
 
-.loading {
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-iteration-count: infinite;
-	animation-name: placeHolderShimmer;
-	animation-timing-function: linear;
-	background: var(--color-primary);
-	background-image: linear-gradient(to right, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
-	background-repeat: no-repeat;
-	background-size: 800px 104px;
-	position: relative;
+
+* {
+	box-sizing: border-box;
 }
 
-@keyframes placeHolderShimmer{
-  0% {
-      background-position: -468px 0;
-  }
-  100% {
-      background-position: 468px 0;
-  }
+html,
+body {
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-secondary);
+	font-family: var(--font-family);
+	font-weight: 400;
+	color: var(--color-primary);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--font-family-secondary);
+	font-weight: var(--font-weight-bold);
+	letter-spacing: var(--letter-spacing-xxxlarge);
+	color: var(--color-primary-dark);
+}
+
+.container {
+	width: 100%;
+	max-width: 1920px;
+	margin: auto;
+}
+
+main {
+	max-width: 1920px;
+	margin: auto;
+	padding: 6rem 1rem 2rem 1rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-cherries-light)
+}
+
+a:hover {
+	color: var(--color-primary-dark);
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		padding: 6rem 2rem 4rem 2rem;
+	}
 }

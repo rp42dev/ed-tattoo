@@ -1,12 +1,13 @@
 import { h } from 'preact';
 import style from './style';
-import Header from '../../components/goBack';
+import Header from '../../components/header';
+import ButtonWrapper from '../../components/buttonWrapper';
 
 const photographs = (props) => {
 	return (
-		<>
 		<main classList="h-100">
-			<Header link='/' />
+			<Header children={<i class="fa-solid fa-house"></i>} link="/" type="link" />
+			
 			<div class={style.pageContact}>
 				<h1 class={style.pageTitle}>Contact me</h1>
 				<div class={style.formWrapper}>
@@ -24,14 +25,12 @@ const photographs = (props) => {
 						<p>
 							<textarea name="message" placeholder="Message" />
 						</p>
-						<p>
-							<button type="submit"><i class="h1 fa-solid fa-paper-plane"></i></button>
-						</p>
+
+						<ButtonWrapper children={<i class="fa-solid fa-paper-plane"></i>} text="Contact me" type="submit" />
 					</form>
 				</div>
 			</div>
 		</main>
-		</>
 	);
 };
 

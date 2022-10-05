@@ -1,0 +1,29 @@
+/* Landing content */
+.container {
+    border-radius: var(--border-radius-large);
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: var(--spacing);
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    background: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
+}
+
+.container h1 {
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.container h1 span {
+    color: var(--color-cherries-light)
+}
+
+.container p {
+  font-weight: var(--font-weight-light);
+}

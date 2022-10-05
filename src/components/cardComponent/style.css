@@ -1,7 +1,23 @@
 .cardMedia {
     width: 100%;
-    max-width: 100%;
+    max-width: 580px;	
     height: 80vh;
+    max-height: 800px;
+}
+
+.card {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    position: relative;
 }
 
 .cardMedia img {
@@ -12,6 +28,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
+    border-radius: var(--border-radius-large);
+    transition: var(--transition);
 }
 
 .imgOverlay {
@@ -21,12 +39,17 @@
     width: 100%;
     height: 100%;
     color: transparent;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--overlay-color-light);
     z-index: 1;
     transition: all 0.2s ease;
 }
 
-.imgOverlay:hover {
-    background-color: rgba(0, 0, 0, 0.0);
+.card:hover .imgOverlay {
+    background-color: var(--overlay-color-hover);
     color: white;
+}
+
+
+.card:hover img {
+    transform: scale(1.05);
 }

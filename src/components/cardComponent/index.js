@@ -11,16 +11,16 @@ const CardComponent = (props) => {
 
     return (
         <div>
-            <div classList="card border-0 shadow">
+            <div class={style.card}>
                 <div classList={style.cardMedia}>
-                    {details.cover && <picture classList="rounded card-img">
+                    {details.cover && <picture>
                         <source srcset={webp} type="image/webp" />
                         <source srcset={jpg} type="image/jpeg" />
                         <img src={jpg} alt={details.title} />
                     </picture>}
                 </div>
                 <div classList={style.imgOverlay}>
-                    <h5 classList="card-title">{details.title}</h5>
+                   
                 </div>
             </div>
         </div>

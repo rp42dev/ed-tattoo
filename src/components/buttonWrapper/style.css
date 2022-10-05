@@ -1,0 +1,20 @@
+.btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+    width: max-content;
+    width: fit-content;  
+    background-color: var(--color-rgb-transparent);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius-rounded);
+}
+
+.btnWrapper span {
+    font-size: var(--font-size);
+    letter-spacing: var(--letter-spacing-large);
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin: 0 1rem;
+}
