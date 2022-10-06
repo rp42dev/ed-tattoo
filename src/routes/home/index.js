@@ -12,7 +12,7 @@ import style from "./style";
 const Home = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	const [isLoaded, setIsLoaded] = useState(false);
-
+	const display = true;
 	useEffect(() => {
 		if (!isLoading) {
 			setIsLoaded(true);
@@ -42,7 +42,7 @@ const Home = (props) => {
 						<Container children={
 							<article>
 
-								<ScaledText children={<h1><span>Ed </span>Tattoo</h1>} maxFontSize={90} maxContainerWidth={900} />
+								<ScaledText children={<h1><span>Ed </span>Tattoo</h1>} maxFontSize={125} maxContainerWidth={900} minFontSize={8} />
 
 								<ScaledText children={<p>
 									Hi I'm Ed, I'm a tattoo artist based in the Oslo.
@@ -63,11 +63,14 @@ const Home = (props) => {
 
 			<section class={style.latestWork}>
 				<div class={style.container}>
+					<div class={style.latestWorkHeader}>
 					<ScaledText children={<h1>Latest <span>Work</span></h1>} maxFontSize={36} maxContainerWidth={900} minFontSize={16} />
-
-					<div class={style.gallery}>
-						{getBlogsListing(data, isLoading)}
 					</div>
+					<div class={style.gallery}>
+						{getBlogsListing(data, isLoading, display)}
+					</div>
+
+					<ButtonWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="View Gallery" type="link" />
 				</div>
 			</section>
 

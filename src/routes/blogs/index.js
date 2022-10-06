@@ -12,10 +12,19 @@ const Blogs = (props) => {
 		<>
 			<Header children={<i class="fa-solid fa-house"></i>} link="/" type="link" />
 
-			<section class={style.gallery}>
-				{getBlogsListing(data, isLoading)}
+			<section>
+				<div class={style.gallery}>
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+					{getBlogsListing(data, isLoading)}
+				</div>
 			</section>
-
 		</>
 	);
 };
