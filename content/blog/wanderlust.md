@@ -1,6 +1,7 @@
 ---
 title: Wanderlust
 date: 2019-08-27T18:44:24.217Z
+isDisplay: true
 cover: assets/images/pexels-clem-onojeghuo-194074.jpg
 tags: travel, philosophy, hobby
 ---
