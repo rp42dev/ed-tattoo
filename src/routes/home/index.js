@@ -2,8 +2,8 @@ import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 
 import ButtonWrapper from "../../components/buttonWrapper";
-import getBlogsListing from '../../utils/getBlogs';
-import ScaledText from "../../utils/scaledText";
+import getBlogsListing from '../../components/getBlogs';
+import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
 import style from "./style";

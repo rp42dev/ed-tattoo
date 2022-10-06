@@ -1,8 +1,5 @@
-import { h } from 'preact';
-import { Link } from 'preact-router';
 import { usePrerenderData } from '@preact/prerender-data-provider';
-import getBlogsListing from '../../utils/getBlogs';
-import CardComponent from '../../components/cardComponent';
+import getBlogsListing from '../../components/getBlogs';
 import Header from '../../components/header';
 
 import style from './style';

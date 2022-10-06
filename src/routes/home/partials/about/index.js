@@ -1,5 +1,5 @@
 import Container from '../../../../components/container';
-import ScaledText from '../../../../utils/scaledText';
+import ScaledText from '../../../../components/scaledText';
 import ButtonWrapper from '../../../../components/buttonWrapper';
 import style from './style';
 
