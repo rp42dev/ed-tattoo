@@ -1,50 +1,5 @@
-.pageContact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.pageTitle {
-  font-size: 3rem;
-  position: relative;
-  display: inline-block;
-  font-weight: 500;
-}
-
-.pageTitle:after {
-  position: absolute;
-  bottom: -5px;
-  left: 0px;
-  content: '';
-  width: 75%;
-  border-bottom: 2px solid #FFC107;
-}
-
-.pageBody {
-  font-size: 1.2rem;
-  flex: 1;
-}
-
-.pageContact input, .pageContact textarea {
-  width: 100%;
-  font-size: 1.1rem;
-  padding: 8px;
-  border: 1px solid #999;
-}
-
-.pageContact .formWrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.pageContact form {
-  flex: 1;
-}
-
-
-@media all and (max-width: 728px) {
-	.formWrapper {
-		flex-direction: column;
-  }
+.pageContact{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }

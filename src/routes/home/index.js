@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 
+import Work from './partials/Work';
+import ContactForm from '../../components/forms/contact';
 import ButtonWrapper from "../../components/buttonWrapper";
-import getBlogsListing from '../../components/getBlogs';
 import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
@@ -44,11 +45,13 @@ const Home = (props) => {
 
 								<ScaledText children={<h1><span>Ed </span>Tattoo</h1>} maxFontSize={125} maxContainerWidth={900} minFontSize={8} />
 
-								<ScaledText children={<p>
+								<ScaledText children={
+								<p>
 									Hi I'm Ed, I'm a tattoo artist based in the Oslo.
 									I specialise in black and grey realism and
 									I'm always looking to expand my portfolio.
-								</p>} maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
+								</p>
+							} maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
 
 								<ButtonWrapper children={<i class="fa-solid fa-paper-plane"></i>} link="/contact" text="Contact me" type="link" />
 							</article>
@@ -63,14 +66,15 @@ const Home = (props) => {
 
 			<section class={style.latestWork}>
 				<div class={style.container}>
-					<div class={style.latestWorkHeader}>
-					<ScaledText children={<h1>Latest <span>Work</span></h1>} maxFontSize={36} maxContainerWidth={900} minFontSize={16} />
-					</div>
-					<div class={style.gallery}>
-						{getBlogsListing(data, isLoading, display)}
-					</div>
+					<Work data={data} isLoading={isLoading} display={display} />
+				</div>
+			</section>
 
-					<ButtonWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="View Gallery" type="link" />
+			{/* Contact */}
+
+			<section class={style.contact}>
+				<div class={style.container}>
+					<ContactForm />
 				</div>
 			</section>
 
