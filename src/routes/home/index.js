@@ -2,8 +2,10 @@ import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 
 import ButtonWrapper from "../../components/buttonWrapper";
-import ScaledText from "../../utils/ScaledText";
+import getBlogsListing from '../../utils/getBlogs';
+import ScaledText from "../../utils/scaledText";
 import Container from "../../components/container";
+import AboutSection from './partials/about';
 import style from "./style";
 
 
@@ -28,7 +30,7 @@ const Home = (props) => {
 	}, []);
 
 	return (
-		<div class={style.home}>
+		<main class={style.home}>
 			<div class={style.videoContainer}>
 				<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
 					<source src="../../assets/bg.mp4" type="video/mp4" />
@@ -38,7 +40,7 @@ const Home = (props) => {
 				<div class={style.overlay}>
 					<div class={style.container}>
 						<Container children={
-							<>
+							<article>
 
 								<ScaledText children={<h1><span>Ed </span>Tattoo</h1>} maxFontSize={90} maxContainerWidth={900} />
 
@@ -49,55 +51,27 @@ const Home = (props) => {
 								</p>} maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
 
 								<ButtonWrapper children={<i class="fa-solid fa-paper-plane"></i>} link="/contact" text="Contact me" type="link" />
-							</>
+							</article>
 						} width="900" />
 					</div>
 				</div>
 			</div>
-			<div class={style.container}>
-				<main style="padding-left: 0; padding-right: 0">
-					<div class={style.aboutSection}>
-						<div class={style.about}>
-							<Container children={
-								<>
-									<ScaledText children={<h1>About <span>Me</span></h1>} maxFontSize={36} maxContainerWidth={900} minFontSize={16} />
-									<ScaledText children={
-										<>
-											<p>
-												I started tattooing in 2017 and have been working in Oslo since then.
-												Tattoo is my passion and I love to create new pieces.
-											</p>
-											<p>
-												My style is black and grey realism, as I love the contrast and the
-												depth that black and grey can give. I also love to create pieces
-												that are very detailed and have a lot of depth to them.
 
-											</p>
-										</>
-									} maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
-								<ButtonWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="Gallery" type="link" />
-								</>
-							} width="900" />
+			<AboutSection />
 
+			{/* Latest work */}
 
-						</div>
-						<div class={style.cardSection}>
-							<div class={style.card}>
-								<div class={style.cardImage}>
-									<img src="../../assets/images/pexels-clem-onojeghuo-194074-900.jpg" alt="Ed" />
-								</div>
-							</div>
-							<div class={style.card}>
-								<div class={style.cardImage}>
-									<img src="../../assets/images/pexels-parcerografo-5968440-900.jpg" alt="Ed" />
-								</div>
-							</div>
-						</div>
+			<section class={style.latestWork}>
+				<div class={style.container}>
+					<ScaledText children={<h1>Latest <span>Work</span></h1>} maxFontSize={36} maxContainerWidth={900} minFontSize={16} />
+
+					<div class={style.gallery}>
+						{getBlogsListing(data, isLoading)}
 					</div>
+				</div>
+			</section>
 
-				</main>
-			</div>
-		</div>
+		</main>
 	);
 };
 

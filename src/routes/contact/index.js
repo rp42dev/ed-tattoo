@@ -8,7 +8,7 @@ const photographs = (props) => {
 		<main classList="h-100">
 			<Header children={<i class="fa-solid fa-house"></i>} link="/" type="link" />
 			
-			<div class={style.pageContact}>
+			<main class={style.pageContact}>
 				<h1 class={style.pageTitle}>Contact me</h1>
 				<div class={style.formWrapper}>
 					<p class={style.pageBody}>
@@ -29,7 +29,7 @@ const photographs = (props) => {
 						<ButtonWrapper children={<i class="fa-solid fa-paper-plane"></i>} text="Contact me" type="submit" />
 					</form>
 				</div>
-			</div>
+			</main>
 		</main>
 	);
 };

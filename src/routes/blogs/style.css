@@ -1,20 +1,12 @@
-.pageBlogs {
-  text-align: center;
+.gallery {
+  display: grid;
+  grid-gap: min(5vw, 2rem);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding-bottom: 4rem;
 }
 
-.pageContent {
-  width: 100%;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--spacing);
-}
-
-
-@media screen and (min-width: 768px) {
-  .pageContent {
-    gap: var(--spacing-xlarge);
+@media screen and (min-width: 913px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }

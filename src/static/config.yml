@@ -6,17 +6,14 @@ public_folder: assets/images
 collections:
   - name: "pages"
     label: "Pages"
-    label_singular: "Page" # Used in the UI, ie: "New Post"
+    label_singular: "Image" # Used in the UI, ie: "New Post"
     folder: "content/blog"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { 
-        label: "Cover", 
-        name: "cover", 
-        widget: "image",
-        }
+      - { label: "isDisplay", name: "isDisplay", widget: "boolean", default: false }
+      - { label: "Cover", name: "cover", widget: "image"}
       - { label: "Tags", name: "tags", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown"}
 

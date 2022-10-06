@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'preact/hooks';
+
 function ScaledText({ children, maxFontSize, minFontSize, maxContainerWidth, minContainerWidth }) {
     /**
     * @param {JSX} children

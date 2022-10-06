@@ -19,9 +19,9 @@ const Blog = (props) => {
 		<>
 			<Header children={<i class="fa-solid fa-arrow-left"></i>} link='/blogs' type="link" />
 
-			<article class={style.blogcontainer}>
+			<main class={style.blogcontainer}>
 				{getBlogBody(data, isLoading)}
-			</article>
+			</main>
 		</>
 	);
 };
@@ -44,7 +44,7 @@ function getBlogBody(data, isLoading) {
 				</picture>}
 				</div>
 				<div class={style.blogbody}>
-					<div className="title"><h1 class={style.blogtitle}>{details.title}</h1></div>
+					<div className="title"><h2 class={style.blogtitle}>{details.title}</h2></div>
 					<Markdown options={{ forceBlock: true }}>{content}</Markdown>
 				</div>
 			</div>
