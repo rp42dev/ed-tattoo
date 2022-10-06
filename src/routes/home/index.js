@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 
-import Work from './partials/Work';
+import Work from './partials/work';
 import ContactForm from '../../components/forms/contact';
 import ButtonWrapper from "../../components/buttonWrapper";
 import ScaledText from '../../components/scaledText';
