@@ -39,7 +39,7 @@ section {
 	padding: 0 min(5vw, 2rem);
 	width: 100%;
 	max-width: 1920px;
-	margin: 5rem auto;
+	margin: min(100vw, 4rem) auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

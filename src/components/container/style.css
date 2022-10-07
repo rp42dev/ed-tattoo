@@ -4,7 +4,7 @@
     position: relative;
     z-index: 3;
     width: 100%;
-    padding: var(--spacing-auto);
+    padding: var(--spacing-auto-card);
     box-sizing: border-box;
     height: auto;
     display: flex;

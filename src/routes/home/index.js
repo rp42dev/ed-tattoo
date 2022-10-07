@@ -7,6 +7,7 @@ import IconWrapper from "../../components/buttonWrapper";
 import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
+import FeatureHome from './partials/featureHome';
 import style from "./style";
 
 
@@ -62,6 +63,7 @@ const Home = (props) => {
 							</article>
 						} width="900" />
 					</div>
+					<FeatureHome />
 				</div>
 			</div>
 			

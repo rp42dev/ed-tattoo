@@ -6,7 +6,15 @@
     --color-secondary: #121212;
     --color-gray: #8a8888;
     --color-secondary-light: #1f1f1f;
+    --color-secondary-lighter: #2b2b2b;
+    --color-secondary-lightest: #3a3a3a;
+
+
     --color-rgb-transparent: rgba(18, 18, 18, 0.5);
+    --color-rgb-transparent-light: rgba(18, 18, 18, 0.3);
+    --color-rgb-transparent-Dark: rgba(18, 18, 18, 0.8);
+
+    --color-rgb-card: rgba(181, 183, 185, 0.1);
 
 
     --color-cherries-light: #9b0808;
@@ -56,12 +64,18 @@
     /* font */
     --font-family: 'Roboto', sans-serif;
     --font-family-secondary: 'Gemunu Libre', sans-serif;
+    --font-family-tertiary: 'Roboto Mono', monospace;
+
     --font-size: 1.1rem;
     --font-size-medium: 1.2rem;
     --font-size-large: 1.4rem;
     --font-size-xlarge: 1.6rem;
     --font-size-xxlarge: 1.8rem;
     --font-size-small: 0.9rem;
+    --font-size-xsmall: 0.8rem;
+    --font-size-xxsmall: 0.7rem;
+    --font-size-xxxsmall: 0.5rem;
+
     --font-size-title: 3rem;
 
     --font-weight: 400;
@@ -85,6 +99,7 @@
     --spacing-xxlarge: 4rem;
     --spacing-small: 0.5rem;
     --spacing-auto: 0 min(5vw, 2rem);
+    --spacing-auto-card: min(5vw, 2rem);
 
     /* transition */
     --transition: all 0.3s ease;
