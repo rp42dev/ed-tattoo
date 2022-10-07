@@ -16,7 +16,9 @@ const Blog = (props) => {
 
 	return (
 		<>
-			<Header children={<i class="fa-solid fa-arrow-left"></i>} link='/blogs' type="link" />
+			<Header link='/blogs' type="link">
+				<i class="fa-solid fa-images"></i>
+			</Header>
 
 			<main class={style.blogcontainer}>
 				{getBlogBody(data, isLoading)}

@@ -1,9 +1,5 @@
 @import './variables.css';
 
-#app {
-	height: 100%;
-}
-
 
 * {
 	box-sizing: border-box;
@@ -12,19 +8,16 @@
 html,
 body {
 	height: 100%;
-	width: 100%;
+	width: 100%;	
 	background-color: var(--color-secondary);
 	font-family: var(--font-family);
-	font-weight: 400;
 	color: var(--color-primary);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-user-select: none;
-	/* Safari */
 	-ms-user-select: none;
-	/* IE 10 and IE 11 */
 	user-select: none;
-	/* Standard syntax */
+	padding: 0;
 	margin: 0;
 }
 

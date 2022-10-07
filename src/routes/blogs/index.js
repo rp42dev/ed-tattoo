@@ -10,7 +10,9 @@ const Blogs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	return (
 		<>
-			<Header children={<i class="fa-solid fa-house"></i>} link="/" type="link" />
+			<Header link="/" type="link" >
+				<i class="fa-solid fa-house"></i>
+			</Header>
 
 			<section>
 				<div class={style.gallery}>

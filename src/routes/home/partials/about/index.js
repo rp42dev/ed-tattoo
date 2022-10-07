@@ -10,8 +10,10 @@ const AboutSection = () => {
                 <div class={style.about}>
                     <Container children={
                         <>
-                            <ScaledText children={<h1>About <span>Me</span></h1>} maxFontSize={36} maxContainerWidth={900} minFontSize={16} />
-                            <ScaledText children={
+                            <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
+                                <h1><span>About</span> Me</h1>
+                            </ScaledText>
+                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
                                 <>
                                     <p>
                                         I started tattooing in 2017 and have been working in Oslo since then.
@@ -24,15 +26,18 @@ const AboutSection = () => {
 
                                     </p>
                                 </>
-                            } maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
-                            <IconWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="Gallery" type="link" />
+                            </ScaledText>
+                            <IconWrapper link="/about" text="Read more" type="link">
+                               <i class="fas fa-arrow-right"></i>
+                            </IconWrapper>
                         </>
                     } width="900" />
                 </div>
                 <div class={style.cardSection}>
                     <div class={style.card}>
                         <div class={style.cardImage}>
-                            <img src="../../assets/images/pexels-clem-onojeghuo-194074-900.jpg" alt="Ed" />
+                            
+                            <img src="../../assets/images/pexels-matheus-ferrero-2123061-900.jpg" alt="Ed" />
                         </div>
                     </div>
                     <div class={style.card}>

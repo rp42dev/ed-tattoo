@@ -43,29 +43,36 @@ const Home = (props) => {
 						<Container children={
 							<article>
 
-								<ScaledText children={<h1><span>Ed </span>Tattoo</h1>} maxFontSize={125} maxContainerWidth={900} minFontSize={8} />
+								<ScaledText maxFontSize={125} maxContainerWidth={900} minFontSize={8}>
+									<h1><span>Ed </span>Tattoo</h1>
+								</ScaledText>
 
-								<ScaledText children={
-								<p>
-									Hi I'm Ed, I'm a tattoo artist based in the Oslo.
-									I specialise in black and grey realism and
-									I'm always looking to expand my portfolio.
-								</p>
-							} maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
+								<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+									<p>
+										Hi I'm Ed, I'm a tattoo artist based in the Oslo.
+										I specialise in black and grey realism and
+										I'm always looking to expand my portfolio.
+									</p>
+								</ScaledText>
 
-								<IconWrapper children={<i class="fa-solid fa-paper-plane"></i>} link="/contact" text="Contact me" type="link" />
+								<IconWrapper link="/contact" text="Contact me" type="link">
+									<i class="fa-solid fa-envelope"></i>
+								</IconWrapper>
+
 							</article>
 						} width="900" />
 					</div>
 				</div>
 			</div>
+			
+			{/* About Section */}
 
 			<AboutSection />
 
 			{/* Latest work */}
 
-				<Work data={data} isLoading={isLoading} display={display} />
-	
+			<Work data={data} isLoading={isLoading} display={display} />
+
 			{/* Contact */}
 
 			<section class={style.contact}>

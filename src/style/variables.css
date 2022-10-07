@@ -1,5 +1,3 @@
-
-
 :root {
     /* colors */
     --color-primary: #e9ebee;
@@ -86,6 +84,7 @@
     --spacing-xlarge: 3rem;
     --spacing-xxlarge: 4rem;
     --spacing-small: 0.5rem;
+    --spacing-auto: 0 min(5vw, 2rem);
 
     /* transition */
     --transition: all 0.3s ease;

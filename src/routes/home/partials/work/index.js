@@ -5,24 +5,31 @@ import getBlogsListing from "../../../../components/getBlogs";
 import style from "./style.css";
 
 
-const Work = ({...props}) => {
+const Work = ({ ...props }) => {
     const { data, isLoading, display } = props;
 
     return (
-       
-            <section class={style.latestWork}>
-                <div class={style.container}>
-            <div class={style.latestWorkHeader}>
-                <ScaledText children={<h1>Latest <span>Work</span></h1>} maxFontSize={36} maxContainerWidth={900} minFontSize={16} />
-            </div>
-            <div class={style.gallery}>
-                {getBlogsListing(data, isLoading, display)}
-            </div>
 
-            <IconWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="View Gallery" type="link" />
+        <section class={style.latestWork}>
+            <div class={style.container}>
+                <div class={style.latestWorkHeader}>
+
+                    <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
+                        <h1><span>Latest</span> Work</h1>
+                    </ScaledText>
+                    
+                </div>
+                <div class={style.gallery}>
+                    {getBlogsListing(data, isLoading, display)}
+                </div>
+
+                <IconWrapper link="/blogs" text="View Gallery" type="link">
+                    <i class="fa-solid fa-images"></i>
+                </IconWrapper>
+
             </div>
-            </section>
- 
+        </section>
+
     );
 };
 
