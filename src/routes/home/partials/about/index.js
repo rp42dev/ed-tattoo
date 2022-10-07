@@ -1,6 +1,6 @@
 import Container from '../../../../components/container';
 import ScaledText from '../../../../components/scaledText';
-import ButtonWrapper from '../../../../components/buttonWrapper';
+import IconWrapper from '../../../../components/buttonWrapper';
 import style from './style';
 
 const AboutSection = () => {
@@ -25,7 +25,7 @@ const AboutSection = () => {
                                     </p>
                                 </>
                             } maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
-                            <ButtonWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="Gallery" type="link" />
+                            <IconWrapper children={<i class="fa-solid fa-camera"></i>} link="/blogs" text="Gallery" type="link" />
                         </>
                     } width="900" />
                 </div>

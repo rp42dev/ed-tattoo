@@ -6,11 +6,8 @@
     --color-primary-darker: #d6d8db;
     --color-primary-dark: #c0bcbc;
     --color-secondary: #121212;
-
     --color-gray: #8a8888;
-    
     --color-secondary-light: #1f1f1f;
-
     --color-rgb-transparent: rgba(18, 18, 18, 0.5);
 
 
@@ -38,6 +35,24 @@
         0px 16px 24px 2px hsla(0, 0%, 0%, 0.14),
         0px 6px 30px 5px hsla(0, 0%, 0%, 0.12),
         0px 8px 10px -5px hsla(0, 0%, 0%, 0.2);
+
+    --gradient: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
+    --gradient-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
+    --gradient-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, 2) 100%);
+    --gradient-cherries: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, 2) 100%);
+    --gradient-cherries-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
+    --gradient-cherries-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, 2) 100%);
+    --gradient-button: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-button-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 100%);
+    --gradient-button-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-button-hover: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-button-hover-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 100%);
+    --gradient-button-hover-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-cherries-button: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-cherries-button-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 100%);
+    --gradient-cherries-button-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-cherries-button-hover: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 100%);
+    --gradient-cherries-button-hover-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 100%);
 
     
     /* font */

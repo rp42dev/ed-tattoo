@@ -1,4 +1,4 @@
-.button {
+.icon {
 	display: grid;
 	place-items: center;
 	height: 50px;
@@ -9,13 +9,18 @@
 	background-color: var(--color-cherries-light);
 	margin: .2rem;
 	transition: all 0.3s ease;
+	outline: none;
+	border: 0;
 }
 
-.button i {
+.icon i {
+	border-radius: 50%;
 	font-size: var(--font-size-xlarge);
 }
 
-.button:hover {
+.icon:active,
+.icon:hover {
 	background: var(--color-primary-dark);
 	color: var(--color-secondary);
 }
+

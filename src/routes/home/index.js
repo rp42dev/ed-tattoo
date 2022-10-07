@@ -3,7 +3,7 @@ import { usePrerenderData } from '@preact/prerender-data-provider';
 
 import Work from './partials/work';
 import ContactForm from '../../components/forms/contact';
-import ButtonWrapper from "../../components/buttonWrapper";
+import IconWrapper from "../../components/buttonWrapper";
 import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
@@ -53,7 +53,7 @@ const Home = (props) => {
 								</p>
 							} maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} />
 
-								<ButtonWrapper children={<i class="fa-solid fa-paper-plane"></i>} link="/contact" text="Contact me" type="link" />
+								<IconWrapper children={<i class="fa-solid fa-paper-plane"></i>} link="/contact" text="Contact me" type="link" />
 							</article>
 						} width="900" />
 					</div>
@@ -64,12 +64,8 @@ const Home = (props) => {
 
 			{/* Latest work */}
 
-			<section class={style.latestWork}>
-				<div class={style.container}>
-					<Work data={data} isLoading={isLoading} display={display} />
-				</div>
-			</section>
-
+				<Work data={data} isLoading={isLoading} display={display} />
+	
 			{/* Contact */}
 
 			<section class={style.contact}>

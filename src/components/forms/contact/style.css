@@ -10,14 +10,17 @@
 
 .formWrapper input,
 .formWrapper textarea {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-light);
     padding: .5rem;
     border-radius: var(--border-radius-large);
 }
 
 .formWrapper input:focus,
 .formWrapper textarea:focus {
-    border: 1px solid var(--color-primary-light);
+    border: 0;
+    outline: 0;
 }
 
 .formWrapper input::placeholder,
@@ -28,11 +31,15 @@
 .formWrapper input,
 .formWrapper textarea {
     color: var(--color-primary);
-    border: 1px solid var(--color-primary-dark);
+    border: 0;
     background-color: var(--color-secondary-light);
 }
 
-/* Autofil input color change */
+.formWrapper textarea{
+    resize: none;
+    height: 100px;
+    overflow: hidden;
+}
 
 .formWrapper input:-webkit-autofill,
 .formWrapper input:-webkit-autofill:hover,

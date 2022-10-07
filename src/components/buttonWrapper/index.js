@@ -1,20 +1,33 @@
 import { h } from 'preact';
 import style from './style';
-import Button from '../button';
+import Icon from '../icon';
 
 
-const ButtonWrapper = ({children, ...props}) => {
+const IconWrapper = ({ children, ...props }) => {
     const { link, text, type } = props;
+
     return (
         <>
-            <div class={style.btnWrapper} >
-                <span class={style.text}>
-                    {text}
-                </span>
-                <Button children={children} link={link} type={type}/>
-            </div>
+            {type === "link" ? (
+                <a href={link}>
+                    <div class={style.btnWrapper} >
+                        <span class={style.text}>
+                            {text}
+                        </span>
+                        <Icon children={children} />
+                    </div>
+                </a>
+            ) : (
+                
+                <button type="submit" class={style.btnWrapper} >
+                    <span class={style.text}>
+                        {text}
+                    </span>
+                    <Icon children={children} />
+                </button>
+            )}
         </>
     );
 };
 
-export default ButtonWrapper;
+export default IconWrapper;

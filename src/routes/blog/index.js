@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { useEffect } from 'preact/hooks';
 import Markdown from 'markdown-to-jsx';
