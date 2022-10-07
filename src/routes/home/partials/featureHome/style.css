@@ -1,10 +1,11 @@
 .featureHome {
     width: 100%;
     position: absolute;
-    bottom: 10vh;
+    bottom: 9vh;
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 1000;
+    padding: .5rem;
 }
 
 .featureHome .container {
@@ -17,31 +18,35 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    gap: calc(6vw - 2rem);
+    gap: .5rem;
 }
 
 .featureHome .col {
     width: 100%;
-    max-width: 230px;
+    max-width: 210px;
 }
 
 .featureHome .col .card {
+    position: relative;
     border: 0;
     border-radius: 0;
     text-align: center;
-
-}
+    z-index: 1;
+}   
 
 .featureHome .col .card .content {
     color: var(--color-primary-dark);
     padding: .5rem;
     background: var(--color-rgb-card);
     border-radius: var(--border-radius-large);
-    font-family: var(--font-family-tertiary);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size);
     font-weight: var(--font-weight-thin);
-    letter-spacing: var(--letter-spacing-small);
-    padding: .2rem;
+    letter-spacing: var(--letter-spacing);
+    padding: .5rem;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .featureHome .col .card h3 {
@@ -52,16 +57,55 @@
     background: var(--color-rgb-card);
     width: fit-content;
     margin: auto;
-    padding: .5rem .5rem 0 .5rem;
+    padding: .5rem 1rem 0 1rem;
     border-radius:var(--border-radius-large) var(--border-radius-large)0  0 ;
 }
 
+.featureHome .col .card .icon{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(20deg);
+    font-size: 6.3rem;
+    color: var(--color-primary-dark);
+    opacity: .03;
+    z-index: -1;
+}
+
+@media screen and (max-width: 890px) {
+    .featureHome {
+        bottom: 12vh;
+    }
+    .featureHome .col .card .content {
+        height: 80px ;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .featureHome .col .card .icon {
+        font-size: 6rem;
+    }
+    .featureHome {
+        bottom: 13vh;
+    }
+
+    .featureHome .col .card .content {
+        height: 100px;
+    }
+}
+
 @media screen and (max-width: 450px) {
+    .featureHome {
+        bottom: 14vh;
+    }
     .featureHome .col .card h3 {
         font-size: var(--font-size-small);
     }
+    .featureHome .col .card .content {
+        height: 80px;
+    }
     
     .featureHome .col .card .content {
-        font-size: var(--font-size-xxxsmall);
+        font-size: var(--font-size-small);
     }
 }
