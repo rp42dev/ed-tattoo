@@ -17,6 +17,13 @@ module.exports = () => {
 			},
 			data: blogs
 		},
+		{
+			url: '/about',
+			seo: {
+				title: 'About',
+				description: 'About page of my website',
+			},
+		},
 		{ 
 			url: '/contact/',
 			seo: {

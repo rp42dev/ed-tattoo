@@ -16,7 +16,7 @@ const Blog = (props) => {
 
 	return (
 		<>
-			<Header links={['blogs']} type="link" />
+			<Header links='blogs' />
 
 			<main class={style.blogcontainer}>
 				{getBlogBody(data, isLoading)}

@@ -5,9 +5,7 @@ import ContactForm from '../../components/forms/contact';
 const photographs = (props) => {
 	return (
 		<>
-			<Header link="/" type="link">
-				<i class="fa-solid fa-home"></i>
-			</Header>
+			<Header link="home" />
 			<main>
 				<section class={style.pageContact}>
 					<ContactForm />
