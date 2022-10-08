@@ -27,9 +27,7 @@ const AboutSection = () => {
                                     </p>
                                 </>
                             </ScaledText>
-                            <IconWrapper link="/about" text="Read more" type="link">
-                               <i class="fas fa-arrow-right"></i>
-                            </IconWrapper>
+                            <IconWrapper link="more" text="Read more" type="link" />
                         </>
                     } width="900" />
                 </div>

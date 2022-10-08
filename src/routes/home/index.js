@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
+import Header from '../../components/header';
 
 import Work from './partials/work';
 import ContactForm from '../../components/forms/contact';
@@ -8,6 +9,7 @@ import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
 import FeatureHome from './partials/featureHome';
+import Icon from '../../components/icon';
 import style from "./style";
 
 
@@ -29,61 +31,64 @@ const Home = (props) => {
 			const { href } = window.location;
 			window.location.href = `${href.substring(0, href.indexOf('#'))}admin${href.substring(href.indexOf('#'))}`;
 		}
+		
 	}, []);
 
 	return (
-		<main class={style.home}>
-			<div class={style.videoContainer}>
-				<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
-					<source src="../../assets/bg.mp4" type="video/mp4" />
-					<source src="../../assets/bg.webm" type="video/webm" />
-				</video>
+		<>
+			<Header links={['facebook', 'instagram', 'blogs']} />
 
-				<div class={style.overlay}>
-					<div class={style.container}>
-						<Container children={
-							<article>
+			<main class={style.home}>
+				<div class={style.videoContainer}>
+					<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
+						<source src="../../assets/bg.mp4" type="video/mp4" />
+						<source src="../../assets/bg.webm" type="video/webm" />
+					</video>
 
-								<ScaledText maxFontSize={125} maxContainerWidth={900} minFontSize={8}>
-									<h1><span>Ed </span>Tattoo</h1>
-								</ScaledText>
+					<div class={style.overlay}>
+						<div class={style.container}>
+							<Container children={
+								<article>
 
-								<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-									<p>
-										Hi I'm Ed, I'm a tattoo artist based in the Oslo.
-										I specialise in black and grey realism and
-										I'm always looking to expand my portfolio.
-									</p>
-								</ScaledText>
+									<ScaledText maxFontSize={125} maxContainerWidth={900} minFontSize={8}>
+										<h1><span>Ed </span>Tattoo</h1>
+									</ScaledText>
 
-								<IconWrapper link="/contact" text="Contact me" type="link">
-									<i class="fa-solid fa-envelope"></i>
-								</IconWrapper>
+									<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+										<p>
+											Hi I'm Ed, I'm a tattoo artist based in the Oslo.
+											I specialise in black and grey realism and
+											I'm always looking to expand my portfolio.
+										</p>
+									</ScaledText>
 
-							</article>
-						} width="900" />
+									{/* <IconWrapper link="contact" text="Contact me" type="link" /> */}
+
+								</article>
+							} width="900" />
+						</div>
+						<FeatureHome />
 					</div>
-					<FeatureHome />
 				</div>
-			</div>
-			
-			{/* About Section */}
 
-			<AboutSection />
+				{/* About Section */}
 
-			{/* Latest work */}
+				<AboutSection />
 
-			<Work data={data} isLoading={isLoading} display={display} />
+				{/* Latest work */}
 
-			{/* Contact */}
+				<Work data={data} isLoading={isLoading} display={display} />
 
-			<section class={style.contact}>
-				<div class={style.container}>
-					<ContactForm />
-				</div>
-			</section>
+				{/* Contact */}
 
-		</main>
+				<section class={style.contact}>
+					<div class={style.container}>
+						<ContactForm />
+					</div>
+				</section>
+
+			</main>
+		</>
 	);
 };
 

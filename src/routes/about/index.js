@@ -9,9 +9,7 @@ const About = (props) => {
 
     return (
         <>
-            <Header link='/' type="link">
-                <i class="fa-solid fa-home"></i>
-            </Header>
+            <Header links={['home', 'facebook', 'instagram']} />
             <main>
                 <section class={style.aboutContainer}>
                     <div class={style.aboutMe}>

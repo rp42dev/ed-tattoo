@@ -29,7 +29,7 @@ const ContactForm = () => {
                     <textarea name="message" placeholder="Message" />
 
 
-                    <IconWrapper children={<i class="fa-solid fa-paper-plane"></i>} text="Submit" type="submit" />
+                    <IconWrapper link="send" text="Submit" type="submit" />
                 </form>
             </div>
         </Container>

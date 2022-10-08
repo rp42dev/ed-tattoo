@@ -23,9 +23,7 @@ const Work = ({ ...props }) => {
                     {getBlogsListing(data, isLoading, display)}
                 </div>
 
-                <IconWrapper link="/blogs" text="View Gallery" type="link">
-                    <i class="fa-solid fa-images"></i>
-                </IconWrapper>
+                <IconWrapper link="blogs" text="View Gallery" type="link" />
 
             </div>
         </section>
