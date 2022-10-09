@@ -62,7 +62,7 @@ const Home = (props) => {
 										</p>
 									</ScaledText>
 
-									{/* <IconWrapper link="contact" text="Contact me" type="link" /> */}
+									<IconWrapper link="contact" text="Contact me" type="link" />
 
 								</article>
 							} width="900" />

@@ -17,6 +17,10 @@
 	margin: auto;
 }
 
+.navContainer .navItem{
+	position: relative;
+}
+
 .sticky {
 	position: fixed;
 	top: 0;

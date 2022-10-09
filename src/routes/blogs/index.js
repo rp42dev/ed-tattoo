@@ -12,7 +12,7 @@ const Blogs = (props) => {
 		<>
 			<Header links="home" />
 
-			<section>
+			<section classList={style.section}>
 				<div class={style.gallery}>
 					{getBlogsListing(data, isLoading)}
 					{getBlogsListing(data, isLoading)}

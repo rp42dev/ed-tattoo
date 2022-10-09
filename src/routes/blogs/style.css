@@ -18,3 +18,8 @@
 .gallery a:nth-child(11n+1) {
   grid-column: span 2;
 }
+
+
+.section{
+  margin-top: min(5vw, 2rem) ;
+}

@@ -1,13 +1,16 @@
+import Tooltip from '../tooltip';
 import style from './style';
 
 const IconsData = {
     back: {
         icon: <i class="fas fa-arrow-left"></i>,
         link: "/",
+        label: "Go Back",
     },
     more: {
         icon: <i class="fas fa-arrow-right"></i>,
         link: "about",
+        label: "Read More",
     },
     send: {
         icon: <i class="fas fa-paper-plane"></i>,
@@ -46,14 +49,16 @@ const IconsData = {
     },
 };
 
-const Icon = ({...props}) => {
+const Icon = ({ ...props }) => {
     const { name } = props;
 
     return (
 
-        <div class={style.icon}>
-            {IconsData[name].icon}
-        </div>
+        <Tooltip text={IconsData[name].label}>
+            <div class={style.icon}>
+                {IconsData[name].icon}
+            </div>
+        </Tooltip>
 
     );
 };

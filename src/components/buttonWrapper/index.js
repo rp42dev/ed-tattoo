@@ -1,43 +1,54 @@
-import { h } from 'preact';
-import style from './style';
+
+
 import Icon from '../icon';
+import style from './style';
+
 
 const LinkData = {
     back: {
         icon: <Icon name="back" />,
         link: "/",
+        label: "Go Back",
     },
     more: {
         link: "about",
-        icon: <Icon name="more" />
+        icon: <Icon name="more" />,
+        label: "Read More",
     },
     send: {
         icon: <Icon name="send" />,
         link: "/contact/success",
+        label: "Send",
     },
     home: {
         link: '/',
-        icon: <Icon name="home" />
+        icon: <Icon name="home" />,
+        label: "Home",
     },
     blogs: {
         link: '/blogs',
-        icon: <Icon name="blogs" />
+        icon: <Icon name="blogs" />,
+        label: "Gallery",
     },
     about: {
         link: '/about',
-        icon: <Icon name="about" />
+        icon: <Icon name="about" />,
+        label: "About",
     },
     contact: {
         link: '/contact',
-        icon: <Icon name="contact" />
+        icon: <Icon name="contact" />,
+        label: "Contact",
     },
     facebook: {
         link: 'https://www.facebook.com/edgars.graudins.1',
-        icon: <Icon name="facebook" />
+        icon: <Icon name="facebook" />,
+        label: "Facebook",
     },
     instagram: {
         link: 'https://www.instagram.com/edtattoo_oslo/',
-        icon: <Icon name="instagram" />
+        icon: <Icon name="instagram" />,
+        label: "Instagram",
     },
 };
 
@@ -48,7 +59,6 @@ const IconWrapper = ({ children, ...props }) => {
     return (
         <>
             {type === "link" ? (
-
                 <a href={LinkData[link].link} classList={style.btnWrapper}>
                     <span>{text}</span>
                     {LinkData[link].icon}
