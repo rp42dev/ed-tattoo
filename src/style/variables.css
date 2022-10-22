@@ -42,12 +42,12 @@
         0px 6px 30px 5px hsla(0, 0%, 0%, 0.12),
         0px 8px 10px -5px hsla(0, 0%, 0%, 0.2);
 
-    --gradient: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
-    --gradient-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
-    --gradient-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, 2) 100%);
-    --gradient-cherries: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, 2) 100%);
+    --gradient: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1), rgba(18, 18, 18, .2));
+    --gradient-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 50%, rgba(18, 18, 18, .2) 100%);
+    --gradient-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, .2) 100%);
+    --gradient-cherries: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, .2) 100%);
     --gradient-cherries-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 50%, rgba(18, 18, 18, 2) 100%);
-    --gradient-cherries-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, 2) 100%);
+    --gradient-cherries-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, .2) 100%);
     --gradient-button: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1) 100%);
     --gradient-button-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 100%);
     --gradient-button-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 100%);

@@ -73,7 +73,7 @@ const Home = (props) => {
 
 				{/* About Section */}
 
-				<AboutSection />
+				<AboutSection data={data} />
 
 				{/* Latest work */}
 

@@ -15,6 +15,19 @@ module.exports = () => {
 				title: 'Home',
 				description: 'Home page of my website',
 			},
+			images: {
+				titles: ['About', 'Me'],
+				images: [
+					{
+						webp: '../../assets/images/pexels-clem-onojeghuo-194074-900.jpg.webp',
+						jpg: '../../assets/images/pexels-clem-onojeghuo-194074-900.jpg',
+					},
+					{
+						webp: '../../assets/images/pexels-parcerografo-5968440-900.jpg.webp',
+						jpg: '../../assets/images/pexels-parcerografo-5968440-900.jpg',
+					},
+				]	
+			},
 			data: blogs
 		},
 		{
@@ -22,6 +35,19 @@ module.exports = () => {
 			seo: {
 				title: 'About',
 				description: 'About page of my website',
+			},
+			data: {
+				titles: ['About', 'Me'],
+				images: [
+					{
+						webp: '../../assets/images/pexels-clem-onojeghuo-194074-900.jpg.webp',
+						jpg: '../../assets/images/pexels-clem-onojeghuo-194074-900.jpg',
+					},
+					{
+						webp: '../../assets/images/pexels-parcerografo-5968440-900.jpg.webp',
+						jpg: '../../assets/images/pexels-parcerografo-5968440-900.jpg',
+					},
+				]	
 			},
 		},
 		{ 

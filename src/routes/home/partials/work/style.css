@@ -7,7 +7,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(200px, calc(60vw - 200px));
+    grid-auto-rows: minmax(170px, calc(80vh));
     gap: 1rem;
     padding-bottom: calc(var(--spacing) * 2);
 }
@@ -37,4 +37,12 @@
 
 .latestWorkHeader {
     max-width: 900px;
+}
+
+
+@media screen and (max-width: 1800px) {
+    .gallery {
+        grid-auto-rows: minmax(170px, calc(50vw));
+    }
+
 }

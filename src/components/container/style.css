@@ -2,7 +2,7 @@
 .container {
     border-radius: var(--border-radius-large);
     position: relative;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     padding: var(--spacing-auto-card);
     box-sizing: border-box;
@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-content: space-between;
     background: var(--gradient);
+    backdrop-filter: blur(6px);
 }
 
 .container h1 {
