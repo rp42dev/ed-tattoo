@@ -1,11 +1,40 @@
+.main {
+  padding: 6rem 0 min(5vw, 2rem) 0;
+}
+
 .about {
   width: 100%;
   height: 100%;
-  max-width: 1900px;
-  margin: 0 auto;
-  min-height: calc(100vh - 8rem);
-  display: flex;
-  flex-direction: row;
+  max-width: 1920px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-around;
 }
+
+.about:nth-child(1) {
+  
+  margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 890px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .image {
+    order: 2;
+  }
+  .about .text {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .about:nth-child(1) {
+
+    margin-bottom: 3rem;
+  }
+}
+
+

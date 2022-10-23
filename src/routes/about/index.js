@@ -15,7 +15,7 @@ const About = (props) => {
     return (
         <>
             <Header links={['home', 'facebook', 'instagram']} />
-            <main>
+            <main class={style.main}>
                 <div class={style.about}>
 
                     <Container width="900" >
@@ -41,7 +41,10 @@ const About = (props) => {
                 </div>
 
                 <div class={style.about}>
+                    <div class={style.image}>
                     <ImageFeature images={data.data.images} titles={data.data.titles} />
+                    </div>
+                    <div class={style.text}>
                     <Container width="900" >
                         <article>
                             <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
@@ -57,6 +60,7 @@ const About = (props) => {
                             </ScaledText>
                         </article>
                     </Container>
+                    </div>
 
                 </div>
 
