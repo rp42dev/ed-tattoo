@@ -1,5 +1,6 @@
 import style from './style';
 import Icon from '../icon';
+import { Link } from 'preact-router';
 
 
 const HeaderData = {
@@ -51,21 +52,21 @@ const Header = ({ ...props }) => {
 
 						<div class={style.navItem}>
 
-							<a href={HeaderData[links].link} class={style.navLink} aria-label={HeaderData[links].areaLabel}>
+							<Link href={HeaderData[links].link} class={style.navLink} aria-label={HeaderData[links].areaLabel}>
 								
 								{HeaderData[links].icon}
 								
-							</a>
+							</Link>
 						</div>
 					) : (
 					links.map((link, index) => {
 						return (
 							<div class={style.navItem} key={index}>
-								<a href={HeaderData[link].link} class={style.navLink} aria-label={HeaderData[link].areaLabel}>
+								<Link href={HeaderData[link].link} class={style.navLink} aria-label={HeaderData[link].areaLabel}>
 							
 									{HeaderData[link].icon}
 									
-								</a>
+								</Link>
 							</div>
 						);
 					})

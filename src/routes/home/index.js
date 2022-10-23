@@ -17,6 +17,8 @@ const Home = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	const [isLoaded, setIsLoaded] = useState(false);
 	const display = true;
+
+	
 	useEffect(() => {
 		if (!isLoading) {
 			setIsLoaded(true);
@@ -36,7 +38,7 @@ const Home = (props) => {
 
 	return (
 		<>
-			<Header links={['facebook', 'instagram', 'blogs']} />
+			<Header links={['blogs', 'facebook', 'instagram']} />
 
 			<main class={style.home}>
 				<div class={style.videoContainer}>
@@ -73,7 +75,8 @@ const Home = (props) => {
 
 				{/* About Section */}
 
-				<AboutSection data={data} />
+
+				{isLoaded && <AboutSection data={data} />}
 
 				{/* Latest work */}
 

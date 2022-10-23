@@ -25,7 +25,7 @@ const IconsData = {
     blogs: {
         icon: <i class="fas fa-images"></i>,
         link: '/blogs',
-        label: "Blogs",
+        label: "Gallery",
     },
     about: {
         icon: <i class="fas fa-user"></i>,

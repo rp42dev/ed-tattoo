@@ -2,7 +2,6 @@ import { usePrerenderData } from '@preact/prerender-data-provider';
 import Header from '../../components/header';
 import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
-import IconWrapper from '../../components/buttonWrapper';
 import ImageFeature from '../../components/imageFeature';
 
 
