@@ -39,31 +39,31 @@ const About = (props) => {
                         </article>
                     </Container>
                     <ImageFeature images={data.data.images} titles={data.data.titles} />
-                <div class={style.featureHomeWrapper}>
-                    <FeatureHome />
-                </div>
+                    <div class={style.featureHomeWrapper}>
+                        <FeatureHome />
+                    </div>
                 </div>
 
                 <div class={style.about}>
                     <div class={style.image}>
-                    <ImageFeature images={data.data.images} titles={data.data.titles} />
+                        <ImageFeature images={data.data.images} titles={data.data.titles} />
                     </div>
                     <div class={style.text}>
-                    <Container width="900" >
-                        <article>
-                            <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
-                                <h1>Stud<span>io</span> </h1>
-                            </ScaledText>
-                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
-                                <p>
-                                    The studio is located in the heart of Oslo, and is easily accessible by public transport.
-                                    My goal is to create a space where people can feel comfortable and safe, and where they can get the best possible experience.
-                                    environment is important to me, and I want to make sure that my clients feel safe and comfortable.
-                                    It has all the equipment needed to create a safe and sterile environment for both the artist and the client.
-                                </p>
-                            </ScaledText>
-                        </article>
-                    </Container>
+                        <Container width="900" >
+                            <article>
+                                <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
+                                    <h1>Stud<span>io</span> </h1>
+                                </ScaledText>
+                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
+                                    <p>
+                                        The studio is located in the heart of Oslo, and is easily accessible by public transport.
+                                        My goal is to create a space where people can feel comfortable and safe, and where they can get the best possible experience.
+                                        environment is important to me, and I want to make sure that my clients feel safe and comfortable.
+                                        It has all the equipment needed to create a safe and sterile environment for both the artist and the client.
+                                    </p>
+                                </ScaledText>
+                            </article>
+                        </Container>
                     </div>
 
                 </div>
