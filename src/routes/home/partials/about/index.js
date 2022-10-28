@@ -15,7 +15,7 @@ const AboutSection = ({ ...props }) => {
                     <Container width="900">
                         <article>
                             <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
-                                <h1><span>About</span> Me</h1>
+                                <h2><span>About</span> Me</h2>
                             </ScaledText>
                             <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 

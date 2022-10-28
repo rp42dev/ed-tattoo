@@ -1,6 +1,7 @@
 import style from './style';
 import Header from '../../components/header';
 import ContactForm from '../../components/forms/contact';
+import Footer from '../../components/footer';
 
 const photographs = (props) => {
 	return (
@@ -11,6 +12,9 @@ const photographs = (props) => {
 					<ContactForm />
 				</section>
 			</main>
+			<div class={style.footerWrapper}>
+				<Footer />
+			</div>
 		</>
 
 	);

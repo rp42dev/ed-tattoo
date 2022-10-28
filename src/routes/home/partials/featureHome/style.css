@@ -1,15 +1,13 @@
 .featureHome {
     width: 100%;
     max-width: 1170px;
-    position: absolute;
-    bottom: 9vh;
-    left: 50%;
-    transform: translate(-50%, 50%);
     z-index: 1000;
+    transform: translateY(-40%);
     padding: var(--spacing-auto);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    overflow: hidden;
     justify-content: space-around;
     gap: var(--spacing-auto-card);
 }

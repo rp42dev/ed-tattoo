@@ -3,6 +3,8 @@ import Header from '../../components/header';
 import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
 import ImageFeature from '../../components/imageFeature';
+import FeatureHome from '../home/partials/featureHome';
+import Footer from '../../components/footer';
 
 
 import style from './style';
@@ -38,6 +40,8 @@ const About = (props) => {
                     </Container>
                     <ImageFeature images={data.data.images} titles={data.data.titles} />
                 </div>
+                <FeatureHome />
+
 
                 <div class={style.about}>
                     <div class={style.image}>
@@ -64,6 +68,9 @@ const About = (props) => {
                 </div>
 
             </main>
+            <div class={style.footerWrapper}>
+                <Footer />
+            </div>
         </>
     );
 };

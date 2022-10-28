@@ -9,7 +9,7 @@ import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
 import FeatureHome from './partials/featureHome';
-import Icon from '../../components/icon';
+import Footer from '../../components/footer';
 import style from "./style";
 
 
@@ -18,7 +18,7 @@ const Home = (props) => {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const display = true;
 
-	
+
 	useEffect(() => {
 		if (!isLoading) {
 			setIsLoaded(true);
@@ -33,14 +33,14 @@ const Home = (props) => {
 			const { href } = window.location;
 			window.location.href = `${href.substring(0, href.indexOf('#'))}admin${href.substring(href.indexOf('#'))}`;
 		}
-		
+
 	}, []);
 
 	return (
 		<>
 			<Header links={['blogs', 'facebook', 'instagram']} />
 
-			<main class={style.home}>
+			<div class={style.home}>
 				<div class={style.videoContainer}>
 					<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
 						<source src="../../assets/bg.mp4" type="video/mp4" />
@@ -48,7 +48,7 @@ const Home = (props) => {
 					</video>
 
 					<div class={style.overlay}>
-						<div class={style.container}>
+						<main class={style.container}>
 							<Container children={
 								<article>
 
@@ -59,7 +59,7 @@ const Home = (props) => {
 									<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
 										<p>
 											Hi I'm Ed, I'm a tattoo artist based in the Oslo.
-											I specialise in black and grey realism and
+											I specialize in black and grey realism and
 											I'm always looking to expand my portfolio.
 										</p>
 									</ScaledText>
@@ -68,13 +68,12 @@ const Home = (props) => {
 
 								</article>
 							} width="900" />
-						</div>
+						</main>
 						<FeatureHome />
 					</div>
 				</div>
 
 				{/* About Section */}
-
 
 				{isLoaded && <AboutSection data={data} />}
 
@@ -90,7 +89,8 @@ const Home = (props) => {
 					</div>
 				</section>
 
-			</main>
+				<Footer />
+			</div>
 		</>
 	);
 };

@@ -32,10 +32,25 @@ const IconsData = {
         link: '/about',
         label: "About",
     },
+    social: {
+        icon: <i class="fas fa-share-alt"></i>,
+        link: '/social',
+        label: "Social",
+    },
     contact: {
         icon: <i class="fas fa-envelope"></i>,
         link: '/contact',
         label: "Contact",
+    },
+    phone: {
+        icon: <i class="fas fa-phone"></i>,
+        link: 'tel:+4790000000',
+        label: "Call",
+    },
+    address: {
+        icon: <i class="fas fa-map-marker-alt"></i>,
+        link: 'https://goo.gl/maps/6Z8Z1JZ8Z2J2',
+        label: "Address",
     },
     facebook: {
         icon: <i class="fab fa-facebook"></i>,

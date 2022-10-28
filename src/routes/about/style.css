@@ -13,8 +13,11 @@
 }
 
 .about:nth-child(1) {
-  
   margin-bottom: 6rem;
+}
+
+.footerWrapper {
+  padding: 4rem 0;
 }
 
 @media screen and (max-width: 890px) {

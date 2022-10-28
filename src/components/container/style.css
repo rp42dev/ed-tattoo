@@ -15,12 +15,16 @@
     backdrop-filter: blur(6px);
 }
 
+.container h2,
+.container h3,
 .container h1 {
     white-space: nowrap;
     text-transform: uppercase;
     margin: 0;
 }
 
+.container h3 span,
+.container h2 span,
 .container h1 span {
     color: var(--color-cherries-light)
 }

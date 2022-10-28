@@ -22,12 +22,12 @@
 }
 
 
-.latestWorkHeader h1 {
+.latestWorkHeader h2 {
     white-space: nowrap;
     text-transform: uppercase;
 }
 
-.latestWorkHeader h1 span {
+.latestWorkHeader h2 span {
     color: var(--color-cherries-light)
 }
 
