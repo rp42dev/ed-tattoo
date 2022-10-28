@@ -8,7 +8,7 @@ import IconWrapper from "../../components/buttonWrapper";
 import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
 import AboutSection from './partials/about';
-import FeatureHome from './partials/featureHome';
+import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
 import style from "./style";
 

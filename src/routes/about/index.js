@@ -3,7 +3,7 @@ import Header from '../../components/header';
 import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
 import ImageFeature from '../../components/imageFeature';
-import FeatureHome from '../home/partials/featureHome';
+import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
 
 
