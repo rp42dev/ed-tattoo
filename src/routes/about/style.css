@@ -40,19 +40,19 @@
     order: 1;
   }
   .featureHomeWrapper {
-    bottom: -12%;
+    bottom: -8%;
   } 
 }
 
 @media screen and (max-width: 670px) {
     .featureHomeWrapper {
-      bottom: -15%;
+      bottom: -6%;
     }
 }
 
 @media screen and (max-width: 440px) {
   .featureHomeWrapper {
-    bottom: -18%;
+    bottom: -8%;
   }
 }
 

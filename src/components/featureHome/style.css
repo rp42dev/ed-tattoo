@@ -45,15 +45,9 @@
 }
 
 
-@media screen and (max-width: 890px) {
-    .featureHome {
-        bottom: 12vh;
-    }
-}
-
 @media screen and (max-width: 500px) {
     .featureHome {
-        bottom: 13vh;
+        bottom: -8%;
     }
 
     .featureHome .card {
@@ -68,7 +62,6 @@
 
 @media screen and (max-width: 450px) {
     .featureHome {
-        bottom: 14vh;
         gap: var(--spacing-small);
         padding: var(--spacing-small);
     }
