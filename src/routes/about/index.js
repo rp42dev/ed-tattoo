@@ -39,9 +39,10 @@ const About = (props) => {
                         </article>
                     </Container>
                     <ImageFeature images={data.data.images} titles={data.data.titles} />
+                <div class={style.featureHomeWrapper}>
+                    <FeatureHome />
                 </div>
-                <FeatureHome />
-
+                </div>
 
                 <div class={style.about}>
                     <div class={style.image}>

@@ -41,34 +41,38 @@ const Home = (props) => {
 			<Header links={['blogs', 'facebook', 'instagram']} />
 
 			<div class={style.home}>
-				<div class={style.videoContainer}>
-					<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
-						<source src="../../assets/bg.mp4" type="video/mp4" />
-						<source src="../../assets/bg.webm" type="video/webm" />
-					</video>
+				<div class={style.hero}>
+					<div class={style.videoContainer}>
+						<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
+							<source src="../../assets/bg.mp4" type="video/mp4" />
+							<source src="../../assets/bg.webm" type="video/webm" />
+						</video>
 
-					<div class={style.overlay}>
-						<main class={style.container}>
-							<Container children={
-								<article>
+						<div class={style.overlay}>
+							<main class={style.container}>
+								<Container children={
+									<article>
 
-									<ScaledText maxFontSize={125} maxContainerWidth={900} minFontSize={8}>
-										<h1><span>Ed </span>Tattoo</h1>
-									</ScaledText>
+										<ScaledText maxFontSize={125} maxContainerWidth={900} minFontSize={8}>
+											<h1><span>Ed </span>Tattoo</h1>
+										</ScaledText>
 
-									<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-										<p>
-											Hi I'm Ed, I'm a tattoo artist based in the Oslo.
-											I specialize in black and grey realism and
-											I'm always looking to expand my portfolio.
-										</p>
-									</ScaledText>
+										<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+											<p>
+												Hi I'm Ed, I'm a tattoo artist based in the Oslo.
+												I specialize in black and grey realism and
+												I'm always looking to expand my portfolio.
+											</p>
+										</ScaledText>
 
-									<IconWrapper link="contact" text="Contact me" type="link" />
+										<IconWrapper link="contact" text="Contact me" type="link" />
 
-								</article>
-							} width="900" />
-						</main>
+									</article>
+								} width="900" />
+							</main>
+						</div>
+					</div>
+					<div class={style.featureHomeWrapper}>
 						<FeatureHome />
 					</div>
 				</div>
