@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1170px;
     z-index: 1000;
+    margin: auto;
     transform: translateY(-40%);
     padding: var(--spacing-auto);
     display: flex;
