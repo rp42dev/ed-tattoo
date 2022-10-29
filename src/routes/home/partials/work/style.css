@@ -12,6 +12,10 @@
     padding-bottom: calc(var(--spacing) * 2);
 }
 
+.latestWork {
+    margin-top: 0;
+}
+
 .gallery a:nth-child(11n+7) {
     grid-column: span 2;
     grid-row: span 2;

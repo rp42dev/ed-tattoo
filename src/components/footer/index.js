@@ -11,8 +11,8 @@ const Footer = () => {
             <footer className={style.footer}>
                 <Container width="1920">
                     <div className={style.footerHeader}>
-                        <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
-                            <h3><span>Ed</span> Tattoo</h3>
+                        <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
+                            <h2><span>Ed</span> Tattoo</h2>
                         </ScaledText>
                     </div>
                     <div className={style.footerContainer}>
@@ -37,13 +37,15 @@ const Footer = () => {
                         <div className={style.container}>
                             <div className={style.footerContent}>
                                 <div className={style.footerIcon}>
-                                    <Icon className={style.icon} name="phone" />
+                                    <a href="tel:+7446588982">
+                                        <Icon className={style.icon} name="phone" />
+                                    </a>
                                 </div>
                                 <div className={style.footerContentText}>
                                     <h3><span>&#8203; Contact</span></h3>
                                     <p className={style.footerContentAddress}>
-                                        <span>edgarstattoo@gmail.com</span> <br />
-                                        <span>Phone: +74 465 88 982</span>
+                                        <span><a href="mailto:edgarstattoo@gmail.com">edgarstattoo@gmail.com</a></span> <br />
+                                        <span><a href="tel:+7446588982">Phone: +74 465 88 982</a></span>
                                     </p>
                                 </div>
                             </div>
@@ -59,14 +61,14 @@ const Footer = () => {
                                     <div className={style.socialMedia}>
                                         <p>
                                             <span>
-                                                Facebook <a href="https://www.facebook.com/edgars.graudins.1" target="_blank" rel="noopener noreferrer">
-                                                    <i className="fab fa-facebook-f"></i>
+                                                <a href="https://www.facebook.com/edgars.graudins.1" target="_blank" rel="noopener noreferrer">
+                                                    Facebook <i className="fab fa-facebook-f"></i>
                                                 </a>
                                             </span>
 
                                             <span>
-                                                Instagram <a href="https://www.instagram.com/edtattoo_oslo/" target="_blank" rel="noopener noreferrer">
-                                                    <i className="fab fa-instagram"></i>
+                                                <a href="https://www.instagram.com/edtattoo_oslo/" target="_blank" rel="noopener noreferrer">
+                                                    Instagram <i className="fab fa-instagram"></i>
                                                 </a>
                                             </span>
                                         </p>

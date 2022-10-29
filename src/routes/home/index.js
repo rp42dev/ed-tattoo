@@ -43,48 +43,50 @@ const Home = (props) => {
 				<div class={style.hero}>
 					<div class={style.homeContainer}>
 						<div class={style.heroImage}>
-							{isLoaded && 
-							<picture>
-								<source srcset={data.webp} type="image/webp" />
-								<source srcset={data.png} type="image/jpeg" />
-								<img src={data.png} alt="hero" />
-							</picture> }
+							{isLoaded &&
+								<picture>
+									<source srcset={data.webp} type="image/webp" />
+									<source srcset={data.png} type="image/jpeg" />
+									<img src={data.png} alt="hero" />
+								</picture>}
 							{/* <img src={} alt="hero image tattoo" /> */}
 						</div>
 
-							<main class={style.containerHero}>
-								<Container children={
-									<article class={style.content}>
-										<div>
-											<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={6}>
-												<h1><span>Ed </span>Tattoo</h1>
-											</ScaledText>
-										</div>
-
-										<div>
-											<FeatureHome />
-										</div>
-										
-										<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-											<p>
-												Tattoo studio in Oslo with a focus on custom tattoos and high quality work.
-											</p>
+						<main class={style.containerHero}>
+							<Container children={
+								<article class={style.content}>
+									<div>
+										<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={37}>
+											<h1><span>Ed </span>Tattoo</h1>
 										</ScaledText>
+									</div>
 
-										<ScaledText maxFontSize={83} maxContainerWidth={900} minFontSize={0}>
+									<div>
+										<FeatureHome />
+									</div>
+
+									<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+										<p>
+											Tattoo studio in<a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank"> lørenskog Oslo <i class="fa-solid fa-location-dot"></i></a> with a focus on custom tattoos and high quality work.
+										</p>
+									</ScaledText>
+
+									<ScaledText maxFontSize={83} maxContainerWidth={900} minFontSize={21}>
+										<a href="tel:+7446588982">
 											<h2><span> +74 </span>465 88 982</h2>
-										</ScaledText>
-										<div class={style.buttonWrapper}>
-											<IconWrapper link="contact" text="Message" type="link" />
-										</div>
+										</a>
+									</ScaledText>
+									<div class={style.buttonWrapper}>
+										<IconWrapper link="contact" text="Message" type="link" />
+									</div>
 
-									</article>
-								} width="900" />
-							</main>
+								</article>
+							} width="900" />
+						</main>
 						<div class={style.overlay}>
 						</div>
 					</div>
-		
+
 				</div>
 				{/* About Section */}
 

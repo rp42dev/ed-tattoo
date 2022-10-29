@@ -25,19 +25,19 @@ function ScaledText({ children, maxFontSize, minFontSize, maxContainerWidth, min
     }
 
     if (minContainerWidth === undefined) {
-        minContainerWidth = 100;
+        minContainerWidth = 300;
     }
 
     useEffect(() => {
         const scaleEl = ref.current;
 
         // Get the container width and font size in pixels for calculations
-        let pixels = scaler(scaleEl.parentElement.offsetWidth, minContainerWidth, maxContainerWidth, minFontSize, maxFontSize);
+        let pixels = scaler(scaleEl.offsetWidth, minContainerWidth, maxContainerWidth, minFontSize, maxFontSize);
         scaleEl.style.fontSize = `${pixels}px`;
 
 
         window.addEventListener('resize', () => {
-            let pixels = scaler(scaleEl.parentElement.offsetWidth, minContainerWidth, maxContainerWidth, minFontSize, maxFontSize);
+            let pixels = scaler(scaleEl.offsetWidth, minContainerWidth, maxContainerWidth, minFontSize, maxFontSize);
             scaleEl.style.fontSize = `${pixels}px`;
         });
 
@@ -49,7 +49,7 @@ function ScaledText({ children, maxFontSize, minFontSize, maxContainerWidth, min
 
     return (
         <>
-            <div ref={ref}>{children}</div>
+            <div style={`max-width: ${maxContainerWidth}px`} ref={ref}>{children}</div>
         </>
     );
 }
