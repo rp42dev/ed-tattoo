@@ -1,8 +1,5 @@
 .pageContact{
   padding: 0 0 0 0;
   margin: 4rem, auto;
-}
-
-.footerWrapper{
-  
+  min-height: calc(100vh - 10rem);
 }

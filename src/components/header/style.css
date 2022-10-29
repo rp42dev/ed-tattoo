@@ -4,13 +4,13 @@
 	position: fixed;
 	z-index: 100;
 	top: 1rem;
-	left: 1rem;
+	right: 1rem;
 }
 
 .navContainer {
 	display: flex;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: right;
 	align-items: center;
 	width: 100%;
 	max-width: 1920px;

@@ -4,15 +4,12 @@
     max-width: 1170px;
     z-index: 10;
     margin: auto;
-    transform: translateY(-40%);
-    padding: var(--spacing-auto);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow: hidden;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: var(--spacing-auto-card);
-    z-index: 1000;
 }
 
 .featureHome .card {
@@ -30,6 +27,7 @@
 }
 
 .featureHome .card .content {
+    font-family: var(--font-family-tertiary);
     font-weight: var(--font-weight);
     letter-spacing: var(--letter-spacing);
     font-size: var(--font-size-xxsmall);
@@ -46,9 +44,6 @@
 
 
 @media screen and (max-width: 500px) {
-    .featureHome {
-        bottom: -8%;
-    }
 
     .featureHome .card {
         width: 110px;
@@ -63,16 +58,15 @@
 @media screen and (max-width: 450px) {
     .featureHome {
         gap: var(--spacing-small);
-        padding: var(--spacing-small);
     }
 
     .featureHome .card {
         padding: .3rem; 
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     .featureHome .card .content img {
-        width: 3.5rem;
+        width: 2.8rem;
     }
 }

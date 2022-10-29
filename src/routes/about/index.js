@@ -38,12 +38,12 @@ const About = (props) => {
                             </ScaledText>
                         </article>
                     </Container>
-                    <ImageFeature images={data.data.images} titles={data.data.titles} />
+                    <ImageFeature images={data.data.about} titles={data.data.titles.slice(0, 1)} />
                 </div>
 
                 <div class={style.about}>
                     <div class={style.image}>
-                        <ImageFeature images={data.data.images} titles={data.data.titles} />
+                        <ImageFeature images={data.data.studio} titles={data.data.titles.slice(1, 3)} />
                     </div>
                     <div class={style.text}>
                         <Container width="900" >

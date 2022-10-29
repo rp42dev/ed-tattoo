@@ -18,7 +18,6 @@ const Home = (props) => {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const display = true;
 
-
 	useEffect(() => {
 		if (!isLoading) {
 			setIsLoaded(true);
@@ -42,41 +41,51 @@ const Home = (props) => {
 
 			<div class={style.home}>
 				<div class={style.hero}>
-					<div class={style.videoContainer}>
-						<video id="video" playsinline="playsinline" muted="muted" loop="loop" autoplay="autoplay" >
-							<source src="../../assets/bg.mp4" type="video/mp4" />
-							<source src="../../assets/bg.webm" type="video/webm" />
-						</video>
+					<div class={style.homeContainer}>
+						<div class={style.heroImage}>
+							{isLoaded && 
+							<picture>
+								<source srcset={data.webp} type="image/webp" />
+								<source srcset={data.png} type="image/jpeg" />
+								<img src={data.png} alt="hero" />
+							</picture> }
+							{/* <img src={} alt="hero image tattoo" /> */}
+						</div>
 
-						<div class={style.overlay}>
-							<main class={style.container}>
+							<main class={style.containerHero}>
 								<Container children={
-									<article>
+									<article class={style.content}>
+										<div>
+											<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={6}>
+												<h1><span>Ed </span>Tattoo</h1>
+											</ScaledText>
+										</div>
 
-										<ScaledText maxFontSize={125} maxContainerWidth={900} minFontSize={8}>
-											<h1><span>Ed </span>Tattoo</h1>
-										</ScaledText>
-
+										<div>
+											<FeatureHome />
+										</div>
+										
 										<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
 											<p>
-												Hi I'm Ed, I'm a tattoo artist based in the Oslo.
-												I specialize in black and grey realism and
-												I'm always looking to expand my portfolio.
+												Tattoo studio in Oslo with a focus on custom tattoos and high quality work.
 											</p>
 										</ScaledText>
 
-										<IconWrapper link="contact" text="Contact me" type="link" />
+										<ScaledText maxFontSize={83} maxContainerWidth={900} minFontSize={0}>
+											<h2><span> +74 </span>465 88 982</h2>
+										</ScaledText>
+										<div class={style.buttonWrapper}>
+											<IconWrapper link="contact" text="Message" type="link" />
+										</div>
 
 									</article>
 								} width="900" />
 							</main>
+						<div class={style.overlay}>
 						</div>
 					</div>
-					<div class={style.featureHomeWrapper}>
-						<FeatureHome />
-					</div>
+		
 				</div>
-
 				{/* About Section */}
 
 				{isLoaded && <AboutSection data={data} />}
@@ -87,11 +96,9 @@ const Home = (props) => {
 
 				{/* Contact */}
 
-				<section class={style.contact}>
-					<div class={style.container}>
-						<ContactForm />
-					</div>
-				</section>
+				<div class={style.container}>
+					<ContactForm />
+				</div>
 
 				<Footer />
 			</div>

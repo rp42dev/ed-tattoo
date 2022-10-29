@@ -5,37 +5,59 @@
 
 .hero {
 	position: relative;
+	height: 100%;
 	width: 100%;
 }
 
-.videoContainer {
+.homeContainer {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
+	max-width: 1920px;
+	margin: auto;
+	height: 100%;
+	min-height: 100vh;
 	overflow: hidden;
 }
 
-.videoContainer video {
+.homeContainer .heroImage img {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
+	bottom: -50%;
+	right: 0%;
+	height: 180vh;
 	width: auto;
-	height: auto;
 	z-index: 1;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	background-size: cover;
-	background-position: center right;
+	background-size: fill;
+	background-position: left;
 }
 
-.container {
+.containerHero {
 	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 	max-width: 1920px;
 	margin: auto;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	max-width: 1920px;
+	margin: auto;
+	padding-bottom: 4rem;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+	min-height: 70vh;
 }
 
 .overlay {
@@ -44,11 +66,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(90deg, rgba(18, 18, 18) 40%, rgba(18, 18, 18, .5) 80%, rgba(18, 18, 18, 0.2) 100%);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
+	background: linear-gradient(90deg, rgba(18, 18, 18, .7) 20%, rgba(18, 18, 18, .1) 50%, transparent 100%);
 	z-index: 2;
 }
 
@@ -64,10 +82,6 @@
 	background-position: center center;
 }
 
-.contact {
-	padding: 0;
-	min-height: calc(90vh - 10rem);
-}
 
 .featureHome {
 	padding: 0 0 100px;
@@ -113,11 +127,17 @@
 	color: #ff5e14;
 }
 
-.featureHomeWrapper {
-	width: 100%;
-	position: absolute;
-	bottom: -8%;
+.buttonWrapper {
+	margin-top: 1rem;
 }
+
+@media screen and (max-width: 1300px) {
+	.homeContainer .heroImage img {
+		height: 150vh;
+		right: -10%;
+	}
+}
+
 
 @media screen and (max-width: 1200px) {
 	.contact {
@@ -125,5 +145,18 @@
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.homeContainer .heroImage img {
+		height: 150vh;
+		right: -20%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.homeContainer .heroImage img {
+		height: 150vh;
+		right: -60%;
+	}
+}
 
 /* Language: css */

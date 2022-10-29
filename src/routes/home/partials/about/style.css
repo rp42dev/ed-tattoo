@@ -20,4 +20,7 @@
     .about {
         flex-direction: column;
     }
+    .padding0 {
+        margin-top: 0;
+    }
 }

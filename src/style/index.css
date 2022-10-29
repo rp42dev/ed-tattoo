@@ -39,6 +39,10 @@ h3,h4,h5,h6 {
 	margin: auto;
 }
 
+img {
+	pointer-events: none;
+}
+
 section {
 	box-sizing: border-box;
 	padding: 0 min(5vw, 2rem);
