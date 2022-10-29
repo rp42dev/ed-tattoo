@@ -39,9 +39,6 @@ const About = (props) => {
                         </article>
                     </Container>
                     <ImageFeature images={data.data.images} titles={data.data.titles} />
-                    <div class={style.featureHomeWrapper}>
-                        <FeatureHome />
-                    </div>
                 </div>
 
                 <div class={style.about}>
@@ -52,7 +49,7 @@ const About = (props) => {
                         <Container width="900" >
                             <article>
                                 <ScaledText maxFontSize={36} maxContainerWidth={900} minFontSize={16}>
-                                    <h1>Stud<span>io</span> </h1>
+                                    <h2><span>The</span> Studio</h2>
                                 </ScaledText>
                                 <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
                                     <p>

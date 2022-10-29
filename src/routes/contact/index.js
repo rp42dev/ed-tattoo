@@ -6,7 +6,7 @@ import Footer from '../../components/footer';
 const photographs = (props) => {
 	return (
 		<>
-			<Header link={['home', 'facebook', 'instagram']}/>
+			<Header link={['home', 'facebook', 'instagram']} />
 			<main>
 				<section class={style.pageContact}>
 					<ContactForm />

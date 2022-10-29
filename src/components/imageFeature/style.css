@@ -22,14 +22,6 @@
     transform: translate(20px, -0px) rotate(-10deg);
 }
 
-.imageFeature .card:nth-child(1):hover {
-    z-index: 4;
-}
-
-.imageFeature .card:nth-child(2):hover {
-    z-index: 4;
-}
-
 
 .card .overlay {
     position: absolute;
@@ -54,8 +46,9 @@
     object-fit: cover;
     border-radius: var(--border-radius-large);
     transition: var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 .imageFeature .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }

@@ -1,5 +1,5 @@
 .main {
-  padding: 6rem 0 min(5vw, 2rem) 0;
+  padding-top: 4rem;
 }
 
 .about {
@@ -10,22 +10,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding-top: 6rem;
 }
 
 .about:nth-child(1) {
-  padding-bottom: 10rem;
   position: relative;
 }
 
 .footerWrapper {
-  padding: 4rem 0;
-}
-
-.featureHomeWrapper {
-  position: absolute;
-  bottom: -6%;
-  width: 100%;
+  padding: 4rem 0 0 0;
 }
 
 @media screen and (max-width: 890px) {
@@ -39,20 +31,4 @@
   .about .text {
     order: 1;
   }
-  .featureHomeWrapper {
-    bottom: -8%;
-  } 
 }
-
-@media screen and (max-width: 670px) {
-    .featureHomeWrapper {
-      bottom: -6%;
-    }
-}
-
-@media screen and (max-width: 440px) {
-  .featureHomeWrapper {
-    bottom: -8%;
-  }
-}
-

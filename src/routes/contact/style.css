@@ -1,9 +1,8 @@
 .pageContact{
-  height: 100vh;
-  margin: 0 auto;
-  padding: 0;
+  padding: 0 0 0 0;
+  margin: 4rem, auto;
 }
 
 .footerWrapper{
-  padding-bottom: 4rem;
+  
 }
