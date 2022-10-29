@@ -19,7 +19,9 @@ const Footer = () => {
                         <div className={style.container}>
                             <div className={style.footerContent}>
                                 <div className={style.footerIcon}>
-                                    <Icon className={style.icon} name="address" />
+                                    <a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">
+                                        <Icon className={style.icon} name="address" />
+                                    </a>
                                 </div>
                                 <div className="footerContentText">
                                     <h3><span>&#8203; Address</span></h3>
@@ -30,6 +32,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
+                        
 
                         <div className={style.container}>
                             <div className={style.footerContent}>
@@ -40,7 +43,7 @@ const Footer = () => {
                                     <h3><span>&#8203; Contact</span></h3>
                                     <p className={style.footerContentAddress}>
                                         <span>edgarstattoo@gmail.com</span> <br />
-                                        <span>Phone: +47 900 00 000</span>
+                                        <span>Phone: +74 465 88 982</span>
                                     </p>
                                 </div>
                             </div>
