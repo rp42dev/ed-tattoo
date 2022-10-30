@@ -30,7 +30,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown"}
   - name: "home"
     label: "Home"
-    label_singular: "Image" # Used in the UI, ie: "New Post"
+    label_singular: "Home" # Used in the UI, ie: "New Post"
     folder: "content/home"
     create: true
     fields:
@@ -40,7 +40,7 @@ collections:
       - { label: "Cover", name: "cover", widget: "image"}
   - name: "special"
     label: "Special"
-    label_singular: "Image" # Used in the UI, ie: "New Post"
+    label_singular: "Special" # Used in the UI, ie: "New Post"
     folder: "content/special"
     create: true
     fields:
