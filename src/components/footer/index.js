@@ -37,7 +37,7 @@ const Footer = () => {
                         <div className={style.container}>
                             <div className={style.footerContent}>
                                 <div className={style.footerIcon}>
-                                    <a href="tel:+7446588982">
+                                    <a href="tel:+4746588982">
                                         <Icon className={style.icon} name="phone" />
                                     </a>
                                 </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                                     <h3><span>&#8203; Contact</span></h3>
                                     <p className={style.footerContentAddress}>
                                         <span><a href="mailto:edgarstattoo@gmail.com">edgarstattoo@gmail.com</a></span> <br />
-                                        <span><a href="tel:+7446588982">Phone: +74 465 88 982</a></span>
+                                        <span><a href="tel:+7446588982">Phone: +47 465 88 982</a></span>
                                     </p>
                                 </div>
                             </div>
@@ -54,7 +54,9 @@ const Footer = () => {
                         <div className={style.container}>
                             <div className={style.footerContent}>
                                 <div className={style.footerIcon}>
-                                    <Icon className={style.icon} name="social" />
+                                    <a href="https://www.instagram.com/edtattoo_oslo/" target="_blank" rel="noopener noreferrer">
+                                        <Icon className={style.icon} name="social" />
+                                    </a>
                                 </div>
                                 <div className="footerContentText">
                                     <h3><span>&#8203; Connect</span></h3>

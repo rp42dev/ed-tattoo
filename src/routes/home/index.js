@@ -72,8 +72,8 @@ const Home = (props) => {
 									</ScaledText>
 
 									<ScaledText maxFontSize={83} maxContainerWidth={900} minFontSize={21}>
-										<a href="tel:+7446588982">
-											<h2><span> +74 </span>465 88 982</h2>
+										<a href="tel:+4746588982">
+											<h2><span> +47 </span>465 88 982</h2>
 										</a>
 									</ScaledText>
 									<div class={style.buttonWrapper}>

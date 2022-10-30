@@ -3,7 +3,8 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
-const [blogs] = generateFileList(join(__dirname, 'content')).nodes;
+const [blogs, images, newes] = generateFileList(join(__dirname, 'content')).nodes;
+
 
 module.exports = () => {
 

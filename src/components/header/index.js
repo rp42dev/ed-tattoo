@@ -30,12 +30,12 @@ const HeaderData = {
 		areaLabel: "Contact",
 	},
 	facebook: {
-		link: 'https://www.facebook.com/edtattoo/',
+		link: 'https://www.facebook.com/edgars.graudins.1',
 		icon: <Icon name="facebook" />,
 		areaLabel: "Facebook",
 	},
 	instagram: {
-		link: 'https://www.instagram.com/edtattoo/',
+		link: 'https://www.instagram.com/edtattoo_oslo/',
 		icon: <Icon name="instagram" />,
 		areaLabel: "Instagram",
 	},
@@ -52,21 +52,21 @@ const Header = ({ ...props }) => {
 
 						<div class={style.navItem}>
 
-							<Link href={HeaderData[links].link} class={style.navLink} aria-label={HeaderData[links].areaLabel}>
+							<a href={HeaderData[links].link} class={style.navLink} aria-label={HeaderData[links].areaLabel} target="_blank" rel="noopener noreferrer">
 								
 								{HeaderData[links].icon}
 								
-							</Link>
+							</a>
 						</div>
 					) : (
 					links.map((link, index) => {
 						return (
 							<div class={style.navItem} key={index}>
-								<Link href={HeaderData[link].link} class={style.navLink} aria-label={HeaderData[link].areaLabel}>
+								<a href={HeaderData[link].link} class={style.navLink} aria-label={HeaderData[link].areaLabel} target="_blank" rel="noopener noreferrer">
 							
 									{HeaderData[link].icon}
 									
-								</Link>
+								</a>
 							</div>
 						);
 					})
