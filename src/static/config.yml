@@ -38,6 +38,8 @@ collections:
       - { label: "Phone Number", name: "phone", widget: "string"}
       - { label: "Headline", name: "headline", widget: "string"}
       - { label: "Cover", name: "cover", widget: "image"}
+      - { label: "About Me heading", name: "aboutHeader", widget: "string"}
+      - { label: "About", name: "about", widget: "markdown"}
   - name: "special"
     label: "Special"
     label_singular: "Special" # Used in the UI, ie: "New Post"

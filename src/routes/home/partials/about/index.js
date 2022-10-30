@@ -19,14 +19,11 @@ const AboutSection = ({ ...props }) => {
                             </ScaledText>
                             <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
-                                <p>
-                                    I started tattooing in 2017 and have been working in Oslo since then.
-                                    Tattoo is my passion and I love to create new pieces.
-                                </p>
-                                <p>
-                                    My style is black and grey realism, as I love the contrast and the
-                                    depth that black and grey can give. I also love to create pieces
-                                    that are very detailed and have a lot of depth to them.
+                                <p> 
+                                    My style is black and grey realism, I love the contrast and 
+                                    the depth that black and grey can give. I also love to do
+                                    colour work, I love the vibrancy and the way it can bring
+                                    a tattoo to life. I'm always happy to do custom work.
 
                                 </p>
 
