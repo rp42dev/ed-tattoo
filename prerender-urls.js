@@ -3,7 +3,7 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
-const [blogs, images, newes] = generateFileList(join(__dirname, 'content')).nodes;
+const [blogs, home, images, ] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
@@ -12,14 +12,9 @@ module.exports = () => {
 		{
 			url: '/',
 			seo: {
-				cover: '/assets/profile.jpg',
 				title: 'Home',
 				description: 'Home page of my website',
 			},
-
-
-			png: '../../assets/images/img2.png',
-			webp: '../../assets/images/img2.png.webp',
 
 			images: {
 				titles: ['About', 'Me'],
@@ -34,6 +29,7 @@ module.exports = () => {
 					},
 				]
 			},
+			home: home,
 			data: blogs
 		},
 		{

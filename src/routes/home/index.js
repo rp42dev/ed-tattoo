@@ -10,6 +10,7 @@ import Container from "../../components/container";
 import AboutSection from './partials/about';
 import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
+import HeadingColor from '../../components/headingColor';
 import style from "./style";
 
 
@@ -45,9 +46,9 @@ const Home = (props) => {
 						<div class={style.heroImage}>
 							{isLoaded &&
 								<picture>
-									<source srcset={data.webp} type="image/webp" />
-									<source srcset={data.png} type="image/jpeg" />
-									<img src={data.png} alt="hero" />
+									<source srcset={`${data.home.edges[0].details.cover}.webp`} type="image/webp" />
+									<source srcset={data.home.edges[0].details.cover} type="image/jpeg" />
+									<img src={data.home.edges[0].details.cover} alt="hero" />
 								</picture>}
 							{/* <img src={} alt="hero image tattoo" /> */}
 						</div>
@@ -57,7 +58,7 @@ const Home = (props) => {
 								<article class={style.content}>
 									<div>
 										<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={37}>
-											<h1><span>Ed </span>Tattoo</h1>
+										<h1><HeadingColor>{data.home.edges[0].details.title}</HeadingColor></h1>	
 										</ScaledText>
 									</div>
 
@@ -67,13 +68,13 @@ const Home = (props) => {
 
 									<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
 										<p>
-											Tattoo studio in<a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank"> lørenskog Oslo <i class="fa-solid fa-location-dot"></i></a> with a focus on custom tattoos and high quality work.
+											{data.home.edges[0].details.headline}
 										</p>
 									</ScaledText>
 
-									<ScaledText maxFontSize={83} maxContainerWidth={900} minFontSize={21}>
-										<a href="tel:+4746588982">
-											<h2><span> +47 </span>465 88 982</h2>
+									<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={24}>
+										<a href={`tel:${data.home.edges[0].details.phone}`}>
+											<h2><HeadingColor>{data.home.edges[0].details.phone}</HeadingColor></h2>
 										</a>
 									</ScaledText>
 									<div class={style.buttonWrapper}>
