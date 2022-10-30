@@ -11,8 +11,13 @@ import Footer from '../../components/footer';
 import style from './style';
 
 
-const About = ({...props}) => {
+const About = (props) => {
     const [data, isLoading] = usePrerenderData(props);
+
+    const aboutImages = data.aboutImages.edges;
+    const studioImages = data.studioImages.edges;
+
+
 
     return (
         <>
@@ -34,12 +39,12 @@ const About = ({...props}) => {
                             </ScaledText>
                         </article>
                     </Container>
-                    <ImageFeature images={data.data.about} titles={data.data.titles.slice(0, 1)} />
+                    <ImageFeature images={aboutImages} />
                 </div>
 
                 <div class={style.about}>
                     <div class={style.image}>
-                        <ImageFeature images={data.data.studio} titles={data.data.titles.slice(1, 3)} />
+                        <ImageFeature images={studioImages} />
                     </div>
                     <div class={style.text}>
                         <Container width="900" >

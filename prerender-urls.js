@@ -3,7 +3,7 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
-const [about, blogs, home, studio ] = generateFileList(join(__dirname, 'content')).nodes;
+const [about, aboutImages, blogs, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
@@ -17,20 +17,7 @@ module.exports = () => {
 				description: 'Home page of my website',
 			},
 
-			images: {
-				titles: ['About', 'Me'],
-				images: [
-					{
-						webp: '../../assets/images/img1-900.jpg.webp',
-						jpg: '../../assets/images/img1-900.jpg',
-					},
-					{
-						webp: '../../assets/images/img3-900.jpg.webp',
-						jpg: '../../assets/images/img3-900.jpg',
-					},
-				]
-			},
-
+			images: aboutImages,
 			content: parseMD(fs.readFileSync(join('content', 'home', 'ed-tattoo.md'), 'utf-8')),
 			home: home,
 			data: blogs
@@ -41,32 +28,12 @@ module.exports = () => {
 				title: 'About',
 				description: 'About page of my website',
 			},
-			data: {
-				titles: ['About', 'About', 'Studio', 'Studio'],
-				about: 
-				[
-					{	
-						webp: '../../assets/images/img1-900.jpg.webp',
-						jpg: '../../assets/images/img1-900.jpg',
-					},
-					{	
-						title: 'About',
-						webp: '../../assets/images/img3-900.jpg.webp',
-						jpg: '../../assets/images/img3-900.jpg',
-					}
-				],
-				studio: [
-					{
-						webp: '../../assets/images/img4-900.jpg.webp',
-						jpg: '../../assets/images/img4-900.jpg',
-					},
-					{
-						webp: '../../assets/images/img5-900.jpg.webp',
-						jpg: '../../assets/images/img5-900.jpg',
-					}
-				]
+			
+				
+			aboutImages: aboutImages,
+			studioImages: studioImages,
 
-			},
+			
 			about: parseMD(fs.readFileSync(join('content', 'about', 'about-me.md'), 'utf-8')),
 			studio: parseMD(fs.readFileSync(join('content', 'studio', 'the-studio.md'), 'utf-8')),
 			dataAbout: about,

@@ -9,6 +9,7 @@ import style from './style';
 const AboutSection = ({ ...props }) => {
 
     const { data } = props;
+    const images = data.images.edges;
 
     return (
         <section class={style.padding0}>
@@ -34,7 +35,7 @@ const AboutSection = ({ ...props }) => {
 
                     </Container>
 
-                <ImageFeature images={data.images.images} titles={data.images.titles} />
+                <ImageFeature images={images} />
                 </div>
         </section>
     );

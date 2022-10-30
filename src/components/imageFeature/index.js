@@ -1,7 +1,12 @@
 import style from './style';
 
 const ImageFeature = ({ ...props }) => {
-    const { images, titles } = props;
+    const { images } = props;
+
+    const jpg1 = images[0].details.image.replace('.jpg', '-900.jpg');
+    const jpeg2 = images[1].details.image.replace('.jpg', '-900.jpg');
+    const webp1 = jpg1 + '.webp';
+    const webp2 = jpeg2 + '.webp';
 
     return (
         <div class={style.imageFeature}>
@@ -9,9 +14,9 @@ const ImageFeature = ({ ...props }) => {
             <div class={style.card}>
 
                 <picture>
-                    <source srcset={images[0].webp} type="image/webp" />
-                    <source srcset={images[0].jpg} type="image/jpeg" />
-                    <img src={images[0].jpg} alt={titles[0]} />
+                    <source srcset={webp1} type="image/webp" />
+                    <source srcset={jpg1} type="image/jpeg" />
+                    <img src={jpg1} alt={images[0].details.title} />
                 </picture>
                 <div class={style.overlay}>
                 </div>
@@ -19,9 +24,9 @@ const ImageFeature = ({ ...props }) => {
             <div class={style.card}>
 
                 <picture>
-                    <source srcset={images[1].webp} type="image/webp" />
-                    <source srcset={images[1].jpg} type="image/jpeg" />
-                    <img src={images[1].jpg} alt={titles[1]} />
+                    <source srcset={webp2} type="image/webp" />
+                    <source srcset={jpeg2} type="image/jpeg" />
+                    <img src={jpeg2} alt={images[1].details.title} />
                 </picture>
                 <div class={style.overlay}>
                 </div>
