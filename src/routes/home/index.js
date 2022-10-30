@@ -2,6 +2,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import Header from '../../components/header';
 
+
 import Work from './partials/work';
 import ContactForm from '../../components/forms/contact';
 import IconWrapper from "../../components/buttonWrapper";
@@ -12,6 +13,7 @@ import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
 import HeadingColor from '../../components/headingColor';
 import style from "./style";
+
 
 
 const Home = (props) => {
@@ -50,7 +52,6 @@ const Home = (props) => {
 									<source srcset={data.home.edges[0].details.cover} type="image/jpeg" />
 									<img src={data.home.edges[0].details.cover} alt="hero" />
 								</picture>}
-							{/* <img src={} alt="hero image tattoo" /> */}
 						</div>
 
 						<main class={style.containerHero}>

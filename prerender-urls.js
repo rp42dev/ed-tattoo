@@ -3,7 +3,7 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
-const [blogs, home, images, ] = generateFileList(join(__dirname, 'content')).nodes;
+const [about, blogs, home, studio ] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
@@ -12,6 +12,7 @@ module.exports = () => {
 		{
 			url: '/',
 			seo: {
+				cover: 'home.jpg',
 				title: 'Home',
 				description: 'Home page of my website',
 			},
@@ -29,6 +30,8 @@ module.exports = () => {
 					},
 				]
 			},
+
+			content: parseMD(fs.readFileSync(join('content', 'home', 'ed-tattoo.md'), 'utf-8')),
 			home: home,
 			data: blogs
 		},
@@ -64,6 +67,10 @@ module.exports = () => {
 				]
 
 			},
+			about: parseMD(fs.readFileSync(join('content', 'about', 'about-me.md'), 'utf-8')),
+			studio: parseMD(fs.readFileSync(join('content', 'studio', 'the-studio.md'), 'utf-8')),
+			dataAbout: about,
+			dataStudio: studio
 		},
 		{
 			url: '/contact/',
