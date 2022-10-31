@@ -8,7 +8,7 @@ const FeatureHome = () => {
     <div className={featureHome}>
       <div className={card}>
         <div className={content}>
-          <img src="./assets/icons/vector.svg" /> 
+          <img src="../assets/icons/vector.svg" /> 
           <p>
             Tattoo
           </p>
@@ -17,7 +17,7 @@ const FeatureHome = () => {
       <div className={card}>
 
         <div className={content}>
-          <img src="./assets/icons/vector-dragon.svg" />
+          <img src="../assets/icons/vector-dragon.svg" />
 
          <p>
             Design
@@ -27,7 +27,7 @@ const FeatureHome = () => {
       <div className={card}>
 
         <div className={content}>
-          <img src="./assets/icons/vector-chair.svg" />
+          <img src="../assets/icons/vector-chair.svg" />
           <p>
             Studio
           </p>
