@@ -12,6 +12,7 @@ import AboutSection from './partials/about';
 import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
 import HeadingColor from '../../components/headingColor';
+import Hero from '../../components/hero';
 import style from "./style";
 
 
@@ -20,6 +21,8 @@ const Home = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	const [isLoaded, setIsLoaded] = useState(false);
 	const display = true;
+
+	const heroImg = data.home.edges[0].details.cover;
 
 	useEffect(() => {
 		if (!isLoading) {
@@ -43,53 +46,38 @@ const Home = (props) => {
 			<Header links={['gallery', 'facebook', 'instagram']} />
 
 			<div class={style.home}>
-				<div class={style.hero}>
-					<div class={style.homeContainer}>
-						<div class={style.heroImage}>
-							{isLoaded &&
-								<picture>
-									<source srcset={`${data.home.edges[0].details.cover}.webp`} type="image/webp" />
-									<source srcset={data.home.edges[0].details.cover} type="image/jpeg" />
-									<img src={data.home.edges[0].details.cover} alt="hero" />
-								</picture>}
-						</div>
+				<Hero hero={heroImg} isLoaded={isLoaded}>
+					<Container children={
+						<article class={style.content}>
+							<div>
+								<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={37}>
+									<h1><HeadingColor>{data.home.edges[0].details.title}</HeadingColor></h1>
+								</ScaledText>
+							</div>
 
-						<main class={style.containerHero}>
-							<Container children={
-								<article class={style.content}>
-									<div>
-										<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={37}>
-										<h1><HeadingColor>{data.home.edges[0].details.title}</HeadingColor></h1>	
-										</ScaledText>
-									</div>
+							<div>
+								<FeatureHome />
+							</div>
 
-									<div>
-										<FeatureHome />
-									</div>
+							<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+								<p>
+									{data.home.edges[0].details.headline}
+								</p>
+							</ScaledText>
 
-									<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-										<p>
-											{data.home.edges[0].details.headline}
-										</p>
-									</ScaledText>
+							<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={24}>
+								<a href={`tel:${data.home.edges[0].details.phone}`}>
+									<h2><HeadingColor>{data.home.edges[0].details.phone}</HeadingColor></h2>
+								</a>
+							</ScaledText>
+							<div class={style.buttonWrapper}>
+								<IconWrapper link="contact" text="Message" type="link" />
+							</div>
 
-									<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={24}>
-										<a href={`tel:${data.home.edges[0].details.phone}`}>
-											<h2><HeadingColor>{data.home.edges[0].details.phone}</HeadingColor></h2>
-										</a>
-									</ScaledText>
-									<div class={style.buttonWrapper}>
-										<IconWrapper link="contact" text="Message" type="link" />
-									</div>
+						</article>
+					} width="900" />
+				</Hero>
 
-								</article>
-							} width="900" />
-						</main>
-						<div class={style.overlay}>
-						</div>
-					</div>
-
-				</div>
 				{/* About Section */}
 
 				{isLoaded && <AboutSection data={data} />}

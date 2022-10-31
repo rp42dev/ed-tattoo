@@ -6,6 +6,7 @@ import ScaledText from '../../components/scaledText';
 import ImageFeature from '../../components/imageFeature';
 import Markdown from 'markdown-to-jsx';
 import Footer from '../../components/footer';
+import Hero from '../../components/hero';
 
 
 import style from './style';
@@ -23,6 +24,9 @@ const About = (props) => {
         <>
             <Header links={['home', 'facebook', 'instagram']} />
             <main class={style.main}>
+                {/* <Hero hero={data.about.edges[0].details.cover} isLoaded={true}>
+                    <div>Hello</div>
+                </Hero> */}
                 <div class={style.about}>
 
                     <Container width="900" >
