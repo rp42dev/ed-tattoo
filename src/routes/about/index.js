@@ -4,6 +4,7 @@ import HeadingColor from '../../components/headingColor';
 import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
 import ImageFeature from '../../components/imageFeature';
+import FeatureHome from '../../components/featureHome';
 import Markdown from 'markdown-to-jsx';
 import Footer from '../../components/footer';
 import Hero from '../../components/hero';
@@ -14,6 +15,7 @@ import style from './style';
 
 const About = (props) => {
     const [data, isLoading] = usePrerenderData(props);
+    const cover = data.dataAbout.edges[0].details.cover
 
     const aboutImages = data.aboutImages.edges;
     const studioImages = data.studioImages.edges;
@@ -24,9 +26,28 @@ const About = (props) => {
         <>
             <Header links={['home', 'facebook', 'instagram']} />
             <main class={style.main}>
-                {/* <Hero hero={data.about.edges[0].details.cover} isLoaded={true}>
-                    <div>Hello</div>
-                </Hero> */}
+                <Hero hero={cover} isLoaded={true}>
+                    <Container width={900}>
+                        <article class={style.content}>
+                            <div>
+                                <ScaledText maxFontSize={210} maxContainerWidth={900} minFontSize={63}>
+                                    <h1><HeadingColor>About</HeadingColor></h1>
+                                </ScaledText>
+                            </div>
+                            <div>
+                                <ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={36}>
+                                    <h1><HeadingColor>Ed Tattoo</HeadingColor></h1>
+                                </ScaledText>
+                            </div>
+                            <div>
+                                <FeatureHome />
+                            </div>  
+                                
+                            
+                        </article>
+
+                    </Container>
+                </Hero>
                 <div class={style.about}>
 
                     <Container width="900" >

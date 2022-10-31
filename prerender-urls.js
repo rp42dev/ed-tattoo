@@ -12,11 +12,12 @@ module.exports = () => {
 		{
 			url: '/',
 			seo: {
-				cover: 'home.jpg',
+				cover: home.edges[0].details.cover,
 				title: 'Home',
 				description: 'Home page of my website',
 			},
 
+			image: home.edges[0].details.cover,
 			images: aboutImages,
 			content: parseMD(fs.readFileSync(join('content', 'home', 'ed-tattoo.md'), 'utf-8')),
 			home: home,

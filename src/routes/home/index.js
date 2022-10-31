@@ -21,14 +21,14 @@ const Home = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	const [isLoaded, setIsLoaded] = useState(false);
 	const display = true;
-
-	const heroImg = data.home.edges[0].details.cover;
-
+	
 	useEffect(() => {
 		if (!isLoading) {
 			setIsLoaded(true);
 		}
 	}, [isLoading]);
+
+	
 	/**
 	 * Netlify CMS's accept invite link land on home page.
 	 * This redirection takes it to the right place(/admin).
@@ -46,8 +46,9 @@ const Home = (props) => {
 			<Header links={['gallery', 'facebook', 'instagram']} />
 
 			<div class={style.home}>
-				<Hero hero={heroImg} isLoaded={isLoaded}>
-					<Container children={
+				{isLoaded && (
+					<Hero hero={data.image} isLoaded={isLoaded}>
+					<Container width={900}>
 						<article class={style.content}>
 							<div>
 								<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={37}>
@@ -75,8 +76,9 @@ const Home = (props) => {
 							</div>
 
 						</article>
-					} width="900" />
+					</Container>
 				</Hero>
+				)}
 
 				{/* About Section */}
 

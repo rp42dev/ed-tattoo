@@ -1,0 +1,41 @@
+.scroll {
+    position: sticky;
+    bottom: 4rem;
+    right: 1rem;
+    float: right;
+    z-index: 3000;
+    color: var(--color-primary-dark);
+    writing-mode: vertical-rl;
+}
+
+.scroll span {
+    position: relative;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.scroll {
+    animation: scroll 1s infinite;
+}
+
+.scroll i {
+    color: var(--color-cherry);
+}
+
+
+@keyframes scroll {
+    0% {
+        opacity: .3;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: .3;
+        transform: translateY(0);
+    }
+}

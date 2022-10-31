@@ -18,6 +18,14 @@
   padding: 4rem 0 0 0;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  min-height: 60vh;
+}
+
 @media screen and (max-width: 890px) {
   .about {
     display: flex;
