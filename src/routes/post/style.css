@@ -1,29 +1,13 @@
 .blogcontainer {
   max-width: 1920px;
-  margin: 0 auto 10em;
+  margin: 0 auto 0;
   line-height: 1.6rem;
 }
 
-.blogtitle {
-  margin: 0;
-  padding: 0;
-  margin-bottom: var(--spacing);
-  text-transform: capitalize;
-}
-
-.blogbody {
-  font-size: var(--font-size);
-  padding: var(--spacing);
-}
 
 .blogbody img {
   max-width: 100%;
   
-}
-
-.blogbody a {
-  color: var(--color-secondary);
-  text-decoration: underline;
 }
 
 .blogcover {

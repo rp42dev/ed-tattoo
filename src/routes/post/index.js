@@ -1,6 +1,5 @@
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { useEffect } from 'preact/hooks';
-import Markdown from 'markdown-to-jsx';
 import Header from '../../components/header';
 
 import style from './style';
@@ -41,10 +40,6 @@ function getBlogBody(data, isLoading) {
 					<source srcset={jpg} type="image/jpeg" />
 					<img src={jpg} alt={details.title} />
 				</picture>}
-				</div>
-				<div class={style.blogbody}>
-					<div className="title"><h2 class={style.blogtitle}>{details.title}</h2></div>
-					<Markdown options={{ forceBlock: true }}>{content}</Markdown>
 				</div>
 			</div>
 		);
