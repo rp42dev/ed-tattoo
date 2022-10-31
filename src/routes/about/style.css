@@ -28,14 +28,14 @@
   min-height: 60vh;
 }
 
-.text{ 
+.textFeature{ 
   user-select: all;
   position: relative;
   z-index: 1000;
   transform: translate(0, 100%);
 }
 
-.text p {
+.textFeature p {
   margin: 0;
 }
  

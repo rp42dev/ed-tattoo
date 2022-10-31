@@ -43,7 +43,7 @@ const About = (props) => {
                             <div>
                                 <FeatureHome />
                             </div>
-                            <div className={style.text}>
+                            <div className={style.textFeature}>
                                 <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={13}>
                                     <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
                                 </ScaledText>
