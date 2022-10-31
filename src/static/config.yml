@@ -15,7 +15,7 @@ collections:
       - { label: "isDisplay", name: "isDisplay", widget: "boolean", default: false }
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "Tags", name: "tags", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
   - name: "home"
     label: "Home"
     label_singular: "Home" # Used in the UI, ie: "New Post"
@@ -27,7 +27,7 @@ collections:
       - { label: "Headline", name: "headline", widget: "string"}
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "About Me heading", name: "aboutHeader", widget: "string"}
-      - { label: "Body", name: "body", widget: "markdown" required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
   - name: "special"
     label: "Special"
     label_singular: "Special" # Used in the UI, ie: "New Post"
@@ -37,7 +37,7 @@ collections:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Cover", name: "cover", widget: "image"}
-      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown", required: false }
   - name: "aboutImages"
     label: "About Images"
     label_singular: "Image" # Used in the UI, ie: "New Post"
@@ -53,7 +53,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
-      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown", required: false }
   - name: "studioImages"
     label: "Studio Images"
     label_singular: "Image" # Used in the UI, ie: "New Post"
@@ -69,5 +69,5 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
-      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown", required: false }
 
