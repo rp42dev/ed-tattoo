@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'preact/hooks';
+
 import IconWrapper from "../../../../components/buttonWrapper";
 import ScaledText from "../../../../components/scaledText";
 import getGalleryListing from "../../../../components/getGallery";
