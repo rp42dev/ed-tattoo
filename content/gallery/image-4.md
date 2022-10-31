@@ -5,4 +5,3 @@ isDisplay: true
 cover: assets/images/tattoo-gfa6573b2c_1280.jpg
 tags: tag
 ---
-b﻿ody text

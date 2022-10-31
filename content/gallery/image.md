@@ -5,4 +5,3 @@ isDisplay: true
 cover: assets/images/image1.jpg
 tags: tag
 ---
-b﻿ody text
