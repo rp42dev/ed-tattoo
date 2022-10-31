@@ -5,6 +5,7 @@ import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
 import ImageFeature from '../../components/imageFeature';
 import FeatureHome from '../../components/featureHome';
+import IconWrapper from '../../components/buttonWrapper';
 import Markdown from 'markdown-to-jsx';
 import Footer from '../../components/footer';
 import Hero from '../../components/hero';
@@ -25,7 +26,7 @@ const About = (props) => {
     return (
         <>
             <Header links={['home', 'facebook', 'instagram']} />
-            <main class={style.main}>
+            <div class={style.main}>
                 <Hero hero={cover} isLoaded={true}>
                     <Container width={900}>
                         <article class={style.content}>
@@ -41,13 +42,25 @@ const About = (props) => {
                             </div>
                             <div>
                                 <FeatureHome />
-                            </div>  
-                                
-                            
-                        </article>
+                            </div>
+                            <div className={style.text}>
+                                <ScaledText maxFontSize={32} maxContainerWidth={900} minFontSize={13}>
+                                    <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
+                                </ScaledText>
 
+                                <ScaledText maxFontSize={32} maxContainerWidth={900} minFontSize={16}>
+
+                                <p className={style.spanColor}>
+                                    Hans Egedes vei 12, Lorenskog 1470, Oslo
+                                    
+                                </p>
+                                </ScaledText>
+                            </div>
+                        </article>
                     </Container>
+
                 </Hero>
+
                 <div class={style.about}>
 
                     <Container width="900" >
@@ -62,6 +75,7 @@ const About = (props) => {
                                     </Markdown>
                                 </p>
                             </ScaledText>
+                            <IconWrapper link="contact" text="Contact me" type="link" />
                         </article>
                     </Container>
                     <ImageFeature images={aboutImages} />
@@ -84,13 +98,14 @@ const About = (props) => {
                                         </Markdown>
                                     </p>
                                 </ScaledText>
+                             <IconWrapper link="map" text="Locate me" type="link" />
                             </article>
                         </Container>
                     </div>
 
                 </div>
 
-            </main>
+            </div>
             <div class={style.footerWrapper}>
                 <Footer />
             </div>

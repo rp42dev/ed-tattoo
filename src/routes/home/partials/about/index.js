@@ -16,6 +16,19 @@ const AboutSection = ({ ...props }) => {
             <div class={style.about}>
                 
                     <Container width="900">
+                        <div className={style.text}>
+                            <ScaledText maxFontSize={32} maxContainerWidth={900} minFontSize={16}>
+                                <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
+                            </ScaledText>
+
+                            <ScaledText maxFontSize={32} maxContainerWidth={900} minFontSize={19}>
+
+                                <p className={style.spanColor}>
+                                    Hans Egedes vei 12, Lorenskog 1470, Oslo
+
+                                </p>
+                            </ScaledText>
+                        </div>
                         <article>
                         <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={30} >
                             <h2><HeadingColor>{data.home.edges[0].details.aboutHeader}</HeadingColor></h2>
@@ -32,7 +45,6 @@ const AboutSection = ({ ...props }) => {
                             </ScaledText>
                         </article>
                         <IconWrapper link="more" text="Read more" type="link" />
-
                     </Container>
 
                 <ImageFeature images={images} />

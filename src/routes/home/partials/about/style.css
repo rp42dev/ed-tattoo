@@ -15,8 +15,35 @@
     padding: 0;
 }
 
+.text {  
+    user-select: all;
+    position: absolute;
+    top: 0;
+    left: var(--padding);
+    z-index: 100;
+    transform: translate(0, -300%);
+}
+
+.spanColor {
+    color: var(--color-primary-dark);
+    white-space: nowrap;
+  
+}
+.text p {
+    margin: 0;
+
+}
+
+.spanColor span {
+    color: var(--color-cherry);
+}
 
 @media screen and (max-width: 890px) {
+
+    .text{
+        position: relative;
+        transform: translate(0, -100%);
+    }
     .about {
         flex-direction: column;
     }
@@ -24,3 +51,5 @@
         margin-top: 0;
     }
 }
+
+

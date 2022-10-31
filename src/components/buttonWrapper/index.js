@@ -20,6 +20,12 @@ const LinkData = {
         link: "/contact/success",
         label: "Send",
     },
+    map: {
+        icon: <Icon name="map" />,
+        link: 'https://goo.gl/maps/bUoCL1oe9fGyFZ3M9',
+        label: "Locate me",
+        nenwTab: true,
+    },
     home: {
         link: '/',
         icon: <Icon name="home" />,
@@ -44,11 +50,13 @@ const LinkData = {
         link: 'https://www.facebook.com/edgars.graudins.1',
         icon: <Icon name="facebook" />,
         label: "Facebook",
+        nenwTab: true,
     },
     instagram: {
         link: 'https://www.instagram.com/edtattoo_oslo/',
         icon: <Icon name="instagram" />,
         label: "Instagram",
+        nenwTab: true,
     },
 };
 
@@ -59,13 +67,13 @@ const IconWrapper = ({ children, ...props }) => {
     return (
         <>
             {type === "link" ? (
-                <a href={LinkData[link].link} classList={style.btnWrapper}>
+                <a href={LinkData[link].link} classList={style.btnWrapper} target={LinkData[link].nenwTab ? "_blank" : ""}>
                     <span>{text}</span>
                     {LinkData[link].icon}
                 </a>
 
             ) : (
-                <button type="submit" classList={style.btnWrapper}>
+                <button type="submit" classList={style.btnWrapper} target={LinkData[link].nenwTab ? "_blank" : ""}>
                     <span>{text}</span>
                     {LinkData[link].icon}
                 </button>

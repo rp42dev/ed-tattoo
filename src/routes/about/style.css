@@ -28,6 +28,20 @@
   min-height: 60vh;
 }
 
+.spanColor {
+  position: relative;
+  z-index: 100;
+  transform: translate(0, 300%);
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+  user-select: all;
+}
+
+.spanColor span {
+  color: var(--color-cherry);
+}
+
+
 @media screen and (max-width: 890px) {
   .about {
     display: flex;

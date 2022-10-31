@@ -20,7 +20,7 @@ const Footer = () => {
                             <div className={style.footerContent}>
                                 <div className={style.footerIcon}>
                                     <a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">
-                                        <Icon className={style.icon} name="address" />
+                                        <Icon className={style.icon} name="map" />
                                     </a>
                                 </div>
                                 <div className="footerContentText">

@@ -59,10 +59,16 @@
     background-position: center center;
 }
 
+@media screen and (max-width: 1600px) {
+    .hero .heroImage img {
+        right: -15%;
+    }
+}
+
 
 @media screen and (max-width: 976px) {    
     .hero .heroImage img {
-        right: -20%;
+        right: -35%;
         
     }
     .hero {
@@ -71,14 +77,10 @@
     }
 }
 
-@media screen and (max-width: 900px) {
-    .hero {
-        
-    }
-}
-
 @media screen and (max-width: 400px) {
-
+     .hero .heroImage img {
+         right: -50%;
+     }
     .hero {
         padding-top: 5rem;
     }

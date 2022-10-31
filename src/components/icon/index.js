@@ -47,10 +47,10 @@ const IconsData = {
         link: 'tel:+4790000000',
         label: "Call",
     },
-    address: {
+    map: {
         icon: <i class="fas fa-map-marker-alt"></i>,
-        link: 'https://goo.gl/maps/6Z8Z1JZ8Z2J2',
-        label: "Address",
+        link: 'https://goo.gl/maps/bUoCL1oe9fGyFZ3M9',
+        label: "Map",
     },
     facebook: {
         icon: <i class="fab fa-facebook"></i>,
