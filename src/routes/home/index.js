@@ -40,7 +40,7 @@ const Home = (props) => {
 
 	return (
 		<>
-			<Header links={['blogs', 'facebook', 'instagram']} />
+			<Header links={['gallery', 'facebook', 'instagram']} />
 
 			<div class={style.home}>
 				<div class={style.hero}>

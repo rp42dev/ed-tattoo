@@ -4,8 +4,8 @@ import { Provider } from '@preact/prerender-data-provider';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
-import Blogs from '../routes/blogs';
-import Blog from '../routes/blog';
+import Gallery from '../routes/gallery';
+import Post from '../routes/post';
 import About from '../routes/about';
 import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
@@ -27,8 +27,8 @@ export default class App extends Component {
 				<div id="app">
 					<Router onChange={this.handleRoute}>
 						<Home path="/" />
-						<Blogs path="/blogs/" />
-						<Blog path="/blog/:name" />
+						<Gallery path="/gallery/" />
+						<Post path="/image/:name" />
 						<Contact path="/contact/" />
 						<About path="/about/" />
 						<ContactSuccess path="/contact/success" />

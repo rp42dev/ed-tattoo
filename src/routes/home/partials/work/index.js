@@ -1,6 +1,6 @@
 import IconWrapper from "../../../../components/buttonWrapper";
 import ScaledText from "../../../../components/scaledText";
-import getBlogsListing from "../../../../components/getBlogs";
+import getGalleryListing from "../../../../components/getGallery";
 
 import style from "./style.css";
 
@@ -20,10 +20,10 @@ const Work = ({ ...props }) => {
                     
                 </div>
                 <div class={style.gallery}>
-                    {getBlogsListing(data, isLoading, display)}
+                    {getGalleryListing(data, isLoading, display)}
                 </div>
 
-                <IconWrapper link="blogs" text="View Gallery" type="link" />
+                <IconWrapper link="gallery" text="View Gallery" type="link" />
 
             </div>
         </section>

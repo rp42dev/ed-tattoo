@@ -5,4 +5,4 @@ isDisplay: true
 cover: assets/images/image3.jpg
 tags: tag
 ---
-t﻿ext
+text

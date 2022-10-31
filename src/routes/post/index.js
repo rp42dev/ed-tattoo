@@ -5,7 +5,7 @@ import Header from '../../components/header';
 
 import style from './style';
 
-const Blog = (props) => {
+const Post = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 	useEffect(() => {
 		const sctollToTop = () => {
@@ -16,7 +16,7 @@ const Blog = (props) => {
 
 	return (
 		<>
-			<Header links='blogs' />
+			<Header links='gallery' />
 
 			<main class={style.blogcontainer}>
 				{getBlogBody(data, isLoading)}
@@ -51,4 +51,4 @@ function getBlogBody(data, isLoading) {
 	}
 }
 
-export default Blog;
+export default Post;

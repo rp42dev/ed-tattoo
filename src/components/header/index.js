@@ -14,9 +14,9 @@ const HeaderData = {
 		icon: <Icon name="home" />,
 		areaLabel: "Home",
 	},
-	blogs: {
-		link: '/blogs',
-		icon: <Icon name="blogs" />,
+	gallery: {
+		link: '/gallery',
+		icon: <Icon name="gallery" />,
 		areaLabel: "Gallery",
 	},
 	about: {

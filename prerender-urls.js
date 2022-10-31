@@ -3,7 +3,7 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
-const [about, aboutImages, blogs, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
+const [about, aboutImages, gallery, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
@@ -20,7 +20,7 @@ module.exports = () => {
 			images: aboutImages,
 			content: parseMD(fs.readFileSync(join('content', 'home', 'ed-tattoo.md'), 'utf-8')),
 			home: home,
-			data: blogs
+			data: gallery
 		},
 		{
 			url: '/about',
@@ -55,36 +55,40 @@ module.exports = () => {
 			}
 		}];
 
-	// adding blogs list posts page
+	// adding gallery list posts page
 	pages.push({
-		url: '/blogs/',
+		url: '/gallery/',
 		seo: {
 			title: 'Gallery',
 			description: 'Gallery page of my website',
 		},
-		data: blogs
+		data: gallery
 	});
 
-
-	// adding all blog pages
-	pages.push(...blogs.edges.map(blog => {
+	// adding gallery list posts page
+	pages.push(...gallery.edges.map(item => {
 		let data;
 
-		if (blog.format === 'md') {
-			const { content } = parseMD(fs.readFileSync(join('content', 'blog', blog.id), 'utf-8'));
-			data = content;
+		if (item.format === 'md') {
+			try {
+				const { content } = parseMD(fs.readFileSync(join('content', 'gallery', item.id), 'utf-8'));
+				data = content;
+			} catch (e) {
+				data = {};
+			}
 		} else {
-			data = fs.readFileSync(join('content', 'blog', blog.id), 'utf-8').replace(/---(.*(\r)?\n)*---/, '');
+			data = fs.readFileSync(join('content', 'gallery', item.id), 'utf-8').replace(/---(.*(\r)?\n)*---/, '');
 		}
+
 		return {
-			url: `/blog/${blog.id}`,
+			url: `/image/${item.id}/`,
 			seo: {
-				title: blog.details.title,
+				title: item.title,
 				description: data.substring(0, 160),
 			},
 			data: {
-				details: blog.details,
-				content: data
+				details: item.details,
+				content: data,
 			}
 		};
 	}));

@@ -25,9 +25,9 @@ const LinkData = {
         icon: <Icon name="home" />,
         label: "Home",
     },
-    blogs: {
-        link: '/blogs',
-        icon: <Icon name="blogs" />,
+    gallery: {
+        link: '/gallery',
+        icon: <Icon name="gallery" />,
         label: "Gallery",
     },
     about: {

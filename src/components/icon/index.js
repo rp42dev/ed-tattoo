@@ -22,9 +22,9 @@ const IconsData = {
         link: '/',
         label: "Home",
     },
-    blogs: {
+    gallery: {
         icon: <i class="fas fa-images"></i>,
-        link: '/blogs',
+        link: '/gallery',
         label: "Gallery",
     },
     about: {
