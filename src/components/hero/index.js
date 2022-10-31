@@ -9,9 +9,9 @@ const Hero = ({ children, ...props }) => {
             <div className={style.heroImage}>
                 {isLoaded &&
                     <picture>
-                        <source srcset={`${hero}.webp`} type="image/webp" />
-                        <source srcset={hero} type="image/jpeg" />
-                        <img src={hero} alt="hero" />
+                        <source srcset={`../${hero}.webp`} type="image/webp" />
+                        <source srcset={`../${hero}`} type="image/jpeg" />
+                        <img src={`../${hero}`} alt="hero" />
                     </picture>}
             </div>
 
