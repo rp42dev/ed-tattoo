@@ -28,13 +28,20 @@
   min-height: 60vh;
 }
 
-.spanColor {
+.text{ 
+  user-select: all;
   position: relative;
-  z-index: 100;
-  transform: translate(0, 300%);
+  z-index: 1000;
+  transform: translate(0, 150%);
+}
+
+.text p {
+  margin: 0;
+}
+ 
+.spanColor {
   color: var(--color-primary-dark);
   white-space: nowrap;
-  user-select: all;
 }
 
 .spanColor span {
