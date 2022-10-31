@@ -1,5 +1,6 @@
 ---
 title: About Me
+cover: assets/images/bgabout.png
 ---
 I'm a Tattoo Artist based in the Oslo area. I have been tattooing for 5 years. My style is black and grey realism, as I love the contrast and the depth that black and grey can give. 
 
