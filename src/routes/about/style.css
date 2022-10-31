@@ -7,7 +7,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: 4rem 0;
+
+  margin-top: 4rem;
+  margin-top: 0;
 }
 
 .about:nth-child(1) {
@@ -36,5 +38,11 @@
   }
   .about .text {
     order: 1;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .about {
+    margin-top: 0;
   }
 }
