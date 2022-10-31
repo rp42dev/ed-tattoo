@@ -44,11 +44,11 @@ const About = (props) => {
                                 <FeatureHome />
                             </div>
                             <div className={style.text}>
-                                <ScaledText maxFontSize={32} maxContainerWidth={900} minFontSize={13}>
+                                <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={13}>
                                     <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
                                 </ScaledText>
 
-                                <ScaledText maxFontSize={32} maxContainerWidth={900} minFontSize={16}>
+                                <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16}>
 
                                 <p className={style.spanColor}>
                                     Hans Egedes vei 12, Lorenskog 1470, Oslo

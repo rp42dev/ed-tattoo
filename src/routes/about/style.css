@@ -32,7 +32,7 @@
   user-select: all;
   position: relative;
   z-index: 1000;
-  transform: translate(0, 150%);
+  transform: translate(0, 100%);
 }
 
 .text p {
