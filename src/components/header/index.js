@@ -1,7 +1,5 @@
 import style from './style';
 import Icon from '../icon';
-import { Link } from 'preact-router';
-
 
 const HeaderData = {
 	undefined: {

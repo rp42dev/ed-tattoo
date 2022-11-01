@@ -46,7 +46,7 @@ const About = (props) => {
                             </div>
                             <div>
                                 <ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={36}>
-                                    <h1><HeadingColor>Ed Tattoo</HeadingColor></h1>
+                                    <h2><HeadingColor>Ed Tattoo</HeadingColor></h2>
                                 </ScaledText>
                             </div>
                             <div>
@@ -60,10 +60,10 @@ const About = (props) => {
 
                     <div className={style.textFeature}>
                         <Container width={900}>
-                            <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={13}>
-                                <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
+                            <ScaledText maxFontSize={44} maxContainerWidth={900} minFontSize={12}>
+                                <h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
                             </ScaledText>
-                            <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16}>
+                            <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16.5}>
                                 <p className={style.spanColor}>
                                     Hans Egedes vei 12, Lorenskog 1470, Oslo
                                 </p>

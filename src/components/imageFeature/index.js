@@ -3,8 +3,8 @@ import style from './style';
 const ImageFeature = ({ ...props }) => {
     const { images } = props;
 
-    const jpg1 = '../' + images[0].details.image.replace('.jpg', '-900.jpg');
-    const jpeg2 = '../' + images[1].details.image.replace('.jpg', '-900.jpg');
+    const jpg1 = '../' + images[0].details.image.replace('.jpg', '-800.jpg');
+    const jpeg2 = '../' + images[1].details.image.replace('.jpg', '-800.jpg');
     const webp1 = jpg1 + '.webp';
     const webp2 = jpeg2 + '.webp';
 

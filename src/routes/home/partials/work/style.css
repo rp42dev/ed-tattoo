@@ -1,10 +1,13 @@
 /* Pre Gallery */
+
+.latestWork {
+    margin-bottom: 0;
+}
+
 .gallery {
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 1920px;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(170px, calc(80vh));
@@ -12,9 +15,6 @@
     padding-bottom: calc(var(--spacing) * 2);
 }
 
-.latestWork {
-    margin: 0;
-}
 
 .gallery a:nth-child(11n+7) {
     grid-column: span 2;
@@ -25,6 +25,11 @@
     grid-column: span 2;
 }
 
+.latestWorkHeader {
+    align-self: start;
+    width: 100%;
+    max-width: 900px;
+}
 
 .latestWorkHeader h2 {
     white-space: nowrap;
@@ -39,8 +44,10 @@
     font-weight: var(--font-weight-light);
 }
 
-.latestWorkHeader {
-    max-width: 900px;
+
+
+.navItem {
+    align-self: start;
 }
 
 

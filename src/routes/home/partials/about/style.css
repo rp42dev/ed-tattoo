@@ -12,10 +12,6 @@
     
 }
 
-.aboutSection{
-    margin-top: 2rem;
-}
-
 .padding0 {
     padding: 0;
     margin-bottom: 3rem;
@@ -33,7 +29,7 @@
     z-index: 100;
     width: 100%;
     max-width: 700px;
-    transform: translate(0, -40%);
+    transform: translate(0, -80%);
 }
 
 .spanColor {
@@ -54,7 +50,7 @@
 
     .textFeature {
         position: relative;
-        transform: translate(0, 20%);
+        transform: translate(0, -30%);
     }
     .about {
         flex-direction: column;

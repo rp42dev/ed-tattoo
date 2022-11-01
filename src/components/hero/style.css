@@ -1,9 +1,6 @@
 
 .hero {
     position: relative;
-    margin-bottom: 3rem;
-    top: 0;
-    left: 0;
     width: 100%;
     margin: auto;
     height: 100%;
@@ -12,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    padding-bottom: 4rem;
 }
 
 .hero .heroImage img {
@@ -75,6 +72,10 @@
     .hero .heroImage img {
         right: -15%;
     }
+    .hero {
+        padding-top: 4rem;
+    }
+    
 }
 
 
@@ -84,8 +85,14 @@
         
     }
     .hero {
-        padding-top: 4rem;
         min-height: 80vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero .heroImage img {
+        right: -50%;
+        height: 150vh;
     }
 }
 

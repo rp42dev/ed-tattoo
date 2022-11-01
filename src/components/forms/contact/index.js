@@ -9,7 +9,7 @@ const ContactForm = () => {
 
         <Container width="900" margin="auto" >
             <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
-                <h2><span>Contact</span> Me</h2>
+                <h2><span>Message</span> Me</h2>
             </ScaledText>
             <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
                 <p>

@@ -13,8 +13,8 @@ module.exports = () => {
 			url: '/',
 			seo: {
 				cover: home.edges[0].details.cover,
-				title: 'Home',
-				description: 'Home page of my website',
+				title: 'Ed Tattoo Oslo',
+				description: 'The tattoo studio in Oslo, Norway. We specialize in custom tattoos and cover-ups. Contact: +47 465 8 982. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo.',
 			},
 
 			contactCover: '../assets/images/contactBg.png',
@@ -27,8 +27,8 @@ module.exports = () => {
 		{
 			url: '/about',
 			seo: {
-				title: 'About',
-				description: 'About page of my website',
+				title: 'About Ed Tattoo Oslo',
+				description: 'Ed Tattoo Oslo is a tattoo studio located in Oslo, Norway. Contact: +47 465 8 982. We specialize in custom tattoos and cover ups. Car parking available.',
 			},
 			
 				
@@ -44,8 +44,8 @@ module.exports = () => {
 		{
 			url: '/contact/',
 			seo: {
-				title: 'Contact',
-				description: 'Contact page of my website',
+				title: 'Contact Ed Tattoo Oslo',
+				description: 'Ed Tattoo Oslo is a tattoo studio located in Oslo, Norway. Contact: +47 465 8 982. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway.',
 			},
 			data: {
 				cover: '../assets/images/contactBg.png',
@@ -56,8 +56,8 @@ module.exports = () => {
 			url: '/contact/success',
 			path: './build/contact/success/index.html',
 			seo: {
-				title: 'Contact',
-				description: 'Contact page of my website',
+				title: 'Contact Ed Tattoo Oslo',
+				description: 'Ed Tattoo Oslo is a tattoo studio located in Oslo, Norway. Contact: +47 465 8 982. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway.',
 			}
 		}];
 
@@ -65,8 +65,8 @@ module.exports = () => {
 	pages.push({
 		url: '/gallery/',
 		seo: {
-			title: 'Gallery',
-			description: 'Gallery page of my website',
+			title: 'Gallery Ed Tattoo Oslo',
+			description: 'Ed Tattoo Oslo is a tattoo studio located in Oslo, Norway.Contact: +47 465 8 982. We specialize in custom tattoos and cover ups. Car parking available.',
 		},
 		data: gallery
 	});
@@ -89,8 +89,8 @@ module.exports = () => {
 		return {
 			url: `/image/${item.id}/`,
 			seo: {
-				title: item.title,
-				description: data.substring(0, 160),
+				title: `${item.title} - Ed Tattoo Oslo`,
+				description: 'Ed Tattoo Oslo is a tattoo studio located in Oslo, Norway Contact: +47 465 8 982.. We specialize in custom tattoos and cover ups. Car parking available.',
 			},
 			data: {
 				details: item.details,

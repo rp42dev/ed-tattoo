@@ -4,7 +4,7 @@ import style from './style';
 const CardComponent = (props) => {
     const { details } = props;
     
-    const jpg = '../' + details.cover.replace('.jpg', '-900.jpg');
+    const jpg = '../' + details.cover.replace('.jpg', '-800.jpg');
     const webp = jpg + '.webp';
 
 

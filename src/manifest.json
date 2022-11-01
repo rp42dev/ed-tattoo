@@ -1,7 +1,7 @@
 {
   "name": "Ed Tattoo",
   "short_name": "Ed",
-  "Description": "Ed is a tattoo artist based in Oslo Norway",
+  "Description": "Ed Tattoo, tattoo studio in Oslo. Contact: +47 465 8 982. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

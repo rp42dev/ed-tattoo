@@ -13,21 +13,19 @@ const Work = ({ ...props }) => {
     return (
 
         <section class={style.latestWork}>
-            <div class={style.container}>
-                <div class={style.latestWorkHeader}>
+            <div class={style.latestWorkHeader}>
 
-                    <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
-                        <h2><span>Latest</span> Work</h2>
-                    </ScaledText>
-                    
-                </div>
-                <div class={style.gallery}>
-                    {getGalleryListing(data, isLoading, display)}
-                </div>
-
-                <IconWrapper link="gallery" text="View Gallery" type="link" />
+                <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
+                    <h2><span>Latest</span> Work</h2>
+                </ScaledText>
 
             </div>
+            <div class={style.gallery}>
+                {getGalleryListing(data, isLoading, display)}
+            </div>
+        <div class={style.navItem}>
+            <IconWrapper link="gallery" text="View Gallery" type="link" />
+        </div>
         </section>
 
     );
