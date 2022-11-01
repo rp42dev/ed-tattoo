@@ -1,4 +1,4 @@
 ---
 title: Studio Image 2
-image: assets/images/img5.jpg
+image: assets/images/img4.jpg
 ---
