@@ -11,9 +11,9 @@ const ContactHome = ({ ...props }) => {
 
             <Hero hero={data.contactCover} isLoaded={true}>
                 <div class={style.heroContact}>
-                    <section class={style.pageContact}>
+                    <div class={style.pageContact}>
                         <ContactForm />
-                    </section>
+                    </div>
                 </div>
             </Hero>
 

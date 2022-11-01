@@ -36,7 +36,7 @@ const About = (props) => {
         <>
             <Header links={['home', 'facebook', 'instagram']} />
             <div class={style.main}>
-                <Hero hero={cover} isLoaded={isLoaded}>
+                <Hero hero={cover} isLoaded={isLoaded} displayScroll={true}>
                     <Container width={900}>
                         <article class={style.content}>
                             <div>

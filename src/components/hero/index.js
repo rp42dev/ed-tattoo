@@ -2,7 +2,7 @@ import style from './style';
 import ScrollDown from '../scrollDown';
 
 const Hero = ({ children, ...props }) => {
-    const { hero, isLoaded } = props;
+    const { hero, isLoaded, displayScroll } = props;
 
     return (
         <div className={style.hero}>
@@ -21,7 +21,7 @@ const Hero = ({ children, ...props }) => {
             <div className={style.overlay}>
 
             </div>
-                <ScrollDown />
+              {displayScroll && <ScrollDown /> }
         </div>
     );
 };

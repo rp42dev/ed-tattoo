@@ -21,7 +21,7 @@ const photographs = (props) => {
 		<>
 		<Header link={['home', 'facebook', 'instagram']} />
 			<main>
-				{isLoaded && <Hero hero={data.data.cover} isLoaded={isLoaded}>
+				{isLoaded && <Hero hero={data.data.cover} isLoaded={isLoaded} displayScroll={true}>
 					<div class={style.heroContact}>
 						<section class={style.pageContact}>
 							<ContactForm />

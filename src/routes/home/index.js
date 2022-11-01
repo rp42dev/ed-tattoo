@@ -47,7 +47,7 @@ const Home = (props) => {
 
 			<div class={style.home}>
 				{isLoaded && (
-					<Hero hero={data.image} isLoaded={isLoaded}>
+					<Hero hero={data.image} isLoaded={isLoaded} displayScroll={true}>
 						<Container width={900}>
 							<article class={style.content}>
 								<div>
