@@ -1,9 +1,9 @@
 .scroll {
-    position: sticky;
-    bottom: 4rem;
+    position: absolute;
+    top: 80%;
     right: 1rem;
     float: right;
-    z-index: 3000;
+    z-index: 30;
     color: var(--color-primary-dark);
     writing-mode: vertical-rl;
 }

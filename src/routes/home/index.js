@@ -4,7 +4,7 @@ import Header from '../../components/header';
 
 
 import Work from './partials/work';
-import ContactForm from '../../components/forms/contact';
+import ContactHome from './partials/contact';
 import IconWrapper from "../../components/buttonWrapper";
 import ScaledText from '../../components/scaledText';
 import Container from "../../components/container";
@@ -93,9 +93,9 @@ const Home = (props) => {
 
 				{/* Contact */}
 
-				<div class={style.container}>
-					<ContactForm />
-				</div>
+			
+				{isLoaded && <ContactHome data={data} />}
+				
 
 				<Footer />
 			</div>

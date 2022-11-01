@@ -17,6 +17,7 @@ module.exports = () => {
 				description: 'Home page of my website',
 			},
 
+			contactCover: '../assets/images/contactBg.png',
 			image: home.edges[0].details.cover,
 			images: aboutImages,
 			content: parseMD(fs.readFileSync(join('content', 'home', 'ed-tattoo.md'), 'utf-8')),
@@ -45,7 +46,11 @@ module.exports = () => {
 			seo: {
 				title: 'Contact',
 				description: 'Contact page of my website',
+			},
+			data: {
+				cover: '../assets/images/contactBg.png',
 			}
+
 		},
 		{
 			url: '/contact/success',

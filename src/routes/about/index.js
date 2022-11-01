@@ -1,4 +1,5 @@
 import { usePrerenderData } from '@preact/prerender-data-provider';
+import { useState, useEffect } from 'preact/hooks';
 import Header from '../../components/header';
 import HeadingColor from '../../components/headingColor';
 import Container from '../../components/container';
@@ -16,6 +17,14 @@ import style from './style';
 
 const About = (props) => {
     const [data, isLoading] = usePrerenderData(props);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        if (!isLoading) {
+            setIsLoaded(true);
+        }
+    }, [isLoading]);
+
     const cover = data.dataAbout.edges[0].details.cover
 
     const aboutImages = data.aboutImages.edges;
@@ -27,7 +36,7 @@ const About = (props) => {
         <>
             <Header links={['home', 'facebook', 'instagram']} />
             <div class={style.main}>
-                <Hero hero={cover} isLoaded={true}>
+                <Hero hero={cover} isLoaded={isLoaded}>
                     <Container width={900}>
                         <article class={style.content}>
                             <div>
@@ -43,28 +52,27 @@ const About = (props) => {
                             <div>
                                 <FeatureHome />
                             </div>
-                            <div className={style.textFeature}>
-                                <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={13}>
-                                    <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
-                                </ScaledText>
-
-                                <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16}>
-
-                                <p className={style.spanColor}>
-                                    Hans Egedes vei 12, Lorenskog 1470, Oslo
-                                    
-                                </p>
-                                </ScaledText>
-                            </div>
                         </article>
                     </Container>
-
                 </Hero>
 
                 <div class={style.about}>
 
-                    <Container width="900" >
-                        <article>
+                    <div className={style.textFeature}>
+                        <Container width={900}>
+                            <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={13}>
+                                <h3 className={style.spanColor}> <span>Your</span> welcome for <span>best</span> tattoo.</h3>
+                            </ScaledText>
+                            <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16}>
+                                <p className={style.spanColor}>
+                                    Hans Egedes vei 12, Lorenskog 1470, Oslo
+                                </p>
+                            </ScaledText>
+                        </Container>
+                    </div>
+
+                    <article className={style.aboutSection}>
+                        <Container width="900" >
                             <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
                                 <h1><HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor></h1>
                             </ScaledText>
@@ -76,8 +84,8 @@ const About = (props) => {
                                 </p>
                             </ScaledText>
                             <IconWrapper link="contact" text="Contact me" type="link" />
-                        </article>
-                    </Container>
+                        </Container>
+                    </article>
                     <ImageFeature images={aboutImages} />
                 </div>
 
@@ -98,7 +106,7 @@ const About = (props) => {
                                         </Markdown>
                                     </p>
                                 </ScaledText>
-                             <IconWrapper link="map" text="Locate me" type="link" />
+                                <IconWrapper link="map" text="Locate me" type="link" />
                             </article>
                         </Container>
                     </div>

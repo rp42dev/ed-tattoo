@@ -12,23 +12,28 @@
     
 }
 
+.aboutSection{
+    margin-top: 2rem;
+}
+
 .padding0 {
     padding: 0;
+    margin-bottom: 3rem;
 }
 
 .aboutSection {
     position: relative;
 }
 
-.text {  
+.textFeature {  
     user-select: all;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
     width: 100%;
-    max-width: 900px;
-    transform: translate(0, -70%);
+    max-width: 700px;
+    transform: translate(0, -40%);
 }
 
 .spanColor {
@@ -36,7 +41,7 @@
     white-space: nowrap;
   
 }
-.text p {
+.textFeature p {
     margin: 0;
 
 }
@@ -47,9 +52,9 @@
 
 @media screen and (max-width: 890px) {
 
-    .text{
+    .textFeature {
         position: relative;
-        transform: translate(0, -50%);
+        transform: translate(0, 20%);
     }
     .about {
         flex-direction: column;

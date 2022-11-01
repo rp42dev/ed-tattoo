@@ -1,14 +1,13 @@
 import style from './style';
 
-const ScroolDown = () => {
+const ScrollDown = () => {
     return (
         <>
             <div className={style.scroll}>
                 <span>Scroll <i class="fas fa-chevron-down"></i></span>
-
             </div>
         </>
     );
 };
 
-export default ScroolDown;
+export default ScrollDown;
