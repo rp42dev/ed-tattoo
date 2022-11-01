@@ -1,7 +1,7 @@
 .imageFeature {
     width: auto;
     display: grid;
-    grid-template-columns: 45% 70%;
+    grid-template-columns: 50% 70%;
     place-items: center;
 }
 
@@ -11,15 +11,15 @@
     z-index: 1;
     width: auto;
     height: 100%;
-    transform: rotate(20deg) translate(-100px, 20px);
+    transform: rotate(20deg) translate(-130px, 40px);
     z-index: 2;
 }
 
 .imageFeature .card:nth-child(1) {
     z-index: 3;
     width: auto;
-    height: 80%;
-    transform: translate(20px, -0px) rotate(-10deg);
+    height: 70%;
+    transform: translate(0px, -0px) rotate(-10deg);
 }
 
 
