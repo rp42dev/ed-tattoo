@@ -12,6 +12,10 @@
     
 }
 
+.aboutContainer {
+    padding-top: 4rem;
+}
+
 .padding0 {
     padding: 0;
     margin-bottom: 3rem;
@@ -21,22 +25,23 @@
     position: relative;
 }
 
-.textFeature {  
+.textFeature {
     user-select: all;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 4;
     width: 100%;
-    max-width: 700px;
-    transform: translate(0, -80%);
+    max-width: 900px;
+    transform: translate(0, -70%);
 }
 
 .spanColor {
     color: var(--color-primary-dark);
     white-space: nowrap;
-  
+
 }
+
 .textFeature p {
     margin: 0;
 
@@ -46,12 +51,13 @@
     color: var(--color-cherry);
 }
 
+
+.spanColor span {
+    color: var(--color-cherry);
+}
+
 @media screen and (max-width: 890px) {
 
-    .textFeature {
-        position: relative;
-        transform: translate(0, -30%);
-    }
     .about {
         flex-direction: column;
     }

@@ -12,12 +12,12 @@ module.exports = (config, env) => {
 		new ImageminPlugin({
 			from: './build/assets/**',
 			pngquant: {
-				quality: '60'
+				quality: '80'
 			},
 			
 			plugins: [
 				imageminMozjpeg({
-					quality: 60,
+					quality: 80,
 					progressive: true
 				})
 			]

@@ -5,7 +5,7 @@ const sharp = require('sharp');
 const imageSourceDirectory = path.resolve(__dirname, 'src/assets');
 
 const sizes = [
-    { size: 1200, rename: false },
+    { size: 1280, rename: false },
     { size: 800, rename: true },
 ];
 
@@ -27,16 +27,25 @@ function processImages() {
                 // Resize and crop images to 1920px width and 1080px height
                 // Max width 1920px and max height 1920px
 
+                // get file size
+                const stats = fs.statSync(filePath);
+                const fileSizeInBytes = stats.size;
+                // Convert the file size to megabytes (optional)
+                const fileSizeInMegabytes = fileSizeInBytes / 1000000.0;
+
+
                 const getSizing = (width, height) => {
                     if (width > height) {
                         if (size.size === 800) {
-                            return { width: 480, height: size.size };
+                            return { width: 800, height: 1200 };
                         } else {
-                            return { width: size.size };
+                            return { width: 1920, height: 1080 };
                         }
                     } else {
                         if (size.size === 800) {
-                            return { height: size.size, width: 480 };
+                            return { width: 800, height: 1200 };
+                        } else {
+                            return { height: 1920 };
                         }
                     };
                 };
