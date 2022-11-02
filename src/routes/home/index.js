@@ -28,6 +28,8 @@ const Home = (props) => {
 		}
 	}, [isLoading]);
 
+	console.log(data.image);
+
 
 	/**
 	 * Netlify CMS's accept invite link land on home page.
