@@ -2,7 +2,7 @@ import style from './style';
 
 const ImageFeature = ({ ...props }) => {
     const { images } = props;
-
+    
     const jpg1 = '../' + images[0].details.image.replace('.jpg', '-thumbnail.jpg');
     const jpeg2 = '../' + images[1].details.image.replace('.jpg', '-thumbnail.jpg');
     const webp1 = jpg1 + '.webp';
@@ -34,6 +34,8 @@ const ImageFeature = ({ ...props }) => {
         </div>
 
     );
+
+
 }
 
 

@@ -30,8 +30,6 @@ const About = (props) => {
     const aboutImages = data.aboutImages.edges;
     const studioImages = data.studioImages.edges;
 
-
-
     return (
         <>
             <Header links={['home', 'facebook', 'instagram']} />

@@ -3,7 +3,7 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
-const [about, aboutImages, gallery, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
+const [about, aboutImages, contact, gallery, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
@@ -17,7 +17,7 @@ module.exports = () => {
 				description: 'The tattoo studio in Oslo, Norway. We specialize in custom tattoos and cover-ups. Contact: +47 465 8 982. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo.',
 			},
 
-			contactCover: '../assets/images/contactBg.png',
+			contactCover: contact.edges[0].details.cover,
 			image: home.edges[0].details.cover,
 			images: aboutImages,
 			content: parseMD(fs.readFileSync(join('content', 'home', 'ed-tattoo.md'), 'utf-8')),
@@ -48,7 +48,7 @@ module.exports = () => {
 				description: 'Ed Tattoo Oslo is a tattoo studio located in Oslo, Norway. Contact: +47 465 8 982. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway.',
 			},
 			data: {
-				cover: '../assets/images/contactBg.png',
+				cover: contact.edges[0].details.cover,
 			}
 
 		},
