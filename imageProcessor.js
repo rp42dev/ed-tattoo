@@ -58,6 +58,16 @@ const imageSettings = {
 
 
 const getSizing = (size, width, height) => {
+    /*
+    * If the image is a portrait image, resize it to the height of the vertical size
+    * If the image is a landscape image, resize it to the width of the horizontal size
+    * If the image is a square image, resize it to the width of the horizontal size
+    * @return {object} with The size of the image to be resized
+    * @param {number} width - The width of the image
+    * @param {number} height - The height of the image
+    * @property {number} width - The width of the image
+    * @property {number} height - The height of the image
+    * */
     if (size === 'cover') {
         return { width: imageSettings[size].size.width, height: imageSettings[size].size.height };
     } else if (size === 'images') {
@@ -72,6 +82,11 @@ const getSizing = (size, width, height) => {
 };
 
 const getSettings = (size) => {
+    /*
+    * Get the settings for the image
+    * @return {object} - The settings for the settings object
+    * @property {number} density - The density of the image
+    */
     if (size === 'cover') {
         return imageSettings[size].settings;
     } else if (size === 'images') {
@@ -81,7 +96,11 @@ const getSettings = (size) => {
     }
 };
 
-const deleteSourceImages = (file) => {	
+const deleteSourceImages = (file) => {
+    /*
+    * Delete the source images
+    * @param {string} file - The path to the file
+    * */
     fs.unlink(file, (err) => {
         if (err) {
             console.log(err);
@@ -92,6 +111,15 @@ const deleteSourceImages = (file) => {
 };
 
 const processor = (dir, dest, file, imagesToProcess) => {
+    /*
+    * Process the images and resize them to the correct size and density
+    * Sharp is used to resize the images and the images are saved
+    * Two formats are saved, one for webP and one for JPEG (for older browsers)
+    * @param {string} dir - The path to the directory
+    * @param {string} dest - The path to the destination directory
+    * @param {string} file - The path to the file
+    * @param {array} imagesToProcess - The images to process
+    * */
     const filePath = path.resolve(dir, file);
 
     if (!fs.existsSync(dest)) {
@@ -149,6 +177,13 @@ const processor = (dir, dest, file, imagesToProcess) => {
 
 
 function processImages() {
+    /*
+    * Process the images and resize them to the correct size and density
+    * @param {string} dir - The path to the directory
+    * @param {string} dest - The path to the destination directory
+    * @param {string} file - The path to the file
+    * @param {array} imagesToProcess - The images to process
+    * */
     for (const [key, value] of Object.entries(dirs)) {
         const dir =  value.src;
         const dest = value.dest;
