@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs-extra');
 const sharp = require('sharp');
 
-const imageSourceDirectory = path.resolve(__dirname, 'src/assets');
-const imageSourceDirectoryBg = path.resolve(__dirname, 'src/assets/bg');
+const imageSourceDirectory = path.resolve(__dirname, 'src/test');
+const imageSourceDirectoryBg = path.resolve(__dirname, 'src/test');
 
 const sizes = [
     { size: 1280, rename: false, DPI: 72 },
@@ -58,7 +58,7 @@ function processImages() {
                 metadata.then(function (data) {
                     const width = data.width
                     const height = data.height
-
+             
                     const fileSize = data.size
 
 
@@ -89,7 +89,7 @@ function processImages() {
 
                         });
 
-
+                    
                 });
             });
         }
