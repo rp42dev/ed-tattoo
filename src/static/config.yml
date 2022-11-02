@@ -19,8 +19,8 @@ collections:
     label: "Home"
     label_singular: "Home" # Used in the UI, ie: "New Post"
     folder: "content/home"
-    media_folder: "cover"
-    public_folder: "assets/bg"
+    media_folder: "{{media_folder}}/cover"
+    public_folder: "{{public_folder}}/bg"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
@@ -51,8 +51,8 @@ collections:
     label: "About"
     label_singular: "About" # Used in the UI, ie: "New Post"
     folder: "content/about"
-    media_folder: "cover"
-    public_folder: "assets/bg"
+    media_folder: "{{media_folder}}/cover"
+    public_folder: "{{public_folder}}/bg"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}

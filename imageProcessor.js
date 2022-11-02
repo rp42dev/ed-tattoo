@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const sharp = require('sharp');
 
 const imageSourceDirectory = path.resolve(__dirname, 'src/assets');
-const imageSourceDirectoryBg = path.resolve(__dirname, 'src/assets/bg');
+const imageSourceDirectoryBg = path.resolve(__dirname, 'content');
 
 const sizes = [
     { size: 1280, rename: false, DPI: 72 },
