@@ -7,12 +7,12 @@ const { settings } = require('cluster');
 
 const dirs = {
     'images': {
-        'src': path.resolve(__dirname, 'src/assets'),
-        'dest': path.resolve(__dirname, 'src/assets/images'),
+        'src':  'src/assets',
+        'dest': 'src/assets/images',
     },
     'cover': {
-        'src': path.resolve(__dirname, 'src/assets/cover'),
-        'dest': path.resolve(__dirname, 'src/assets/images/bg'),
+        'src': 'src/assets/cover',
+        'dest': 'src/assets/images/bg',
     }
 }
 
@@ -150,8 +150,31 @@ const processor = (dir, dest, file, imagesToProcess) => {
 
 function processImages() {
     for (const [key, value] of Object.entries(dirs)) {
-        const dir = value.src;
+        const dir =  value.src;
         const dest = value.dest;
+
+        //  resoleve the path to the directory
+        const directoryPath = path.resolve(dir);
+        const destinationPath = path.resolve(dest);
+        
+        if (!fs.existsSync(directoryPath)) {
+            // if the directory doesn't exist, create it
+            try {
+                fs.mkdirSync(directoryPath);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        if (!fs.existsSync(destinationPath)) {
+            // if the directory doesn't exist, create it
+            try {
+                fs.mkdirSync(destinationPath);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
         let imagesToProcess = [];
 
         if (key === 'cover') {
@@ -160,9 +183,9 @@ function processImages() {
             imagesToProcess = ['images', 'thumbnail'];
         }
 
-        fs.readdirSync(dir).forEach(file => {
+        fs.readdirSync(directoryPath).forEach(file => {
             if (file.match(/\.(jpg|png|gif|svg|webp)$/)) {
-                processor(dir, dest, file, imagesToProcess);
+                processor(directoryPath, destinationPath, file, imagesToProcess);
 
             }
         });
