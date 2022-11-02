@@ -95,7 +95,11 @@ const processor = (dir, dest, file, imagesToProcess) => {
     const filePath = path.resolve(dir, file);
 
     if (!fs.existsSync(dest)) {
-        fs.mkdirSync(dest);
+        try {
+            fs.mkdirSync(dest);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     imagesToProcess.forEach(size => {
@@ -149,8 +153,6 @@ function processImages() {
         const dir = value.src;
         const dest = value.dest;
         let imagesToProcess = [];
-
-        console.log(key);
 
         if (key === 'cover') {
             imagesToProcess = ['cover'];
