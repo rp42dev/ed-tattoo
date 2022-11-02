@@ -15,12 +15,12 @@ collections:
       - { label: "isDisplay", name: "isDisplay", widget: "boolean", default: false }
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "Tags", name: "tags", widget: "string" }
-media_folder: "src/assets/bg"
-public_folder: "/assets/bg"
   - name: "home"
     label: "Home"
     label_singular: "Home" # Used in the UI, ie: "New Post"
     folder: "content/home"
+    media_folder: "src/assets/bg"
+    public_folder: "/assets/bg"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
@@ -29,8 +29,6 @@ public_folder: "/assets/bg"
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "About Me heading", name: "aboutHeader", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown", required: false }
-media_folder: "src/assets/bg"
-public_folder: "/assets/bg"
   - name: "special"
     label: "Special"
     label_singular: "Special" # Used in the UI, ie: "New Post"
@@ -41,8 +39,6 @@ public_folder: "/assets/bg"
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Cover", name: "cover", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-media_folder: "src/assets"
-public_folder: "/assets/images"
   - name: "aboutImages"
     label: "About Images"
     label_singular: "Image" # Used in the UI, ie: "New Post"
@@ -51,19 +47,17 @@ public_folder: "/assets/images"
     fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Image", name: "image", widget: "image"}
-media_folder: "src/assets/bg"
-public_folder: "/assets/bg"
   - name: "about"
     label: "About"
     label_singular: "About" # Used in the UI, ie: "New Post"
     folder: "content/about"
+    media_folder: "src/assets/bg"
+    public_folder: "/assets/bg"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "cover", name: "cover", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-media_folder: "src/assets"
-public_folder: "/assets/images"
   - name: "studioImages"
     label: "Studio Images"
     label_singular: "Image" # Used in the UI, ie: "New Post"
@@ -72,8 +66,6 @@ public_folder: "/assets/images"
     fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Image", name: "image", widget: "image"}
-media_folder: "src/assets/bg"
-public_folder: "/assets/bg"
   - name: "studio"
     label: "Studio"
     label_singular: "Studio" # Used in the UI, ie: "New Post"
