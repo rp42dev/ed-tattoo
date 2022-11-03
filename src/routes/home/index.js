@@ -51,7 +51,7 @@ const Home = (props) => {
 						<Container width={900}>
 							<article class={style.content}>
 								<div>
-									<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={37}>
+									<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={52}>
 										<h1><HeadingColor>{data.home.edges[0].details.title}</HeadingColor></h1>
 									</ScaledText>
 								</div>
@@ -71,7 +71,7 @@ const Home = (props) => {
 									<FeatureHome />
 								</div>
 
-								<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={24}>
+								<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={23}>
 									<a href={`tel:${data.home.edges[0].details.phone}`}>
 										<h2><HeadingColor>{data.home.edges[0].details.phone}</HeadingColor></h2>
 									</a>
