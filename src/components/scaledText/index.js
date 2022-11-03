@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'preact/hooks';
 
-function ScaledText({ children, maxFontSize, minFontSize, maxContainerWidth, minContainerWidth }) {
+function ScaledText({ children, maxFontSize, minFontSize, maxContainerWidth, minContainerWidth, tag }) {
     /**
     * @param {JSX} children
     * @param {number} maxFontSize
@@ -47,11 +47,32 @@ function ScaledText({ children, maxFontSize, minFontSize, maxContainerWidth, min
         }
     }, []);
 
-    return (
-        <>
-            <div style={`max-width: ${maxContainerWidth}px`} ref={ref}>{children}</div>
-        </>
+    const tags = {
+        h1: 'h1',
+        h2: 'h2',
+        h3: 'h3',
+        h4: 'h4',
+        h5: 'h5',
+        h6: 'h6',
+        p: 'p',
+        span: 'span',
+        div: 'div',
+    };  
+
+    if (tag === undefined) {
+        tag = 'div';
+    } 
+
+    const Tag = tags[tag];
+
+    const element = (
+        <Tag style={`max-width: ${maxContainerWidth}px`} ref={ref}>
+            {children}
+        </Tag>
     );
+
+    return element;
+
 }
 
 export default ScaledText;

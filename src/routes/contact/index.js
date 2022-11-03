@@ -19,19 +19,16 @@ const photographs = (props) => {
 
 	return (
 		<>
-		<Header link={['home', 'facebook', 'instagram']} />
+			<Header link={['home', 'facebook', 'instagram']} />
 			<main>
 				{isLoaded && <Hero hero={data.data.cover} isLoaded={isLoaded} displayScroll={true}>
-					<div class={style.heroContact}>
-						<section class={style.pageContact}>
-							<ContactForm />
-						</section>
+					<div class={style.content}>
+						<ContactForm />
 					</div>
-				</Hero>	}
+
+				</Hero>}
 			</main>
-			<div class={style.footerWrapper}>
-				<Footer />
-			</div>
+			<Footer />
 		</>
 
 	);

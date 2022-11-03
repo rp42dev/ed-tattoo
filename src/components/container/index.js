@@ -9,9 +9,9 @@ function Container({ children, ...props }) {
      * @param {string} width - Width of the container.
     */
   return (
-    <div class={style.container} style={`max-width: ${width}px; margin: ${margin}`}>
+    <article class={style.container} style={`max-width: ${width}px; margin: ${margin}`}>
       {children}
-    </div>
+    </article>
   );
 }
 

@@ -15,8 +15,8 @@ const Work = ({ ...props }) => {
         <section class={style.latestWork}>
             <div class={style.latestWorkHeader}>
 
-                <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
-                    <h2><span>Latest</span> Work</h2>
+                <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                    <span>Latest</span> Work
                 </ScaledText>
 
             </div>

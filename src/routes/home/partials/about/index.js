@@ -12,34 +12,22 @@ const AboutSection = ({ ...props }) => {
     const images = data.images.edges;
 
     return (
-        <section>
-            <div class={style.aboutSection}>
+        <section class={style.aboutSection}>
+            <div class={style.about}>
+                <Container width="900">
+                    <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                        <HeadingColor>{data.home.edges[0].details.aboutHeader}</HeadingColor>
+                    </ScaledText>
+                    <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
+                        <Markdown>
+                            {data.content.content}
+                        </Markdown>
 
-                <div class={style.about}>
-                    <div class={style.aboutContainer}>
-                        <Container width="900">
+                    </ScaledText>
+                    <IconWrapper link="more" text="Read more" type="link" />
+                </Container>
 
-                            <article>
-                                <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={30} >
-                                    <h2><HeadingColor>{data.home.edges[0].details.aboutHeader}</HeadingColor></h2>
-                                </ScaledText>
-                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
-
-                                    <p>
-                                        <Markdown>
-                                            {data.content.content}
-                                        </Markdown>
-
-                                    </p>
-
-                                </ScaledText>
-                                <IconWrapper link="more" text="Read more" type="link" />
-                            </article>
-                        </Container>
-                    </div>
-
-                    <ImageFeature images={images} />
-                </div>
+                <ImageFeature images={images} />
             </div>
         </section>
     );

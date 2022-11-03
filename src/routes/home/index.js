@@ -45,22 +45,22 @@ const Home = (props) => {
 		<>
 			<Header links={['gallery', 'facebook', 'instagram']} />
 
-			<div class={style.home}>
+			<main class={style.home}>
 				{isLoaded && (
 					<Hero hero={data.image} isLoaded={isLoaded} displayScroll={true}>
 						<Container width={900}>
-							<article class={style.content}>
+							<div class={style.content}>
 								<div>
-									<ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={52}>
-										<h1><HeadingColor>{data.home.edges[0].details.title}</HeadingColor></h1>
+									<ScaledText maxFontSize={197} maxContainerWidth={900} minFontSize={54} tag='h1'>
+										<HeadingColor>{data.home.edges[0].details.title}</HeadingColor>
 									</ScaledText>
 								</div>
 
 								<div>
-									<ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={12}>
+									<ScaledText maxFontSize={47} maxContainerWidth={900} minFontSize={12}>
 										<h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
 									</ScaledText>
-									<ScaledText maxFontSize={48} maxContainerWidth={900} minFontSize={16.5}>
+									<ScaledText maxFontSize={49} maxContainerWidth={900} minFontSize={16.5}>
 										<span className={style.address}>
 											Hans Egedes vei 12, Lorenskog 1470, Oslo
 										</span>
@@ -71,16 +71,16 @@ const Home = (props) => {
 									<FeatureHome />
 								</div>
 
-								<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={23}>
+								<ScaledText maxFontSize={137} maxContainerWidth={900} minFontSize={34} tag='h2'>
 									<a href={`tel:${data.home.edges[0].details.phone}`}>
-										<h2><HeadingColor>{data.home.edges[0].details.phone}</HeadingColor></h2>
+										<HeadingColor>{data.home.edges[0].details.phone}</HeadingColor>
 									</a>
 								</ScaledText>
 								<div class={style.buttonWrapper}>
 									<IconWrapper link="contact" text="Message" type="link" />
 								</div>
 
-							</article>
+							</div>
 
 						</Container>
 
@@ -103,7 +103,7 @@ const Home = (props) => {
 
 
 				<Footer />
-			</div>
+			</main>
 		</>
 	);
 };

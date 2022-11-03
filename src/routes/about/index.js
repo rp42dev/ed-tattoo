@@ -33,38 +33,35 @@ const About = (props) => {
     return (
         <>
             <Header links={['home', 'facebook', 'instagram']} />
-            <div class={style.main}>
+            <main class={style.main}>
                 <Hero hero={cover} isLoaded={isLoaded} displayScroll={true}>
                     <Container width={900}>
                         <div className={style.aboutContent}>
-                            <div>
-                                <ScaledText maxFontSize={131} maxContainerWidth={900} minFontSize={36}>
-                                    <h2 className={style.headingEd}><HeadingColor>Ed Tattoo</HeadingColor></h2>
-                                </ScaledText>
-                            </div>
+
+                            <ScaledText maxFontSize={197} maxContainerWidth={900} minFontSize={54} tag='h1'>
+                                <span>Ed </span>Tattoo
+                            </ScaledText>
+
 
                             <div>
                                 <FeatureHome />
                             </div>
                             <div>
-                                <ScaledText maxFontSize={48} maxContainerWidth={900} minFontSize={16.5}>
+                                <ScaledText maxFontSize={48} maxContainerWidth={900} minFontSize={16.5} tag='p'>
                                     <span className={style.address}>
                                         Hans Egedes vei 12, Lorenskog 1470, Oslo
                                     </span>
                                 </ScaledText>
                             </div>
                             <article>
-                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-                                    <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-                                        <p>
-                                            Tattoo studio in Oslo with a focus on quality and customer satisfaction.
-                                            We have a wide range of styles and are always open to new ideas and challenges.
-                                            The studio is located in Oslo lørenskog, and is easily accessible by public transport.
-                                            It is recommend that you book an appointment in advance. We look forward to seeing you!
-                                        </p>
-                                    </ScaledText>
-                                </ScaledText>
+                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} tag='p' >
 
+                                    Tattoo studio in Oslo with a focus on quality and customer satisfaction.
+                                    We have a wide range of styles and are always open to new ideas and challenges.
+                                    The studio is located in Oslo lørenskog, and is easily accessible by public transport.
+                                    It is recommend that you book an appointment in advance. We look forward to seeing you!
+
+                                </ScaledText>
                             </article>
                             <div class={style.buttonWrapper}>
                                 <IconWrapper link="phone" text="Call Me" type="link" />
@@ -73,22 +70,22 @@ const About = (props) => {
                     </Container>
                 </Hero>
                 <section class={style.about}>
-                    <article className={style.aboutSection}>
+                    <div className={style.aboutSection}>
 
                         <Container width="900" >
-                            <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
-                                <h1><HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor></h1>
+                            <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                                <HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor>
                             </ScaledText>
-                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
-                                <p>
-                                    <Markdown>
-                                        {data.about.content}
-                                    </Markdown>
-                                </p>
+                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} tag='p'>
+
+                                <Markdown>
+                                    {data.about.content}
+                                </Markdown>
+
                             </ScaledText>
                             <IconWrapper link="contact" text="Contact me" type="link" />
                         </Container>
-                    </article>
+                    </div>
                     <ImageFeature images={aboutImages} />
                 </section>
 
@@ -98,28 +95,23 @@ const About = (props) => {
                     </div>
                     <div class={style.text}>
                         <Container width="900" >
-                            <article>
-                                <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
-                                    <h2><HeadingColor>{data.dataStudio.edges[0].details.title}</HeadingColor></h2>
-                                </ScaledText>
-                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
-                                    <p>
-                                        <Markdown>
-                                            {data.studio.content}
-                                        </Markdown>
-                                    </p>
-                                </ScaledText>
-                                <IconWrapper link="map" text="Locate me" type="link" />
-                            </article>
+                            <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                                <HeadingColor>{data.dataStudio.edges[0].details.title}</HeadingColor>
+                            </ScaledText>
+                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} tag='p'>
+
+                                <Markdown>
+                                    {data.studio.content}
+                                </Markdown>
+
+                            </ScaledText>
+                            <IconWrapper link="map" text="Locate me" type="link" />
                         </Container>
                     </div>
-
                 </section>
+            </main>
 
-            </div>
-            <div class={style.footerWrapper}>
-                <Footer />
-            </div>
+            <Footer />
         </>
     );
 };
