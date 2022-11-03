@@ -76,7 +76,7 @@ const About = (props) => {
                             <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                                 <HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor>
                             </ScaledText>
-                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} tag='p'>
+                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
                                 <Markdown>
                                     {data.about.content}
@@ -98,7 +98,7 @@ const About = (props) => {
                             <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                                 <HeadingColor>{data.dataStudio.edges[0].details.title}</HeadingColor>
                             </ScaledText>
-                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} tag='p'>
+                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
                                 <Markdown>
                                     {data.studio.content}
