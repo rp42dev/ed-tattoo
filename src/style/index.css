@@ -46,7 +46,7 @@ img {
 }
 
 section {
-	margin: 4rem 0;
+	margin: 4rem auto;
 	padding: 0 min(5vw, 2rem);
 	width: 100%;
 	max-width: 1920px;

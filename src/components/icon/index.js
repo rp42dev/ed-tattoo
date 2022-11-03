@@ -44,7 +44,7 @@ const IconsData = {
     },
     phone: {
         icon: <i class="fas fa-phone"></i>,
-        link: 'tel:+4790000000',
+        link: 'tel:+4746588983',
         label: "Call",
     },
     map: {

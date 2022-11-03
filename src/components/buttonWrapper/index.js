@@ -47,7 +47,7 @@ const LinkData = {
         label: "Contact",
     },
     phone: {
-        link: 'tel:+447723 333 333',
+        link: 'tel:+4746588983',
         icon: <Icon name="phone" />,
         label: "Call Me",
         nenwTab: true,

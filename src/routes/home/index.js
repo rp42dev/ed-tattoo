@@ -71,7 +71,7 @@ const Home = (props) => {
 									<FeatureHome />
 								</div>
 
-								<ScaledText maxFontSize={137} maxContainerWidth={900} minFontSize={34} tag='h2'>
+								<ScaledText maxFontSize={124} maxContainerWidth={900} minFontSize={30} tag='h2'>
 									<a href={`tel:${data.home.edges[0].details.phone}`}>
 										<HeadingColor>{data.home.edges[0].details.phone}</HeadingColor>
 									</a>
