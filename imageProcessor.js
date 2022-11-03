@@ -21,11 +21,11 @@ const imageSettings = {
         'rename': false,
         'size': {
             'vertical': {
-                'width': 1920,
+                'width': null,
                 'height': 1080,
             },
             'horizontal': {
-                'width': null,
+                'width': 1920,
                 'height': 1920,
             },
         },
