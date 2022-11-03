@@ -7,7 +7,7 @@ import ScaledText from "../../scaledText";
 const ContactForm = () => {
     return (
 
-        <Container width="900" margin="auto" >
+        <Container width="900" >
             <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
                 <h2><span>Message</span> Me</h2>
             </ScaledText>

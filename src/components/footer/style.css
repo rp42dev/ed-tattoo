@@ -7,6 +7,7 @@
     color: var(--color-primary-darker);
     letter-spacing: var(--letter-spacing-small);
     z-index: 1000;
+    padding: var(--spacing-auto);
 }
 
 a {
@@ -18,26 +19,22 @@ a {
 .footerContainer {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
-    padding: 2rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footerHeader {
-    margin: auto;
     width: 100%;
     max-width: 400px;
-    text-align: center;
-    padding-bottom: 1rem;
+    padding: 2rem 0;
 }
 
 .footerContent {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 250px;
+    padding: 1rem 0;
 }
 
 .footerContent h3 {
@@ -71,6 +68,7 @@ a {
     letter-spacing: var(--letter-spacing);
     font-weight: var(--font-weight);
     color: var(--color-primary-darker);
+    padding: 1rem 0;
 }
 
 .footerContentText span {

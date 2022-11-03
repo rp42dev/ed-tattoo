@@ -10,12 +10,10 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--color-secondary);
-    border-bottom: 10px solid var(--color-secondary);
 }
 
 .hero .heroImage img {
     position: absolute;
-    bottom: -50%;
     right: -5%;
     height: 190vh;
     width: auto;
@@ -26,9 +24,7 @@
 
 .container {
     width: 100%;
-    height: auto;
-    max-width: 1920px;
-    margin: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +44,7 @@
 .overlay::before {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -73,9 +69,6 @@
     .hero .heroImage img {
         right: -15%;
     }
-    .hero {
-        padding-top: 4rem;
-    }
     
 }
 
@@ -93,15 +86,5 @@
 @media screen and (max-width: 768px) {
     .hero .heroImage img {
         right: -50%;
-        height: 150vh;
-    }
-}
-
-@media screen and (max-width: 400px) {
-     .hero .heroImage img {
-         right: -50%;
-     }
-    .hero {
-        padding-top: 5rem;
     }
 }

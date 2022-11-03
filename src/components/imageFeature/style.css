@@ -54,3 +54,9 @@
         transform: scale(1.01);
     }
 }
+
+@media screen and (max-width: 500px) {
+    .imageFeature .card {
+        transform: rotate(20deg) translate(-80px, 40px);
+    }
+}

@@ -12,7 +12,7 @@ const AboutSection = ({ ...props }) => {
     const images = data.images.edges;
 
     return (
-        <section class={style.padding0}>
+        <section>
             <div class={style.aboutSection}>
 
                 <div class={style.about}>

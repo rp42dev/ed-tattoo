@@ -1,6 +1,11 @@
 import style from './style';
 
 const ScrollDown = () => {
+    const top = document.documentElement.scrollTop;
+
+    
+
+
     return (
         <>
             <div className={style.scroll}>

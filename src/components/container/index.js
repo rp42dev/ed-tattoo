@@ -10,7 +10,6 @@ function Container({ children, ...props }) {
     */
   return (
     <div class={style.container} style={`max-width: ${width}px; margin: ${margin}`}>
-
       {children}
     </div>
   );

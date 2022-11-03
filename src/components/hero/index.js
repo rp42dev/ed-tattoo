@@ -15,9 +15,9 @@ const Hero = ({ children, ...props }) => {
                     </picture>}
             </div>
 
-            <main className={style.container}>
+            <section className={style.container}>
                 {children}
-            </main>
+            </section>
             <div className={style.overlay}>
 
             </div>

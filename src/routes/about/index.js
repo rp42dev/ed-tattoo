@@ -72,7 +72,7 @@ const About = (props) => {
                         </div>
                     </Container>
                 </Hero>
-                <div class={style.about}>
+                <section class={style.about}>
                     <article className={style.aboutSection}>
 
                         <Container width="900" >
@@ -90,9 +90,9 @@ const About = (props) => {
                         </Container>
                     </article>
                     <ImageFeature images={aboutImages} />
-                </div>
+                </section>
 
-                <div class={style.about}>
+                <section class={style.about}>
                     <div class={style.image}>
                         <ImageFeature images={studioImages} />
                     </div>
@@ -114,7 +114,7 @@ const About = (props) => {
                         </Container>
                     </div>
 
-                </div>
+                </section>
 
             </div>
             <div class={style.footerWrapper}>
