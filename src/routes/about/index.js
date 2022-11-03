@@ -36,40 +36,45 @@ const About = (props) => {
             <div class={style.main}>
                 <Hero hero={cover} isLoaded={isLoaded} displayScroll={true}>
                     <Container width={900}>
-                        <article class={style.content}>
+                        <div className={style.aboutContent}>
                             <div>
-                                <ScaledText maxFontSize={210} maxContainerWidth={900} minFontSize={63}>
-                                    <h1><HeadingColor>About</HeadingColor></h1>
+                                <ScaledText maxFontSize={131} maxContainerWidth={900} minFontSize={36}>
+                                    <h2 className={style.headingEd}><HeadingColor>Ed Tattoo</HeadingColor></h2>
                                 </ScaledText>
                             </div>
-                            <div>
-                                <ScaledText maxFontSize={132} maxContainerWidth={900} minFontSize={36}>
-                                    <h2><HeadingColor>Ed Tattoo</HeadingColor></h2>
-                                </ScaledText>
-                            </div>
+
                             <div>
                                 <FeatureHome />
                             </div>
-                        </article>
+                            <div>
+                                <ScaledText maxFontSize={48} maxContainerWidth={900} minFontSize={16.5}>
+                                    <span className={style.address}>
+                                        Hans Egedes vei 12, Lorenskog 1470, Oslo
+                                    </span>
+                                </ScaledText>
+                            </div>
+                            <article>
+                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+                                    <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
+                                        <p>
+                                            Tattoo studio in Oslo with a focus on quality and customer satisfaction.
+                                            We have a wide range of styles and are always open to new ideas and challenges.
+                                            The studio is located in Oslo lørenskog, and is easily accessible by public transport.
+                                            It is recommend that you book an appointment in advance. We look forward to seeing you!
+                                        </p>
+                                    </ScaledText>
+                                </ScaledText>
+
+                            </article>
+                            <div class={style.buttonWrapper}>
+                                <IconWrapper link="phone" text="Call Me" type="link" />
+                            </div>
+                        </div>
                     </Container>
                 </Hero>
-
                 <div class={style.about}>
-
-                    <div className={style.textFeature}>
-                        <Container width={900}>
-                            <ScaledText maxFontSize={44} maxContainerWidth={900} minFontSize={12}>
-                                <h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
-                            </ScaledText>
-                            <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16.5}>
-                                <p className={style.spanColor}>
-                                    Hans Egedes vei 12, Lorenskog 1470, Oslo
-                                </p>
-                            </ScaledText>
-                        </Container>
-                    </div>
-
                     <article className={style.aboutSection}>
+
                         <Container width="900" >
                             <ScaledText maxFontSize={36} maxContainerWidth={400} minFontSize={26} >
                                 <h1><HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor></h1>

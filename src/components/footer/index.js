@@ -23,7 +23,7 @@ const Footer = () => {
                                         <Icon className={style.icon} name="map" />
                                     </a>
                                 </div>
-                                <div className="footerContentText">
+                                <div className={style.footerContentText}>
                                     <h3><span>&#8203; Address</span></h3>
                                     <p className={style.footerContentAddress}>
                                         <span>Hans Egedes vei 12,</span> <br />
@@ -58,7 +58,7 @@ const Footer = () => {
                                         <Icon className={style.icon} name="social" />
                                     </a>
                                 </div>
-                                <div className="footerContentText">
+                                <div className={style.footerContentText}>
                                     <h3><span>&#8203; Connect</span></h3>
                                     <div className={style.socialMedia}>
                                         <p>

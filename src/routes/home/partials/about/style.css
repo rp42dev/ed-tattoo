@@ -12,10 +12,6 @@
     
 }
 
-.aboutContainer {
-    padding-top: 4rem;
-}
-
 .padding0 {
     padding: 0;
     margin-bottom: 3rem;
@@ -60,6 +56,7 @@
 
     .about {
         flex-direction: column;
+        margin-top: 0;
     }
     .padding0 {
         margin-top: 0;

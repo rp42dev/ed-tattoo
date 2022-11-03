@@ -73,6 +73,10 @@ a {
     color: var(--color-primary-darker);
 }
 
+.footerContentText span {
+    font-weight: 100;
+}
+
 @media screen and (max-width: 800px) {
     .footerContainer {
         display: flex;

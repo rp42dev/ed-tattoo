@@ -14,18 +14,7 @@ const AboutSection = ({ ...props }) => {
     return (
         <section class={style.padding0}>
             <div class={style.aboutSection}>
-            <div className={style.textFeature}>
-                <Container width={900}>
-                    <ScaledText maxFontSize={44} maxContainerWidth={900} minFontSize={12}>
-                        <h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
-                    </ScaledText>
-                    <ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={16.5}>
-                        <p className={style.spanColor}>
-                            Hans Egedes vei 12, Lorenskog 1470, Oslo
-                        </p>
-                    </ScaledText>
-                </Container>
-            </div>
+
                 <div class={style.about}>
                     <div class={style.aboutContainer}>
                         <Container width="900">

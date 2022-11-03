@@ -46,6 +46,12 @@ const LinkData = {
         icon: <Icon name="contact" />,
         label: "Contact",
     },
+    phone: {
+        link: 'tel:+447723 333 333',
+        icon: <Icon name="phone" />,
+        label: "Call Me",
+        nenwTab: true,
+    },
     facebook: {
         link: 'https://www.facebook.com/edgars.graudins.1',
         icon: <Icon name="facebook" />,

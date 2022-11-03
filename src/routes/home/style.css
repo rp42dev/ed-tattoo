@@ -7,9 +7,16 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	gap: 2rem;
 	height: 100%;
 	min-height: 70vh;
 }
+
+.content h1,
+.content h2 {
+	line-height: 80%
+}
+
 
 .featureHome {
 	padding: 0 0 100px;
@@ -65,6 +72,15 @@
 	margin-bottom: 4rem;
 }
 
+.address {
+	color: var(--color-primary-dark);
+	font-weight: var(--font-weight-thin);
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
 
 @media screen and (max-width: 1300px) {
 	.homeContainer .heroImage img {
@@ -81,9 +97,19 @@
 }
 
 @media screen and (max-width: 992px) {
+		.content {
+			padding-top: 2rem;
+		}
+
 	.homeContainer .heroImage img {
 		height: 170vh;
 		right: -50%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content {
+		padding-top: 4rem;
 	}
 }
 

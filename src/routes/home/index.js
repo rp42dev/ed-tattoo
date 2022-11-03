@@ -57,14 +57,19 @@ const Home = (props) => {
 								</div>
 
 								<div>
-									<FeatureHome />
+									<ScaledText maxFontSize={46} maxContainerWidth={900} minFontSize={12}>
+										<h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
+									</ScaledText>
+									<ScaledText maxFontSize={48} maxContainerWidth={900} minFontSize={16.5}>
+										<span className={style.address}>
+											Hans Egedes vei 12, Lorenskog 1470, Oslo
+										</span>
+									</ScaledText>
 								</div>
 
-								<ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} >
-									<p>
-										{data.home.edges[0].details.headline}
-									</p>
-								</ScaledText>
+								<div>
+									<FeatureHome />
+								</div>
 
 								<ScaledText maxFontSize={92} maxContainerWidth={900} minFontSize={24}>
 									<a href={`tel:${data.home.edges[0].details.phone}`}>
@@ -75,10 +80,10 @@ const Home = (props) => {
 									<IconWrapper link="contact" text="Message" type="link" />
 								</div>
 
-								</article>
-							
+							</article>
+
 						</Container>
-						
+
 					</Hero>
 				)}
 
@@ -93,9 +98,9 @@ const Home = (props) => {
 
 				{/* Contact */}
 
-			
+
 				{isLoaded && <ContactHome data={data} />}
-				
+
 
 				<Footer />
 			</div>
