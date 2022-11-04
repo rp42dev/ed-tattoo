@@ -14,7 +14,7 @@ module.exports = () => {
 			seo: {
 				cover: home.edges[0].details.cover,
 				title: 'Ed Tattoo Oslo',
-				description: 'The tattoo studio in Lørenskog near Oslo, Norway. We specialize in custom tattoos and cover-ups. Contact: +47 465 88 983. Address: Hans Egedes vei 12, 1470 Lørenskog, Norway',
+				description: 'Tattoo studio in Lørenskog Norway near Oslo. We specialize in custom tattoos and cover-ups. Contact: +47 465 88 983. Address: Hans Egedes vei 12, 1470 Lørenskog, Norway',
 			},
 
 			contactCover: contact.edges[0].details.cover,
@@ -27,8 +27,8 @@ module.exports = () => {
 		{
 			url: '/about',
 			seo: {
-				title: 'About Ed Tattoo Oslo',
-				description: 'Ed Tattoo is a tattoo studio located in Lørenskog near Oslo, Norway. Contact: +47 465 88 983. We specialize in custom tattoos and cover ups. Car parking available.',
+				title: 'About Ed Tattoo',
+				description: "Tattoo studio in Lørenskog. My style is black and grey realism, I'm always happy to do custom tattoos and cover ups. Contact: +47 465 88 983.",
 			},
 			
 				
@@ -45,7 +45,7 @@ module.exports = () => {
 			url: '/contact/',
 			seo: {
 				title: 'Contact Ed Tattoo Oslo',
-				description: 'Ed Tattoo Oslo is a tattoo studio located in Lørenskog near Oslo, Norway. Contact: +47 465 88 983. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway.',
+				description: 'Contact: +47 465 88 983. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway. Email: edgarstattoo@gmail.com. Parking: Free parking in front of the studio.',
 			},
 			data: {
 				cover: contact.edges[0].details.cover,
