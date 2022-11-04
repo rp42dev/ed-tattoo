@@ -40,7 +40,7 @@ const IconsData = {
     contact: {
         icon: <i class="fas fa-envelope"></i>,
         link: '/contact',
-        label: "Contact",
+        label: "Message",
     },
     phone: {
         icon: <i class="fas fa-phone"></i>,

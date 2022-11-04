@@ -14,11 +14,9 @@ const Work = ({ ...props }) => {
 
         <section class={style.latestWork}>
             <div class={style.latestWorkHeader}>
-
                 <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                     <span>Latest</span> Work
                 </ScaledText>
-
             </div>
             <div class={style.gallery}>
                 {getGalleryListing(data, isLoading, display)}
