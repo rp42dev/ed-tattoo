@@ -1,6 +1,6 @@
 import Container from '../../../../components/container';
 import ScaledText from '../../../../components/scaledText';
-import IconWrapper from '../../../../components/buttonWrapper';
+import Button from '../../../../components/button';
 import ImageFeature from '../../../../components/imageFeature';
 import HeadingColor from '../../../../components/headingColor';
 import Markdown from 'markdown-to-jsx';
@@ -24,7 +24,7 @@ const AboutSection = ({ ...props }) => {
                         </Markdown>
 
                     </ScaledText>
-                    <IconWrapper link="more" text="Read more" type="link" />
+                    <Button link="more" text="Read more" type="link" />
                 </Container>
 
                 <ImageFeature images={images} />

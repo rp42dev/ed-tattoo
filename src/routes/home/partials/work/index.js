@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 
-import IconWrapper from "../../../../components/buttonWrapper";
+import Button from "../../../../components/button";
 import ScaledText from "../../../../components/scaledText";
 import getGalleryListing from "../../../../components/getGallery";
 
@@ -24,7 +24,7 @@ const Work = ({ ...props }) => {
                 {getGalleryListing(data, isLoading, display)}
             </div>
         <div class={style.navItem}>
-            <IconWrapper link="gallery" text="View Gallery" type="link" />
+            <Button link="gallery" text="View Gallery" type="link" />
         </div>
         </section>
 

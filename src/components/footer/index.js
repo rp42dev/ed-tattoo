@@ -27,7 +27,7 @@ const Footer = () => {
                                     <h3><span>&#8203; Address</span></h3>
                                     <p className={style.footerContentAddress}>
                                         <span>Hans Egedes vei 12,</span> <br />
-                                        <span>Lorenskog 1470, Oslo</span>
+                                        <span>Lorenskog 1470, Norway</span>
                                     </p>
                                 </div>
                             </div>

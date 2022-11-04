@@ -1,4 +1,4 @@
-import IconWrapper from "../../buttonWrapper";
+import Button from "../../button";
 import style from "./style.css";
 import Container from "../../container";
 import ScaledText from "../../scaledText";
@@ -31,7 +31,7 @@ const ContactForm = () => {
                     <textarea name="message" placeholder="Message" />
 
 
-                    <IconWrapper link="send" text="Submit" type="submit" />
+                    <Button link="send" text="Submit" type="submit" />
                 </form>
             </div>
         </Container>

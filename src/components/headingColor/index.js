@@ -1,3 +1,4 @@
+import style from './style';
 
 const HeadingColor = ({ children }) => {
     /*
@@ -16,7 +17,7 @@ const HeadingColor = ({ children }) => {
     if (headingWordCount > 1) {
         return (
             <>
-                <span>{headingFirstWord}</span> {headingRest}
+                <span className={style.spanColor}>{headingFirstWord}</span> {headingRest}
             </>
         );
     } else {

@@ -6,7 +6,8 @@ import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
 import ImageFeature from '../../components/imageFeature';
 import FeatureHome from '../../components/featureHome';
-import IconWrapper from '../../components/buttonWrapper';
+import Button from '../../components/button';
+import ButtonWrapper from '../../components/buttonWrapper';
 import Markdown from 'markdown-to-jsx';
 import Footer from '../../components/footer';
 import Hero from '../../components/hero';
@@ -46,26 +47,28 @@ const About = (props) => {
                             <div>
                                 <FeatureHome />
                             </div>
-                            <div>
-                                <ScaledText maxFontSize={48} maxContainerWidth={900} minFontSize={16.5} tag='p'>
-                                    <span className={style.address}>
-                                        Hans Egedes vei 12, Lorenskog 1470, Oslo
-                                    </span>
+                            <div className={style.paddingTop}>
+                                <ScaledText maxFontSize={45.4} maxContainerWidth={900} minFontSize={15}>
+                                    <a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">
+                                        <span className={style.address}>
+                                            Hans Egedes vei 12, Lørenskog, 1470, Norway
+                                        </span>
+                                    </a>
                                 </ScaledText>
                             </div>
                             <article>
                                 <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16} tag='p' >
 
-                                    Tattoo studio in Oslo with a focus on quality and customer satisfaction.
+                                    Tattoo studio in Lørenskog with a focus on quality and customer satisfaction.
                                     We have a wide range of styles and are always open to new ideas and challenges.
-                                    The studio is located in Oslo lørenskog, and is easily accessible by public transport.
+                                    The studio is easily accessible by public transport.
                                     It is recommend that you book an appointment in advance. We look forward to seeing you!
 
                                 </ScaledText>
-                            </article>
-                            <div class={style.buttonWrapper}>
-                                <IconWrapper link="phone" text="Call Me" type="link" />
+                            <div class={style.button}>
+                                <ButtonWrapper links={["phone", "contact"]} text="contact Me" />
                             </div>
+                            </article>
                         </div>
                     </Container>
                 </Hero>
@@ -83,7 +86,8 @@ const About = (props) => {
                                 </Markdown>
 
                             </ScaledText>
-                            <IconWrapper link="contact" text="Contact me" type="link" />
+                            <Button link={"gallery"} text="My Work" type="link" />
+                           
                         </Container>
                     </div>
                     <ImageFeature images={aboutImages} />
@@ -105,7 +109,7 @@ const About = (props) => {
                                 </Markdown>
 
                             </ScaledText>
-                            <IconWrapper link="map" text="Locate me" type="link" />
+                            <Button link="map" text="Location" type="link" />
                         </Container>
                     </div>
                 </section>

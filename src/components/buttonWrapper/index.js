@@ -8,84 +8,83 @@ const LinkData = {
     back: {
         icon: <Icon name="back" />,
         link: "/",
-        label: "Go Back",
+        areaLabel: "Go Back",
     },
-    more: {
-        link: "about",
-        icon: <Icon name="more" />,
-        label: "Read More",
-    },
-    send: {
-        icon: <Icon name="send" />,
-        link: "/contact/success",
-        label: "Send",
-    },
+
     map: {
         icon: <Icon name="map" />,
         link: 'https://goo.gl/maps/bUoCL1oe9fGyFZ3M9',
-        label: "Locate me",
-        nenwTab: true,
+        areaLabel: "Locate me",
+        target: "_blank",
     },
     home: {
         link: '/',
         icon: <Icon name="home" />,
-        label: "Home",
+        areaLabel: "Home",
     },
     gallery: {
         link: '/gallery',
         icon: <Icon name="gallery" />,
-        label: "Gallery",
+        areaLabel: "Gallery",
     },
     about: {
         link: '/about',
         icon: <Icon name="about" />,
-        label: "About",
+        areaLabel: "About",
     },
     contact: {
         link: '/contact',
         icon: <Icon name="contact" />,
-        label: "Contact",
+        areaLabel: "Contact",
     },
     phone: {
         link: 'tel:+4746588983',
         icon: <Icon name="phone" />,
-        label: "Call Me",
-        nenwTab: true,
+        areaLabel: "Call Me",
+        target: "_blank",
     },
     facebook: {
         link: 'https://www.facebook.com/edgars.graudins.1',
         icon: <Icon name="facebook" />,
-        label: "Facebook",
-        nenwTab: true,
+        areaLabel: "Facebook",
+        target: "_blank",
     },
     instagram: {
         link: 'https://www.instagram.com/edtattoo_oslo/',
         icon: <Icon name="instagram" />,
-        label: "Instagram",
-        nenwTab: true,
+        areaLabel: "Instagram",
+        target: "_blank",
     },
 };
 
 
-const IconWrapper = ({ children, ...props }) => {
-    const { link, text, type } = props;
+const ButtonWrapper = ({ children, ...props }) => {
+    const { links, text } = props;
 
     return (
         <>
-            {type === "link" ? (
-                <a href={LinkData[link].link} classList={style.btnWrapper} target={LinkData[link].nenwTab ? "_blank" : ""}>
-                    <span>{text}</span>
-                    {LinkData[link].icon}
-                </a>
+            <div className={style.btnWrapper}>
+                <span>{text}</span>
+                {!Array.isArray(links) ? (
 
-            ) : (
-                <button type="submit" classList={style.btnWrapper} target={LinkData[link].nenwTab ? "_blank" : ""}>
-                    <span>{text}</span>
-                    {LinkData[link].icon}
-                </button>
-            )}
+                    <a href={LinkData[links].link} areaLabel={LinkData[links].areaLabel} target={LinkData[links].target} rel="noopener noreferrer">
+                        {LinkData[links].icon}
+                    </a>
+
+                ) : (
+                    links.map((link, index) => {
+
+                        return (
+                            <a key={index} href={LinkData[link].link} areaLabel={LinkData[link].areaLabel} target={LinkData[link].target} rel="noopener noreferrer">
+                                {LinkData[link].icon}
+                            </a>
+                        )
+
+                    })
+                )}
+            </div>
         </>
     );
 };
 
-export default IconWrapper;
+export default ButtonWrapper;
