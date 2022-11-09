@@ -2,6 +2,6 @@
 title: "Image "
 date: 2022-10-31T13:07:07.062Z
 isDisplay: false
-cover: assets/images/whatsapp-image-2022-11-06-at-21.48.21.jpg
+cover: assets/images/img8.jpg
 tags: tag
 ---
