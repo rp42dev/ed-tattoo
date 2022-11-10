@@ -33,15 +33,14 @@ function getBlogBody(data, isLoading) {
 		const jpg = '../' + details.cover
 		const webp = jpg + '.webp';
 		return (
-			<div>
-				<div class={style.blogImage}>
-				{details.cover && <picture class={style.blogcover}>
+			<div class={style.blogcover}>
+				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
 					<source srcset={jpg} type="image/jpeg" />
 					<img src={jpg} alt={details.title} />
 				</picture>}
-				</div>
 			</div>
+
 		);
 	}
 }
