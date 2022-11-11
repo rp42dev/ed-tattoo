@@ -21,12 +21,12 @@ const photographs = (props) => {
 		<>
 			<Header link={['home', 'facebook', 'instagram']} />
 			<main>
-				{isLoaded && <Hero hero={data.data.cover} isLoaded={isLoaded} displayScroll={true}>
-					<div class={style.content}>
+				<div class={style.content}>
+					{isLoaded && <Hero hero={data.data.cover} isLoaded={isLoaded} displayScroll={true}>
 						<ContactForm />
-					</div>
 
-				</Hero>}
+					</Hero>}
+				</div>
 			</main>
 			<Footer />
 		</>

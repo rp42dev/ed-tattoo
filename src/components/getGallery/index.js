@@ -11,7 +11,9 @@ function getGalleryListing(data, isLoading, display) {
              if (item.details.isDisplay === true) {
                 displayGallery.push(item);
             }
-            displayGallery = displayGallery.slice(0, 5)
+            
+            displayGallery = displayGallery.slice(0, 7);
+            
         });
         } else {
             displayGallery = data.data.edges;

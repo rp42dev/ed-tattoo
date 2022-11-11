@@ -1,5 +1,6 @@
 /* Video header */
 .home {
+	min-height: 100vh;
 	height: 100%;
 }
 
