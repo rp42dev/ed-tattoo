@@ -145,7 +145,7 @@ const processor = (dir, dest, file, imagesToProcess) => {
             image.clone()
                 .resize(getSizing(size, width, height))
                 .jpeg({ quality: 80, mozjpeg: true })
-                .flatten()
+                .toFormat('jpeg')
                 .toFile(destination)
 
                 .then(() => {
@@ -219,7 +219,7 @@ function processImages() {
         }
 
         fs.readdirSync(directoryPath).forEach(file => {
-            if (file.match(/\.(jpg|png|gif|svg|webp)$/)) {
+            if (file.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
                 processor(directoryPath, destinationPath, file, imagesToProcess);
 
             }
