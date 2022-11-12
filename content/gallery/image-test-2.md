@@ -2,6 +2,6 @@
 title: Image
 date: 2022-10-31T11:45:41.023Z
 isDisplay: true
-cover: assets/images/img7.jpg
+cover: assets/images/img13.jpeg
 tags: tag
 ---
