@@ -10,19 +10,21 @@ const CardComponent = (props) => {
 
 
     return (
+                <FadeEffect>
         <div class={style.card}>
-            <FadeEffect>
 
-                {details.cover && <picture>
-                    <source srcset={webp} type="image/webp" />
-                    <source srcset={jpg} type="image/jpeg" />
+
+            {details.cover && <picture>
+                <source srcset={webp} type="image/webp" />
+                <source srcset={jpg} type="image/jpeg" />
                     <img src={jpg} alt={details.title} />
-                </picture>}
-                <div classList={style.imgOverlay}>
+            </picture>}
+            <div classList={style.imgOverlay}>
 
-                </div>
-            </FadeEffect>
+            </div>
+
         </div>
+                </FadeEffect>
 
     );
 }
