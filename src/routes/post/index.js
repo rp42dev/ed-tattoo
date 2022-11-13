@@ -1,6 +1,7 @@
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { useEffect } from 'preact/hooks';
 import Header from '../../components/header';
+import FadeEffect from '../../components/fadeEffect';
 
 import style from './style';
 
@@ -33,6 +34,7 @@ function getBlogBody(data, isLoading) {
 		const jpg = '../' + details.cover
 		const webp = jpg + '.webp';
 		return (
+			<FadeEffect>
 			<div class={style.blogcover}>
 				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
@@ -40,7 +42,7 @@ function getBlogBody(data, isLoading) {
 					<img src={jpg} alt={details.title} />
 				</picture>}
 			</div>
-
+			</FadeEffect>
 		);
 	}
 }

@@ -10,6 +10,7 @@ import Button from '../../components/button';
 import ButtonWrapper from '../../components/buttonWrapper';
 import Markdown from 'markdown-to-jsx';
 import Footer from '../../components/footer';
+import FadeEffect from '../../components/fadeEffect';
 import Hero from '../../components/hero';
 
 
@@ -36,6 +37,7 @@ const About = (props) => {
             <Header links={['home', 'facebook', 'instagram']} />
             <main class={style.main}>
                 <Hero hero={cover} isLoaded={isLoaded} displayScroll={true}>
+                    
                     <Container width={900}>
                         <div className={style.aboutContent}>
 
@@ -71,10 +73,11 @@ const About = (props) => {
                             </article>
                         </div>
                     </Container>
+
                 </Hero>
                 <section class={style.about}>
                     <div className={style.aboutSection}>
-
+                        <FadeEffect>
                         <Container width="900" >
                             <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                                 <HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor>
@@ -89,6 +92,7 @@ const About = (props) => {
                             <Button link={"gallery"} text="My Work" type="link" />
                            
                         </Container>
+                        </FadeEffect>
                     </div>
                     <ImageFeature images={aboutImages} />
                 </section>
@@ -98,6 +102,7 @@ const About = (props) => {
                         <ImageFeature images={studioImages} />
                     </div>
                     <div class={style.text}>
+                        <FadeEffect>
                         <Container width="900" >
                             <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                                 <HeadingColor>{data.dataStudio.edges[0].details.title}</HeadingColor>
@@ -111,6 +116,7 @@ const About = (props) => {
                             </ScaledText>
                             <Button link="map" text="Location" type="link" />
                         </Container>
+                        </FadeEffect>
                     </div>
                 </section>
             </main>

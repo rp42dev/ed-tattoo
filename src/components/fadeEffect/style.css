@@ -12,12 +12,10 @@
 
 @keyframes fade-in {
     0% {
-        transform: scale(1.01);
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
         opacity: 1;
     }
 }

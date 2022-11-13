@@ -1,5 +1,4 @@
 import style from './style';
-import FadeEffect from '../fadeEffect';
 
 function Container({ children, ...props }) {
   const { width, margin } = props;
@@ -11,9 +10,7 @@ function Container({ children, ...props }) {
   */
   return (
     <article class={style.container} style={`max-width: ${width}px; margin: ${margin}`}>
-      <FadeEffect>
         {children}
-      </FadeEffect>
     </article>
   );
 }
