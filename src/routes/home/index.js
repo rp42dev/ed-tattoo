@@ -13,6 +13,7 @@ import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
 import HeadingColor from '../../components/headingColor';
 import Hero from '../../components/hero';
+import FadeEffect from '../../components/fadeEffect';
 import style from "./style";
 
 
@@ -71,8 +72,6 @@ const Home = (props) => {
 									</ScaledText>
 								</div>
 
-								
-
 								<ScaledText maxFontSize={124} maxContainerWidth={900} minFontSize={30} tag='h2'>
 									<a href={`tel:${data.home.edges[0].details.phone}`}>
 										<HeadingColor>{data.home.edges[0].details.phone}</HeadingColor>
@@ -89,7 +88,6 @@ const Home = (props) => {
 					</Hero>
 				)}
 
-
 				{/* About Section */}
 
 				{isLoaded && <AboutSection data={data} />}
@@ -100,9 +98,7 @@ const Home = (props) => {
 
 				{/* Contact */}
 
-
 				{isLoaded && <ContactHome data={data} />}
-
 
 				<Footer />
 			</main>

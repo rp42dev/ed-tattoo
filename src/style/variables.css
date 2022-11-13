@@ -42,7 +42,7 @@
         0px 6px 30px 5px hsla(0, 0%, 0%, 0.12),
         0px 8px 10px -5px hsla(0, 0%, 0%, 0.2);
 
-    --gradient: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(233, 235, 238, 0.1), rgba(18, 18, 18, .2));
+    --gradient: linear-gradient(90deg, rgba(18, 18, 18, .02), rgba(233, 235, 238, 0.05), rgba(18, 18, 18, .02));
     --gradient-dark: linear-gradient(90deg, rgba(18, 18, 18, .2), rgba(18, 18, 18, 0.1) 50%, rgba(18, 18, 18, .2) 100%);
     --gradient-light: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, .2) 100%);
     --gradient-cherries: linear-gradient(90deg, rgba(233, 235, 238, .2), rgba(233, 235, 238, 0.1) 50%, rgba(233, 235, 238, .2) 100%);
