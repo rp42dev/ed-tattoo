@@ -12,21 +12,21 @@ const Work = ({ ...props }) => {
 
     return (
 
-        <section class={style.latestWork}>
-            <div class={style.latestWorkHeader}>
-                <FadeEffect>
+        <FadeEffect>
+            <section class={style.latestWork}>
+                <div class={style.latestWorkHeader}>
                     <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                         <span>Latest</span> Work
                     </ScaledText>
-                </FadeEffect>
-            </div>
-            <div class={style.gallery}>
-                {getGalleryListing(data, isLoading, display)}
-            </div>
-            <div class={style.navItem}>
-                <Button link="gallery" text="View Gallery" type="link" />
-            </div>
-        </section>
+                </div>
+                <div class={style.gallery}>
+                    {getGalleryListing(data, isLoading, display)}
+                </div>
+                <div class={style.navItem}>
+                    <Button link="gallery" text="View Gallery" type="link" />
+                </div>
+            </section>
+        </FadeEffect>
 
     );
 };
