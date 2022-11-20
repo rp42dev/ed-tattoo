@@ -35,6 +35,11 @@
   height: 100%;
 }
 
+.aboutSection {
+  position: relative;
+  z-index: 100;
+}
+
 .spanColor {
   color: var(--color-primary-dark);
   white-space: nowrap;

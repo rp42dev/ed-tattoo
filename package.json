@@ -44,7 +44,9 @@
     "preact-render-to-string": "^5.1.10",
     "preact-router": "^3.0.1",
     "sharp": "^0.31.1",
-    "styled-components": "^5.3.6"
+    "sitemap": "^7.1.1",
+    "styled-components": "^5.3.6",
+    "xml": "^1.0.1"
   },
   "jest": {
     "preset": "jest-preset-preact"

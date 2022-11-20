@@ -8,20 +8,21 @@ module.exports = (config, env) => {
 	netlifyPlugin(config);
 	processImages();
 
-	env.production && !env.ssr && config.plugins.push(
-		new ImageminPlugin({
-			from: './build/assets/**',
-			pngquant: {
-				quality: '80'
-			},
-			
-			plugins: [
-				imageminMozjpeg({
-					quality: 80,
-					progressive: true
-				})
-			]
-		})
-	);
+		env.production && !env.ssr && config.plugins.push(
+			new ImageminPlugin({
+				from: './build/assets/**',
+				pngquant: {
+					quality: '80'
+				},
+
+				plugins: [
+					imageminMozjpeg({
+						quality: 80,
+						progressive: true
+					})
+				]
+			})
+		);
+
 	return config;
 };

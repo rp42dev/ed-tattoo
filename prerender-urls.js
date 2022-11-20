@@ -3,11 +3,14 @@ const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;
 
+const { SitemapStream, streamToPromise } = require('sitemap')
+const { Readable } = require('stream')
+
+
 const [about, aboutImages, contact, gallery, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
-
 	const pages = [
 		{
 			url: '/',
@@ -98,6 +101,37 @@ module.exports = () => {
 			}
 		};
 	}));
+
+	// An array with your links
+	const links = [
+		{ url: '/', changefreq: 'monthly', priority: 1 },
+		{ url: '/about', changefreq: 'monthly', priority: 0.5 },
+		{ url: '/gallery', changefreq: 'weekly', priority: 0.8 },
+		{ url: '/contact', changefreq: 'monthly', priority: 0.2 },
+		...gallery.edges.map((item) => {
+			return {
+				url: `/image/${item.id}`,
+				changefreq: 'yearly',
+				priority: 0.6,
+				img: [
+					{
+						url: item.details.cover,
+						title: item.details.title
+					}
+				]
+			}
+		})
+	]
+
+	// Create a stream to write to
+	const stream = new SitemapStream({ hostname: 'https://edtattoo.no' })
+
+	// Return a promise that resolves with your XML string
+	streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
+		data.toString()
+	).then((data) => {
+		fs.writeFileSync('src/assets/sitemap.xml', data);
+	})
 
 	return pages;
 };

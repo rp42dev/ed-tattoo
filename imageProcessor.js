@@ -227,4 +227,5 @@ function processImages() {
 
     }
 }
+
 module.exports = processImages;

@@ -15,20 +15,23 @@ const AboutSection = ({ ...props }) => {
     return (
         <section class={style.aboutSection}>
             <div class={style.about}>
-                <FadeEffect>
-                <Container width="900">
-                    <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
-                        <HeadingColor>{data.home.edges[0].details.aboutHeader}</HeadingColor>
-                    </ScaledText>
-                    <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
-                        <Markdown>
-                            {data.content.content}
-                        </Markdown>
+                <div class={style.aboutContent}>
+                    <FadeEffect>
+                        <Container width="900">
 
-                    </ScaledText>
-                    <Button link="more" text="Read more" type="link" />
-                </Container>
-                </FadeEffect>
+                            <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                                <HeadingColor>{data.home.edges[0].details.aboutHeader}</HeadingColor>
+                            </ScaledText>
+                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
+                                <Markdown>
+                                    {data.content.content}
+                                </Markdown>
+
+                            </ScaledText>
+                            <Button link="more" text="Read more" type="link" />
+                        </Container>
+                    </FadeEffect>
+                </div>
                 <ImageFeature images={images} />
             </div>
         </section>
