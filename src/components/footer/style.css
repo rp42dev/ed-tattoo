@@ -69,6 +69,18 @@ a {
     font-weight: var(--font-weight);
     color: var(--color-primary-darker);
     padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerBottom span {
+    color: rgb(179, 113, 66);
+    border: 1px solid rgb(179, 113, 66);
+    border-radius: 2px;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .footerContentText span {
