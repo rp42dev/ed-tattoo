@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 import { Link } from 'preact-router';
 import CardComponent from '../cardComponent';
@@ -9,11 +9,15 @@ function getGalleryListing(data, isLoading, display) {
     const [gallery, setGallery] = useState([]);
     let displayGallery = [];
 
+    
     useEffect(() => {
         if (data && data.data) {
+            let sortedGallery = data.data.edges.sort((a, b) => {
+                return new Date(b.details.date) - new Date(a.details.date);
+            });
 
             if (display) {
-                data.data.edges.map(item => {
+                sortedGallery.map(item => {
 
                     if (item.details.isDisplay === true) {
                         displayGallery.push(item);
@@ -25,6 +29,7 @@ function getGalleryListing(data, isLoading, display) {
             }
 
             setGallery(displayGallery);
+            
         }
 
     }, [data, gallery]);

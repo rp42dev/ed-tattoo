@@ -112,7 +112,7 @@ module.exports = () => {
 			changefreq: 'weekly',
 			priority: 0.8,
 		},
-				
+
 		...gallery.edges.map((item) => {
 			return {
 				url: `/gallery/${item.id}`,
