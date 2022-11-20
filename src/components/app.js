@@ -28,7 +28,7 @@ export default class App extends Component {
 					<Router onChange={this.handleRoute}>
 						<Home path="/" />
 						<Gallery path="/gallery/" />
-						<Post path="/image/:name" />
+						<Post path="/gallery/:name" />
 						<Contact path="/contact/" />
 						<About path="/about/" />
 						<ContactSuccess path="/contact/success" />
