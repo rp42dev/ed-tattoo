@@ -7,7 +7,7 @@ const { SitemapStream, streamToPromise } = require('sitemap')
 const { Readable } = require('stream')
 
 
-const [about, aboutImages, contact, gallery, home, studio, studioImages ] = generateFileList(join(__dirname, 'content')).nodes;
+const [about, aboutImages, contact, gallery, home, studio, studioImages] = generateFileList(join(__dirname, 'content')).nodes;
 
 
 module.exports = () => {
@@ -33,12 +33,12 @@ module.exports = () => {
 				title: 'About Ed Tattoo',
 				description: "Tattoo studio in Lørenskog. My style is black and grey realism, I'm always happy to do custom tattoos and cover ups. Contact: +47 465 88 983.",
 			},
-			
-				
+
+
 			aboutImages: aboutImages,
 			studioImages: studioImages,
 
-			
+
 			about: parseMD(fs.readFileSync(join('content', 'about', 'about-me.md'), 'utf-8')),
 			studio: parseMD(fs.readFileSync(join('content', 'studio', 'the-studio.md'), 'utf-8')),
 			dataAbout: about,
@@ -106,8 +106,13 @@ module.exports = () => {
 	const links = [
 		{ url: '/', changefreq: 'monthly', priority: 1 },
 		{ url: '/about', changefreq: 'monthly', priority: 0.5 },
-		{ url: '/gallery', changefreq: 'weekly', priority: 0.8 },
-		{ url: '/contact', changefreq: 'monthly', priority: 0.2 },
+		{ url: '/contact', changefreq: 'monthly', priority: 0.3 },
+		{
+			url: '/gallery',
+			changefreq: 'weekly',
+			priority: 0.8,
+		},
+				
 		...gallery.edges.map((item) => {
 			return {
 				url: `/image/${item.id}`,

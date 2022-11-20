@@ -13,7 +13,6 @@ const CardComponent = (props) => {
         <FadeEffect>
             <div class={style.card}>
 
-
                 {details.cover && <picture>
                     <source srcset={webp} type="image/webp" />
                     <source srcset={jpg} type="image/jpeg" />
