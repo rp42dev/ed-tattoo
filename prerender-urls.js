@@ -98,6 +98,8 @@ module.exports = () => {
 			data: {
 				details: item.details,
 				content: data,
+				next: gallery.edges[gallery.edges.indexOf(item) + 1],
+				prev: gallery.edges[gallery.edges.indexOf(item) - 1],
 			}
 		};
 	}));

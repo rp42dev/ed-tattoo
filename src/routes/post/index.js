@@ -9,7 +9,7 @@ import style from './style';
 const Post = ({ ...props }) => {
 	const [data, isLoading] = usePrerenderData(props);
 
-	if (!data) {
+	if (!data && !isLoading) {
 		return (
 			<>
 				<Notfound type="404" />
@@ -21,13 +21,13 @@ const Post = ({ ...props }) => {
 		<>
 			<Header links='gallery' />
 
-			{!data ? (
+			{isLoading ? (
 				<div class={style.loading}>
 					<div class={style.loader} />
 				</div>
 			) : (
 				< main class={style.blogcontainer}>
-					{getBlogBody(data, isLoading)}
+					{getBlogBody(data)}
 				</main>
 			)}
 		</>
@@ -36,7 +36,9 @@ const Post = ({ ...props }) => {
 
 
 function getBlogBody(data) {
-	const { details } = data.data;
+	const { details, prev, next } = data.data;
+
+	if (!details) return null;
 
 	const jpg = '../' + details.cover
 	const webp = jpg + '.webp';
@@ -46,9 +48,19 @@ function getBlogBody(data) {
 				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
 					<source srcset={jpg} type="image/jpeg" />
-					<img src={jpg} alt={details.title} />
+					<img src={jpg} alt={details.title} height="60" />
 				</picture>}
 			</div>
+			{next && <div class={style.goNext}>
+				<a href={next.id} class={style.next}>
+					<i class="fa-solid fa-chevron-right" />
+				</a>
+			</div>}
+			{prev && <div class={style.goPrev}>
+				<a href={prev.id} class={style.prev}>
+					<i class="fa-solid fa-chevron-left"></i>
+				</a>
+			</div>}
 		</FadeEffect>
 	);
 

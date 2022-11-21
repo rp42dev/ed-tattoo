@@ -29,7 +29,6 @@ export default class App extends Component {
 		removeTrailingSlach(e.url)
 	};
 
-
 	render(props) {
 		return (
 			<Provider value={props}>
