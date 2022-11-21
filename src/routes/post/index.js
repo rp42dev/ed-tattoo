@@ -3,23 +3,10 @@ import { useEffect } from 'preact/hooks';
 import Header from '../../components/header';
 import FadeEffect from '../../components/fadeEffect';
 import Notfound from '../notfound';
-
 import style from './style';
 
+
 const Post = ({ ...props }) => {
-
-	useEffect(() => {
-		var url_view = window.location.href;
-		var url_path = window.location.pathname;
-		var url_hash = window.location.hash;
-		if (url_path.endsWith("/") || url_hash.endsWith("/")) {
-			if (url_path !== "/") {
-				url_view = url_view.slice(0, -1);
-				window.location.replace(url_view);
-			}
-		}
-	}, []);
-
 	const [data, isLoading] = usePrerenderData(props);
 
 	if (!data) {

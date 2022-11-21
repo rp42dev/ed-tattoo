@@ -1,5 +1,5 @@
 import { h, Component } from 'preact';
-import { Router } from 'preact-router';
+import { Router, route } from 'preact-router';
 import { Provider } from '@preact/prerender-data-provider';
 
 // Code-splitting is automated for routes
@@ -11,6 +11,13 @@ import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
+
+const removeTrailingSlach = (url) => {
+	if (url.endsWith('/')) {
+		route(url.slice(0, -1), true);
+	}
+};
+
 export default class App extends Component {
 
 	/** Gets fired when the route changes.
@@ -19,7 +26,9 @@ export default class App extends Component {
 	 */
 	handleRoute = e => {
 		this.currentUrl = e.url;
+		removeTrailingSlach(e.url)
 	};
+
 
 	render(props) {
 		return (
@@ -32,7 +41,7 @@ export default class App extends Component {
 						<Contact path="/contact" />
 						<About path="/about" />
 						<ContactSuccess path="/contact/success" />
-						<NotFoundPage type="404" default/>
+						<NotFoundPage type="404" default />
 					</Router>
 				</div>
 			</Provider>

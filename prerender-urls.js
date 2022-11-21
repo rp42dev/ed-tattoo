@@ -90,7 +90,7 @@ module.exports = () => {
 		}
 
 		return {
-			url: `/gallery/${item.id}`,
+			url: `/gallery/${item.id}/`,
 			seo: {
 				title: `${item.title} - Ed Tattoo Oslo`,
 				description: 'Ed Tattoo Oslo is a tattoo studio located in Lørenskog near Oslo, Norway Contact: +47 465 88 983.. We specialize in custom tattoos and cover ups. Car parking available.',
