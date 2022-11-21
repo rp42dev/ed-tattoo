@@ -8,17 +8,17 @@ import style from './style';
 
 const Post = ({ ...props }) => {
 
-	useEffect(() => {
-		var url_view = window.location.href;
-		var url_path = window.location.pathname;
-		var url_hash = window.location.hash;
-		if (url_path.endsWith("/") || url_hash.endsWith("/")) {
-			if (url_path !== "/") {
-				url_view = url_view.slice(0, -1);
-				window.location.replace(url_view);
-			}
+	var url_path = window.location.pathname;
+	var url_hash = window.location.hash;
+	if (url_path.endsWith("/") || url_hash.endsWith("/")) {
+		if (url_path !== "/") {
+			return (
+				<>
+					<Notfound type="404" />
+				</>
+			);
 		}
-	}, []);
+	}
 
 	const [data, isLoading] = usePrerenderData(props);
 
