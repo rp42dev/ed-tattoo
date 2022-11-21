@@ -25,15 +25,11 @@ const Post = ({ ...props }) => {
 	return (
 		<>
 			<Header links='gallery' />
-			{isLoading ? (
-				<div class={style.loading}>
-					<div class={style.loader} />
-				</div>
-			) : (
+			{!isLoading &&
 				< main class={style.blogcontainer}>
 					{getBlogBody(data)}
 				</main>
-			)}
+			}
 		</>
 	);
 };
@@ -115,6 +111,7 @@ function getBlogBody(data) {
 				const distMoved = Math.abs(Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY);
 				const activePct = distMoved / this.element.offsetWidth;
 
+
 				if (activePct > this.options.triggerPercent) {
 					if (Math.abs(deltaX) > Math.abs(deltaY)) {
 						deltaX < 0 ? this.trigger('SWIPE_LEFT') : this.trigger('SWIPE_RIGHT');
@@ -149,13 +146,13 @@ function getBlogBody(data) {
 				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
 					<source srcset={jpg} type="image/jpeg" />
-					<img src={jpg} alt={details.title} height="60" />
+					<img src={jpg} alt={details.title} />
 				</picture>}
 				{next &&
 					<Link href={`/gallery/${next.id}`}>
 						<div class={style.goNext}>
 							<div class={style.next}>
-								<i class="fa-solid fa-chevron-left"></i>
+								<i class="fa-solid fa-chevron-right"></i>
 							</div>
 						</div>
 					</Link>

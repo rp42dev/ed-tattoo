@@ -3,6 +3,7 @@
   max-width: 1920px;
   margin: 0 auto 0;
   line-height: 1.6rem;
+  overflow: hidden;
 }
 
 .blogcover {
@@ -18,33 +19,6 @@
   left: 50%;
   transform: translateX(-50%);
   height: 100vh;
-}
-
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.loader {
-  border: 16px solid rgba(153, 147, 147, 0.678);
-  border-top: 16px solid var(--color-secondary);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 1s linear infinite;
-}
-
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .goNext,
@@ -86,4 +60,30 @@
 .goNext i,
 .goPrev i {
   font-size: 2rem;
+}
+
+.swipe-right {
+  animation: swipeRight 0.5s ease;
+}
+
+.swipe-left {
+  animation: swipeLeft 0.5s ease;
+}
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
