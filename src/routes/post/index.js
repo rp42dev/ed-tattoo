@@ -136,7 +136,7 @@ function getBlogBody(data) {
 				redirect(`/gallery/${prev.id}`);
 			}
 		});
-	}, []);
+	}, [prev, next]);
 
 
 	if (!details) return null;
