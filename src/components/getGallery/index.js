@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from "preact/hooks";
-
 import { Link } from 'preact-router';
 import CardComponent from '../cardComponent';
+
 
 function getGalleryListing(data, isLoading, display) {
 
@@ -50,7 +49,5 @@ function getGalleryListing(data, isLoading, display) {
         </>
     );
 }
-
-
 
 export default getGalleryListing;
