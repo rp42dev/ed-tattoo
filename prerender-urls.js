@@ -1,4 +1,4 @@
-const { generateFileList } = require('./src/crawler');
+const { generateFileList } = require('./src/utils/crawler');
 const { join } = require('path');
 const fs = require('fs');
 const parseMD = require('parse-md').default;

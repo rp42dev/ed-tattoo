@@ -1,5 +1,5 @@
-import style from './style';
 import FadeEffect from '../fadeEffect';
+import style from './style';
 
 const ImageFeature = ({ ...props }) => {
     const { images } = props;

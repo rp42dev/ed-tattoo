@@ -1,21 +1,18 @@
 import { useEffect, useState } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
+
+import style from "./style";
 import Header from '../../components/header';
-
-
+import Hero from '../../components/hero';
+import Container from "../../components/container";
+import ScaledText from '../../components/scaledText';
+import FeatureHome from '../../components/featureHome';
+import HeadingColor from '../../components/headingColor';
+import Button from "../../components/button";
+import AboutSection from './partials/about';
 import Work from './partials/work';
 import ContactHome from './partials/contact';
-import Button from "../../components/button";
-import ScaledText from '../../components/scaledText';
-import Container from "../../components/container";
-import AboutSection from './partials/about';
-import FeatureHome from '../../components/featureHome';
 import Footer from '../../components/footer';
-import HeadingColor from '../../components/headingColor';
-import Hero from '../../components/hero';
-import FadeEffect from '../../components/fadeEffect';
-import style from "./style";
-
 
 
 const Home = (props) => {

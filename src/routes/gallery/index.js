@@ -1,9 +1,9 @@
 
 import { usePrerenderData } from '@preact/prerender-data-provider';
-import getGalleryListing from '../../components/getGallery';
-import Header from '../../components/header';
-
 import style from './style';
+import Header from '../../components/header';
+import getGalleryListing from '../../components/getGallery';
+
 
 
 const Gallery = ({...props}) => {

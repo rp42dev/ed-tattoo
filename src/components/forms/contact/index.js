@@ -1,7 +1,7 @@
-import Button from "../../button";
-import style from "./style.css";
 import Container from "../../container";
 import ScaledText from "../../scaledText";
+import style from "./style.css";
+import Button from "../../button";
 
 
 const ContactForm = () => {

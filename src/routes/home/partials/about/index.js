@@ -1,11 +1,11 @@
+import style from './style';
+import FadeEffect from '../../../../components/fadeEffect';
 import Container from '../../../../components/container';
 import ScaledText from '../../../../components/scaledText';
-import Button from '../../../../components/button';
-import ImageFeature from '../../../../components/imageFeature';
-import HeadingColor from '../../../../components/headingColor';
 import Markdown from 'markdown-to-jsx';
-import FadeEffect from '../../../../components/fadeEffect';
-import style from './style';
+import Button from '../../../../components/button';
+import HeadingColor from '../../../../components/headingColor';
+import ImageFeature from '../../../../components/imageFeature';
 
 const AboutSection = ({ ...props }) => {
 

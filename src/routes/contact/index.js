@@ -1,10 +1,10 @@
-import style from './style';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { useState, useEffect } from 'preact/hooks';
+import style from './style';
 import Header from '../../components/header';
+import Hero from '../../components/hero';
 import ContactForm from '../../components/forms/contact';
 import Footer from '../../components/footer';
-import Hero from '../../components/hero';
 
 const photographs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);

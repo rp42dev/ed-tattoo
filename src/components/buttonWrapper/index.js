@@ -1,7 +1,7 @@
 
 
-import Icon from '../icon';
 import style from './style';
+import Icon from '../icon';
 
 
 const LinkData = {

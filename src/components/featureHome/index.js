@@ -1,6 +1,5 @@
-import Icon from "../icon";
-
 import style from "./style.css";
+
 
 const FeatureHome = () => {
   const { featureHome, card, content } = style;

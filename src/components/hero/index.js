@@ -1,6 +1,6 @@
+import FadeEffect from '../fadeEffect';
 import style from './style';
 import ScrollDown from '../scrollDown';
-import FadeEffect from '../fadeEffect';
 
 const Hero = ({ children, ...props }) => {
     const { hero, isLoaded, displayScroll } = props;

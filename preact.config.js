@@ -1,7 +1,7 @@
 const netlifyPlugin = require('preact-cli-plugin-netlify');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
-const processImages = require('./imageProcessor');
+const processImages = require('./src/utils/imageProcessor');
 
 
 module.exports = (config, env) => {

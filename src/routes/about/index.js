@@ -1,20 +1,20 @@
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { useState, useEffect } from 'preact/hooks';
+import style from './style';
 import Header from '../../components/header';
-import HeadingColor from '../../components/headingColor';
+import Hero from '../../components/hero';
 import Container from '../../components/container';
 import ScaledText from '../../components/scaledText';
-import ImageFeature from '../../components/imageFeature';
 import FeatureHome from '../../components/featureHome';
-import Button from '../../components/button';
 import ButtonWrapper from '../../components/buttonWrapper';
-import Markdown from 'markdown-to-jsx';
-import Footer from '../../components/footer';
 import FadeEffect from '../../components/fadeEffect';
-import Hero from '../../components/hero';
+import HeadingColor from '../../components/headingColor';
+import Markdown from 'markdown-to-jsx';
+import Button from '../../components/button';
+import ImageFeature from '../../components/imageFeature';
+import Footer from '../../components/footer';
 
 
-import style from './style';
 
 
 const About = (props) => {
@@ -37,7 +37,7 @@ const About = (props) => {
             <Header links={['home', 'facebook', 'instagram']} />
             <main class={style.main}>
                 <Hero hero={cover} isLoaded={isLoaded} displayScroll={true}>
-                    
+
                     <Container width={900}>
                         <div className={style.aboutContent}>
 
@@ -67,9 +67,9 @@ const About = (props) => {
                                     It is recommend that you book an appointment in advance. We look forward to seeing you!
 
                                 </ScaledText>
-                            <div class={style.button}>
-                                <ButtonWrapper links={["phone", "contact"]} text="contact Me" />
-                            </div>
+                                <div class={style.button}>
+                                    <ButtonWrapper links={["phone", "contact"]} text="contact Me" />
+                                </div>
                             </article>
                         </div>
                     </Container>
@@ -78,21 +78,21 @@ const About = (props) => {
                 <section class={style.about}>
                     <div className={style.aboutSection}>
                         <FadeEffect>
-                            
-                            <Container width="900" > 
-                            <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
-                                <HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor>
-                            </ScaledText>
-                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
-                                <Markdown>
-                                    {data.about.content}
-                                </Markdown>
+                            <Container width="900" >
+                                <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                                    <HeadingColor>{data.dataAbout.edges[0].details.title}</HeadingColor>
+                                </ScaledText>
+                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
-                            </ScaledText>
-                            <Button link={"gallery"} text="My Work" type="link" />
-                           
-                        </Container>
+                                    <Markdown>
+                                        {data.about.content}
+                                    </Markdown>
+
+                                </ScaledText>
+                                <Button link={"gallery"} text="My Work" type="link" />
+
+                            </Container>
                         </FadeEffect>
                     </div>
                     <ImageFeature images={aboutImages} />
@@ -104,19 +104,19 @@ const About = (props) => {
                     </div>
                     <div class={style.text}>
                         <FadeEffect>
-                        <Container width="900" >
-                            <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
-                                <HeadingColor>{data.dataStudio.edges[0].details.title}</HeadingColor>
-                            </ScaledText>
-                            <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
+                            <Container width="900" >
+                                <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
+                                    <HeadingColor>{data.dataStudio.edges[0].details.title}</HeadingColor>
+                                </ScaledText>
+                                <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
-                                <Markdown>
-                                    {data.studio.content}
-                                </Markdown>
+                                    <Markdown>
+                                        {data.studio.content}
+                                    </Markdown>
 
-                            </ScaledText>
-                            <Button link="map" text="Location" type="link" />
-                        </Container>
+                                </ScaledText>
+                                <Button link="map" text="Location" type="link" />
+                            </Container>
                         </FadeEffect>
                     </div>
                 </section>

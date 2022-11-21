@@ -1,6 +1,6 @@
 
-import ContactForm from "../../../../components/forms/contact"
 import Hero from "../../../../components/hero"
+import ContactForm from "../../../../components/forms/contact"
 
 
 const ContactHome = ({ ...props }) => {

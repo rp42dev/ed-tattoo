@@ -1,10 +1,10 @@
 import FadeEffect from "../../../../components/fadeEffect";
 
-import Button from "../../../../components/button";
+import style from "./style.css";
 import ScaledText from "../../../../components/scaledText";
 import getGalleryListing from "../../../../components/getGallery";
+import Button from "../../../../components/button";
 
-import style from "./style.css";
 
 
 const Work = ({ ...props }) => {

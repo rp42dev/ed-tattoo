@@ -1,8 +1,8 @@
-import Container from '../container'
-import Icon from '../icon'
-import ScaledText from '../scaledText';
 import FadeEffect from '../fadeEffect';
 import style from "./style";
+import Container from '../container'
+import ScaledText from '../scaledText';
+import Icon from '../icon'
 
 
 const Footer = () => {
