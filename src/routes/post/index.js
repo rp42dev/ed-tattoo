@@ -8,23 +8,20 @@ import style from './style';
 
 const Post = ({ ...props }) => {
 
-	const isBrowser = typeof window !== "undefined";
 
 	useEffect(() => {
-		if (isBrowser) {
-			var url_path = window.location.pathname;
-			var url_hash = window.location.hash;
-			if (url_path.endsWith("/") || url_hash.endsWith("/")) {
-				if (url_path !== "/") {
-					return (
-						<>
-							<Notfound type="404" />
-						</>
-					);
-				}
+		var url_path = window.location.pathname;
+		var url_hash = window.location.hash;
+		if (url_path.endsWith("/") || url_hash.endsWith("/")) {
+			if (url_path !== "/") {
+				return (
+					<>
+						<Notfound type="404" />
+					</>
+				);
 			}
 		}
-	}, [isBrowser]);
+	}, []);
 
 	const [data, isLoading] = usePrerenderData(props);
 
