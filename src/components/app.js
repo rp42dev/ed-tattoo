@@ -27,12 +27,12 @@ export default class App extends Component {
 				<div id="app">
 					<Router onChange={this.handleRoute}>
 						<Home path="/" />
-						<Gallery path="/gallery/" />
+						<Gallery path="/gallery" />
 						<Post path="/gallery/:name" />
-						<Contact path="/contact/" />
-						<About path="/about/" />
+						<Contact path="/contact" />
+						<About path="/about" />
 						<ContactSuccess path="/contact/success" />
-						<NotFoundPage type="404" default />
+						<NotFoundPage type="404" default/>
 					</Router>
 				</div>
 			</Provider>

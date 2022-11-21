@@ -2,39 +2,59 @@ import { usePrerenderData } from '@preact/prerender-data-provider';
 import { useEffect } from 'preact/hooks';
 import Header from '../../components/header';
 import FadeEffect from '../../components/fadeEffect';
+import Notfound from '../notfound';
 
 import style from './style';
 
-const Post = (props) => {
-	const [data, isLoading] = usePrerenderData(props);
+const Post = ({ ...props }) => {
+
 	useEffect(() => {
-		const sctollToTop = () => {
-			window.scrollTo(0, 0);
-		};
-		sctollToTop();
+		var url_view = window.location.href;
+		var url_path = window.location.pathname;
+		var url_hash = window.location.hash;
+		if (url_path.endsWith("/") || url_hash.endsWith("/")) {
+			if (url_path !== "/") {
+				url_view = url_view.slice(0, -1);
+				window.location.replace(url_view);
+			}
+		}
 	}, []);
+
+	const [data, isLoading] = usePrerenderData(props);
+
+	if (!data) {
+		return (
+			<>
+				<Notfound type="404" />
+			</>
+		);
+	}
 
 	return (
 		<>
 			<Header links='gallery' />
 
-			<main class={style.blogcontainer}>
-				{getBlogBody(data, isLoading)}
-			</main>
+			{!data ? (
+				<div class={style.loading}>
+					<div class={style.loader} />
+				</div>
+			) : (
+				< main class={style.blogcontainer}>
+					{getBlogBody(data, isLoading)}
+				</main>
+			)}
 		</>
 	);
 };
 
 
-function getBlogBody(data, isLoading) {
+function getBlogBody(data) {
+	const { details } = data.data;
 
-	if (data && data.data) {
-		const { details, content } = data.data;
-
-		const jpg = '../' + details.cover
-		const webp = jpg + '.webp';
-		return (
-			<FadeEffect>
+	const jpg = '../' + details.cover
+	const webp = jpg + '.webp';
+	return (
+		<FadeEffect>
 			<div class={style.blogcover}>
 				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
@@ -42,9 +62,9 @@ function getBlogBody(data, isLoading) {
 					<img src={jpg} alt={details.title} />
 				</picture>}
 			</div>
-			</FadeEffect>
-		);
-	}
+		</FadeEffect>
+	);
+
 }
 
 export default Post;
