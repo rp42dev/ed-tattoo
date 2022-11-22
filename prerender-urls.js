@@ -42,8 +42,8 @@ module.exports = () => {
 			url: '/',
 			seo: {
 				cover: home.edges[0].details.cover,
-				title: `Ed Tattoo | ${list_of_titles[home.edges[0].details.title]}`,
-				description: 'Tattoo designs Lørenskog, Traditional tattoo Lørenskog, Custom tattoos Lørenskog, Tattoo cover-ups Lørenskog, Tattoo Lørenskog. Contact: +47 465 88 983.',
+				title: home.edges[0].details.sep-title,
+				description: home.edges[0].details.seo-description,
 			},
 
 			contactCover: contact.edges[0].details.cover,
