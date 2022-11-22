@@ -20,7 +20,7 @@ const AboutSection = ({ ...props }) => {
                         <Container width="900">
 
                             <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
-                                <HeadingColor>{data.home.edges[0].details.aboutHeader}</HeadingColor>
+                                <HeadingColor>About Me</HeadingColor>
                             </ScaledText>
                             <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
                                 <Markdown>

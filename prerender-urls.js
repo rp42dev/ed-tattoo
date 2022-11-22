@@ -9,6 +9,32 @@ const { Readable } = require('stream')
 
 const [about, aboutImages, contact, gallery, home, studio, studioImages] = generateFileList(join(__dirname, 'content')).nodes;
 
+const list_of_descriptions = {
+	'Black and grey tattoos Lørenskog': 'I specialize in black and grey tattoos. I love contrast and dept that black and gray can give and I love to create new designs and styles.',
+	'Tattoo cover ups Lørenskog': 'We cover up old tattoos, and make them look new again. we will make sure that the new tattoo is a perfect match for the old one.',
+	'Tattoo designs Lørenskog': 'I can create a custom tattoo design for you. I can also make a tattoo design based on your ideas. We can work together to create a unique tattoo design.',
+	'Traditional tattoo Lørenskog': 'I specialize in traditional tattoos. I love the old school style and I love to create new designs and styles. I can create a custom tattoo design for you.',
+	'Custom tattoos Lørenskog': 'I create unique custom tattoos. I can also make a tattoo design based on your ideas. Or We can work together to create a unique tattoo design.',
+	'Color tattoos Lørenskog': 'I specialize in color tattoos. I love the bright colors and I love to create new designs and styles. I can create a custom tattoo design for you.',
+	'Tattoo studio Lørenskog': 'We specialize in custom tattoos. We can create a custom tattoo design for you. We can also make a tattoo design based on your ideas.',
+	'Tattoo artist Lørenskog': 'I specialize in black and grey tattoos, color tattoos, traditional tattoos, cover ups and custom tattoos, I can create a custom tattoo design for you.',
+	'Tattoo artist Lørenskog near Oslo': 'I am a tattoo artist in Lørenskog near Oslo. I specialize in black and grey tattoos, color tattoos, traditional tattoos, cover ups and custom tattoos.',
+	'Tattoo studio Lørenskog near Oslo': 'We specialize in custom tattoos. We can create a custom tattoo design for you. We can also make a tattoo design based on your ideas.',
+}
+	
+const list_of_titles = {
+	'Black and grey tattoos Lørenskog': 'Black and grey tattoos Lørenskog',
+	'Tattoo cover ups Lørenskog': 'Tattoo cover ups Lørenskog',
+	'Tattoo designs Lørenskog': 'Tattoo designs Lørenskog',
+	'Traditional tattoo Lørenskog': 'Traditional tattoo Lørenskog',
+	'Custom tattoos Lørenskog': 'Custom tattoos Lørenskog',
+	'Color tattoos Lørenskog': 'Color tattoos Lørenskog',
+	'Tattoo studio Lørenskog': 'Tattoo studio Lørenskog',
+	'Tattoo artist Lørenskog': 'Tattoo artist Lørenskog',
+	'Tattoo artist Lørenskog near Oslo': 'Tattoo artist Lørenskog near Oslo',
+	'Tattoo studio Lørenskog near Oslo': 'Tattoo studio Lørenskog near Oslo',
+}
+
 
 module.exports = () => {
 	const pages = [
@@ -16,8 +42,8 @@ module.exports = () => {
 			url: '/',
 			seo: {
 				cover: home.edges[0].details.cover,
-				title: 'Ed Tattoo Oslo',
-				description: 'Tattoo studio in Lørenskog Norway near Oslo. We specialize in custom tattoos and cover-ups. Contact: +47 465 88 983. Address: Hans Egedes vei 12, 1470 Lørenskog, Norway',
+				title: `Ed Tattoo | ${list_of_titles[home.edges[0].details.title]}`,
+				description: 'Tattoo designs Lørenskog, Traditional tattoo Lørenskog, Custom tattoos Lørenskog, Tattoo cover-ups Lørenskog, Tattoo Lørenskog. Contact: +47 465 88 983.',
 			},
 
 			contactCover: contact.edges[0].details.cover,
@@ -30,8 +56,8 @@ module.exports = () => {
 		{
 			url: '/about',
 			seo: {
-				title: 'About Ed Tattoo',
-				description: "Tattoo studio in Lørenskog. My style is black and grey realism, I'm always happy to do custom tattoos and cover ups. Contact: +47 465 88 983.",
+				title: 'About - Ed Tattoo | Tattoo Artist Lørenskog',
+				description: "I specialize in Black and grey realism, Color Tattoos, Black and gary tattoo designs and Unique tattoo designs. Contact: +47 465 88 983.",
 			},
 
 
@@ -47,8 +73,8 @@ module.exports = () => {
 		{
 			url: '/contact/',
 			seo: {
-				title: 'Contact Ed Tattoo Oslo',
-				description: 'Contact: +47 465 88 983. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway. Email: edgarstattoo@gmail.com. Parking: Free parking in front of the studio.',
+				title: 'Contact - Ed Tattoo | Custom Tattoos In Lorenskog Norway',
+				description: 'Contact: +47 465 88 983. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway.  Parking: Free parking in front of the studio.',
 			},
 			data: {
 				cover: contact.edges[0].details.cover,
@@ -59,8 +85,8 @@ module.exports = () => {
 			url: '/contact/success',
 			path: './build/contact/success/index.html',
 			seo: {
-				title: 'Contact Ed Tattoo Oslo',
-				description: 'Ed Tattoo Oslo is a tattoo studio located in Lørenskog near Oslo, Norway. Contact: +47 465 88 983. Address: Hans Egedes vei 12, Lorenskog 1470, Oslo, Norway.',
+				title: 'Ed Tattoo | tattoo studio in Lørenskog',
+				description: 'Ed Tattoo is a tattoo studio located in Lørenskog near Oslo, Norway. ',
 			}
 		}];
 
@@ -68,8 +94,8 @@ module.exports = () => {
 	pages.push({
 		url: '/gallery/',
 		seo: {
-			title: 'Gallery Ed Tattoo Oslo',
-			description: 'Ed Tattoo Oslo is a tattoo studio located in Lørenskog near Oslo, Norway.Contact: +47 465 88 983. We specialize in custom tattoos and cover ups. Car parking available.',
+			title: 'Gallery Ed Tattoo',
+			description: 'Ed Tattoo Lørenskog - Tattoo studio Lørenskog, near Oslo. We specialize in custom tattoos and cover ups. Car parking available. Contact: +47 465 88 983.',
 		},
 		data: gallery
 	});
