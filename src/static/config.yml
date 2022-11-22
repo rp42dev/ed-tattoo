@@ -33,15 +33,11 @@ collections:
       - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}]}
   - label: "home Sections"
     name: "homesSections"
-    label_singular: "Home Page" # Used in the UI, ie: "New Post"
-    folder: "content/homePage"
-    media_folder: "{{dirname}}/{{media_folder}}/cover"
-    public_folder: "{{public_folder}}/bg"
-    create: true
     widget: 'list'
     types:
       - label: "HomeSection"
         name: "home section"
+        folder: "content/homePage"
         widget: object
         create: true
         fields:
