@@ -12,6 +12,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "SEO Title", name: "seo-title", widget: "string"}
+      - { label: "SEO Description", name: "seo-description", widget: "string"}
       - { label: "isDisplay", name: "isDisplay", widget: "boolean", default: false }
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "Tags", name: "tags", widget: "string" }
@@ -23,14 +25,17 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "SEO Title", name: "seo-title", widget: "string"}
+      - { label: "SEO Description", name: "seo-description", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - label: "home Sections"
         name: "homesSections"
+        label_singular: "home Section"
         widget: 'list'
         types:
-          - label: "AboutSection"
-            name: "about section"
+          - label: "About Section"
+            name: "about-section"
             widget: object
             fields:
               - { label: "Title", name: "title", widget: "string"}
@@ -38,8 +43,9 @@ collections:
               - { label: "Cover", name: "cover", widget: "image", required: false }
               - { label: "Body", name: "body", widget: "markdown", required: false }
               - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
-          - label: "SpecialSection"
-            name: "special section"
+          - label: "Special Section"
+            name: "special-section"
+            label_singular: "special Section"
             widget: object
             fields:
               - { label: "Title", name: "title", widget: "string"}
@@ -47,52 +53,54 @@ collections:
               - { label: "Cover", name: "cover", widget: "image", required: false }
               - { label: "Body", name: "body", widget: "markdown", required: false }
 
-  - name: "aboutImages"
-    label: "About Images"
-    label_singular: "Image" # Used in the UI, ie: "New Post"
-    folder: "content/aboutImages"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Image", name: "image", widget: "image"}
   - name: "about"
     label: "About"
     label_singular: "About" # Used in the UI, ie: "New Post"
     folder: "content/about"
-    media_folder: "{{dirname}}/{{media_folder}}/cover"
-    public_folder: "{{public_folder}}/bg"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
-      - { label: "cover", name: "cover", widget: "image", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "SEO Title", name: "seo-title", widget: "string"}
+      - { label: "SEO Description", name: "seo-description", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown", required: false }
-  - name: "studioImages"
-    label: "Studio Images"
-    label_singular: "Image" # Used in the UI, ie: "New Post"
-    folder: "content/studioImages"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Image", name: "image", widget: "image"}
-  - name: "studio"
-    label: "Studio"
-    label_singular: "Studio" # Used in the UI, ie: "New Post"
-    folder: "content/studio"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+    - label: "About Sections"
+      name: "aboutSections"
+      widget: 'list'
+      types:
+        - label: "About Section"
+          name: "about-section"
+          widget: object
+          fields:
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "Publish Date", name: "date", widget: "datetime" }
+            - { label: "Body", name: "body", widget: "markdown", required: false }
+            - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
+    - label: "Studio Sections"
+      name: "studioSections"
+      widget: 'list'
+      types:
+        - label: "Studio Section"
+          name: "studio-section"
+          widget: object
+          fields:
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "Publish Date", name: "date", widget: "datetime" }
+            - { label: "Body", name: "body", widget: "markdown", required: false }
+            - { label: "Studio images", name: "studioImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
+  
   - name: "contact"
     label: "Contact"
     label_singular: "Contact" # Used in the UI, ie: "New Post"
     folder: "content/contact"
-    media_folder: "{{dirname}}/{{media_folder}}/cover"
-    public_folder: "{{public_folder}}/bg"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "SEO Title", name: "seo-title", widget: "string"}
+      - { label: "SEO Description", name: "seo-description", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown", required: false }
-      - { label: "cover", name: "cover", widget: "image", required: false }
+
   - name: "cover"
     label: "Cover"
     label_singular: "Cover" # Used in the UI, ie: "New Post"
