@@ -98,7 +98,6 @@ collections:
         media_folder: "{{dirname}}/{{media_folder}}/cover"
         public_folder: "{{public_folder}}/bg"
         create: true
-        create: true
         fields:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -111,7 +110,6 @@ collections:
         widget: object
         media_folder: "content/home/about"
         public_folder: "assets/images"
-        create: true
         create: true
         fields:
           - { label: "Title", name: "title", widget: "string"}
