@@ -38,14 +38,14 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string"}
           - { label: "Body", name: "body", widget: "markdown", required: false }
-      - name: "aboutImages"
-        label: "About Images"
-        label_singular: "About Image" # Used in the UI, ie: "New Post"
-        folder: "content/home/aboutImages"
-        create: true
-        fields:
-          - { label: "Title", name: "title", widget: "string"}
-          - { label: "Cover", name: "cover", widget: "image"}
+        - name: "aboutImages"
+          label: "About Images"
+          label_singular: "About Image" # Used in the UI, ie: "New Post"
+          folder: "content/home/about/images"
+          create: true
+          fields:
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "Cover", name: "cover", widget: "image"}
   - name: "special"
     label: "Special"
     label_singular: "Special" # Used in the UI, ie: "New Post"
