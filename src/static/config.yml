@@ -64,30 +64,30 @@ collections:
       - { label: "SEO Title", name: "seo-title", widget: "string"}
       - { label: "SEO Description", name: "seo-description", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown", required: false }
-    - label: "About Sections"
-      name: "aboutSections"
-      widget: 'list'
-      types:
-        - label: "About Section"
-          name: "about-section"
-          widget: object
-          fields:
-            - { label: "Title", name: "title", widget: "string"}
-            - { label: "Publish Date", name: "date", widget: "datetime" }
-            - { label: "Body", name: "body", widget: "markdown", required: false }
-            - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
-    - label: "Studio Sections"
-      name: "studioSections"
-      widget: 'list'
-      types:
-        - label: "Studio Section"
-          name: "studio-section"
-          widget: object
-          fields:
-            - { label: "Title", name: "title", widget: "string"}
-            - { label: "Publish Date", name: "date", widget: "datetime" }
-            - { label: "Body", name: "body", widget: "markdown", required: false }
-            - { label: "Studio images", name: "studioImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
+      - label: "About Sections"
+        name: "aboutSections"
+        widget: 'list'
+        types:
+          - label: "About Section"
+            name: "about-section"
+            widget: object
+            fields:
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "Publish Date", name: "date", widget: "datetime" }
+              - { label: "Body", name: "body", widget: "markdown", required: false }
+              - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
+      - label: "Studio Sections"
+        name: "studioSections"
+        widget: 'list'
+        types:
+          - label: "Studio Section"
+            name: "studio-section"
+            widget: object
+            fields:
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "Publish Date", name: "date", widget: "datetime" }
+              - { label: "Body", name: "body", widget: "markdown", required: false }
+              - { label: "Studio images", name: "studioImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
   
   - name: "contact"
     label: "Contact"
