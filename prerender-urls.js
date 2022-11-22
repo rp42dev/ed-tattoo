@@ -99,8 +99,8 @@ module.exports = () => {
 	pages.push({
 		url: '/gallery/',
 		seo: {
-			title: gallery.edges[0].details.seotitle,
-			description: gallery.edges[0].details.seodescription,
+			title: 'Gallery - Custom tattoos Lørenskog | Ed Tattoo',
+			description: list_of_descriptions['Custom tattoos Lørenskog'],
 		},
 		galleryData: gallery
 	});

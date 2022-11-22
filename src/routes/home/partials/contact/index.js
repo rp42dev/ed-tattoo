@@ -5,9 +5,7 @@ import ContactForm from "../../../../components/forms/contact"
 
 const ContactHome = ({ ...props }) => {
     const { data } = props;
-
-    console.log(data)
-
+    
     return (
         <>
             <Hero hero={data}>

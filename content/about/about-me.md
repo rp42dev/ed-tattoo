@@ -1,10 +1,7 @@
 ---
 title: About Me
 date: 2022-11-22T17:25:29.676Z
-seo-title: Tattoo artist Lørenskog | Ed Tattoo
-seo-description: I specialize in black and grey tattoos, color tattoos,
-  traditional tattoos, cover ups and custom tattoos, I can create a custom
-  tattoo design for you.
+
 studioSections:
   - type: studio-section
     date: 2022-11-22T17:29:50.750Z
