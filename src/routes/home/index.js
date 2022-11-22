@@ -17,15 +17,6 @@ import Footer from '../../components/footer';
 
 const Home = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
-	const [isLoaded, setIsLoaded] = useState(false);
-	const display = true;
-
-	useEffect(() => {
-		if (!isLoading) {
-			setIsLoaded(true);
-		}
-	}, [isLoading]);
-
 
 	/**
 	 * Netlify CMS's accept invite link land on home page.
@@ -44,8 +35,8 @@ const Home = (props) => {
 			<Header links={['gallery', 'facebook', 'instagram']} />
 
 			<main class={style.home}>
-				{isLoaded && (
-					<Hero hero={data.image} isLoaded={isLoaded} displayScroll={true}>
+				{!isLoading && (
+					<Hero hero={data.cover} displayScroll={true}>
 						<Container width={900}>
 							<div class={style.content}>
 								<div>
@@ -70,8 +61,8 @@ const Home = (props) => {
 								</div>
 
 								<ScaledText maxFontSize={124} maxContainerWidth={900} minFontSize={30} tag='h2'>
-									<a href={`tel:${data.home.edges[0].details.phone}`}>
-										<HeadingColor>{data.home.edges[0].details.phone}</HeadingColor>
+									<a href='tel:+47 465 88 983'>
+										<HeadingColor>+47 465 88 983</HeadingColor>
 									</a>
 								</ScaledText>
 								<div class={style.button}>
@@ -87,15 +78,15 @@ const Home = (props) => {
 
 				{/* About Section */}
 
-				{isLoaded && <AboutSection data={data} />}
+				{!isLoading && <AboutSection data={data.aboutSection} />}
 
 				{/* Latest work */}
 
-				<Work data={data} isLoading={isLoading} display={display} />
+				{!isLoading && <Work data={data.galleryData} display={true} />}
 
 				{/* Contact */}
 
-				{isLoaded && <ContactHome data={data} />}
+				{!isLoading && <ContactHome data={data.contactCover} />}
 
 				<Footer />
 			</main>

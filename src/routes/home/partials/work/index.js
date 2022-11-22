@@ -8,7 +8,8 @@ import Button from "../../../../components/button";
 
 
 const Work = ({ ...props }) => {
-    const { data, isLoading, display } = props;
+    const { data, display } = props;
+
 
     return (
 
@@ -20,7 +21,7 @@ const Work = ({ ...props }) => {
                     </ScaledText>
                 </div>
                 <div class={style.gallery}>
-                    {getGalleryListing(data, isLoading, display)}
+                    {getGalleryListing(data, display)}
                 </div>
                 <div class={style.navItem}>
                     <Button link="gallery" text="View Gallery" type="link" />

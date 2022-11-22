@@ -16,10 +16,10 @@ const Gallery = ({...props}) => {
 
 			<section classList={style.section}>
 				<div class={style.gallery}>
-					{getGalleryListing(data, isLoading)}
-					{getGalleryListing(data, isLoading)}
-					{getGalleryListing(data, isLoading)}
-					{getGalleryListing(data, isLoading)}
+					{!isLoading && getGalleryListing(data.galleryData)}
+					{!isLoading && getGalleryListing(data.galleryData)}
+					{!isLoading && getGalleryListing(data.galleryData)}
+					{!isLoading && getGalleryListing(data.galleryData)}
 				</div>
 			</section>
 		</>

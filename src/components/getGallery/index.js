@@ -3,15 +3,15 @@ import { Link } from 'preact-router';
 import CardComponent from '../cardComponent';
 
 
-function getGalleryListing(data, isLoading, display) {
+function getGalleryListing(data, display) {
 
     const [gallery, setGallery] = useState([]);
-    let displayGallery = [];
 
+    let displayGallery = [];
     
     useEffect(() => {
-        if (data && data.data) {
-            let sortedGallery = data.data.edges.sort((a, b) => {
+        if (data) {
+            let sortedGallery = data.edges.sort((a, b) => {
                 return new Date(b.details.date) - new Date(a.details.date);
             });
 
@@ -24,7 +24,7 @@ function getGalleryListing(data, isLoading, display) {
                     displayGallery = displayGallery.slice(0, 7);
                 });
             } else {
-                displayGallery = data.data.edges;
+                displayGallery = data.edges;
             }
 
             setGallery(displayGallery);
@@ -32,7 +32,6 @@ function getGalleryListing(data, isLoading, display) {
         }
 
     }, [data, gallery]);
-
 
     return (
         <>
