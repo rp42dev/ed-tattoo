@@ -90,13 +90,13 @@ collections:
   - name: "homePage"
     label: "sections"
     label_singular: "Home Page" # Used in the UI, ie: "New Post"
+    media_folder: "{{dirname}}/{{media_folder}}/cover"
+    public_folder: "{{public_folder}}/bg"
     widget: 'list'
     types:
       - label: "HomeSection"
         name: "home section"
         widget: object
-        media_folder: "{{dirname}}/{{media_folder}}/cover"
-        public_folder: "{{public_folder}}/bg"
         create: true
         fields:
           - { label: "Title", name: "title", widget: "string"}
@@ -108,8 +108,7 @@ collections:
       - label: "AboutSection"
         name: "about section"
         widget: object
-        media_folder: "content/home/about"
-        public_folder: "assets/images"
+        folder: "content/home/about"
         create: true
         fields:
           - { label: "Title", name: "title", widget: "string"}
