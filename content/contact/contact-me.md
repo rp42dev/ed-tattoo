@@ -2,12 +2,8 @@
 title: Contact Me
 cover: assets/images/bg/contactbg.png
 date: 2022-11-22T17:35:04.010Z
-seotitle: Tattoo designs Lørenskog | Ed Tattoo
-seoodescription: I can create a custom tattoo design for you. I can also make a
-  tattoo design based on your ideas. We can work together to create a unique
-  tattoo design.
-seo-title: " Contast -Tattoo designs Lørenskog | Ed Tattoo"
-seo-description: I can create a custom tattoo design for you. I can also make
+seotitle: " Contast -Tattoo designs Lørenskog | Ed Tattoo"
+seodescription: I can create a custom tattoo design for you. I can also make
   a   tattoo design based on your ideas. We can work together to create a
   unique   tattoo design.
 ---
