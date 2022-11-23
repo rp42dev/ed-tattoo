@@ -77,7 +77,6 @@ module.exports = () => {
 	// adding gallery list posts page
 	pages.push(...gallery.edges.map(item => {
 		let data;
-
 		if (item.format === 'md') {
 			try {
 				const { content } = parseMD(fs.readFileSync(join('content', 'gallery', item.id), 'utf-8'));
@@ -85,8 +84,8 @@ module.exports = () => {
 					...item,
 					content,
 					seo: {
-						title: item.seotitle,
-						description: item.seodescription,
+						title: item.details.seotitle,
+						description: item.details.seodescription,
 					}
 				};
 
@@ -101,8 +100,8 @@ module.exports = () => {
 			url: `/gallery/${item.id}/`,
 			seo: {
 				cover: item.details.cover,
-				title: item.seotitle,
-				description: item.seodescription,
+				title: item.details.seotitle,
+				description: item.details.seodescription,
 			},
 			data: {
 				details: item.details,
