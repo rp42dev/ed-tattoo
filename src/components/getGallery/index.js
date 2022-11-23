@@ -1,37 +1,21 @@
-import { useEffect, useState } from "preact/hooks";
 import { Link } from 'preact-router';
 import CardComponent from '../cardComponent';
 
 
 function getGalleryListing(data, display) {
 
-    const [gallery, setGallery] = useState([]);
+    let gallery;
 
-    let displayGallery = [];
-    
-    useEffect(() => {
-        if (data) {
-            let sortedGallery = data.edges.sort((a, b) => {
-                return new Date(b.details.date) - new Date(a.details.date);
-            });
-
-            if (display) {
-                sortedGallery.map(item => {
-
-                    if (item.details.isDisplay === true) {
-                        displayGallery.push(item);
-                    }
-                    displayGallery = displayGallery.slice(0, 7);
-                });
-            } else {
-                displayGallery = data.edges;
-            }
-
-            setGallery(displayGallery);
-            
-        }
-
-    }, [data, gallery]);
+    switch (display) {
+        case null || undefined:
+            gallery = data.edges;
+            break;
+        case true:
+            gallery = data.edges.filter(item => item.details.isDisplay === true);
+            break;
+        default:
+            gallery = data.edges;
+    }
 
     return (
         <>

@@ -14,6 +14,9 @@ writeSeoTags(join(__dirname, 'content'));
 module.exports = () => {
 	const [about, contact, cover, gallery, home] = generateFileList(join(__dirname, 'content')).nodes;
 
+	// Sort by date and Reverse the gallery array to get the latest post first
+	gallery.edges.sort((a, b) => b.details.date - a.details.date);
+
 	const pages = [
 		{
 			url: '/',

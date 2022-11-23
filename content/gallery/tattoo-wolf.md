@@ -1,6 +1,6 @@
 --- 
 title: Tattoo wolf 
-date: 2022-11-23T17:36:12.685Z 
+date: 2022-11-23T17:36:14.685Z 
 seotitle: Ed Tattoo studio Lørenskog 
 seodescription: Ed Tattoo studio is located in Lørenskog, near Oslo, Clean and safe environment for clients and artists. Contact me for a free consultation. 
 isDisplay: true 

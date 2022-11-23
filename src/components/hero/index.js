@@ -24,7 +24,6 @@ const Hero = ({ children, ...props }) => {
                 <div className={style.overlay}>
 
                 </div>
-                {displayScroll && <ScrollDown />}
             </div>
         </FadeEffect>
     );

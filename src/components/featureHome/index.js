@@ -1,37 +1,34 @@
 import style from "./style.css";
 
+const data = [
+  {
+    title: "Tattoo",
+    img: "../assets/icons/vector.svg"
+  },
+  {
+    title: "Design",
+    img: "../assets/icons/vector-dragon.svg"
+  },
+  {
+    title: "Studio",
+    img: "../assets/icons/vector-chair.svg"
+  },
+];
+
 
 const FeatureHome = () => {
   const { featureHome, card, content } = style;
+
   return (
     <div className={featureHome}>
-      <div className={card}>
-        <div className={content}>
-          <img src="../assets/icons/vector.svg" /> 
-          <p>
-            Tattoo
-          </p>
+      {data.map((item, index) => (
+        <div key={index} className={card}>
+          <div className={content}>
+            <img src={item.img} alt="icon" />
+            <h3>{item.title}</h3>
+          </div>
         </div>
-      </div>
-      <div className={card}>
-
-        <div className={content}>
-          <img src="../assets/icons/vector-dragon.svg" />
-
-         <p>
-            Design
-          </p>
-        </div>
-      </div>
-      <div className={card}>
-
-        <div className={content}>
-          <img src="../assets/icons/vector-chair.svg" />
-          <p>
-            Studio
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

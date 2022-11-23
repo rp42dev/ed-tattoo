@@ -83,7 +83,7 @@ const Footer = () => {
                         </div>
                         <div className={style.footerBottom}>
                             <p>© 2022 Ed Tattoo</p>
-                            <p>Website by | <a href="https://www.rp42.dev" target="_blank" rel="noopener noreferrer">RP<span>42</span> Design</a></p>
+                            <p>Website Developed by | <a href="https://www.rp42.dev" target="_blank" rel="noopener noreferrer">RP<span>42</span></a></p>
                         </div>
                     </Container>
                 </div>

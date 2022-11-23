@@ -1,6 +1,7 @@
 .scroll {
-    display: none;
+    display: block;
     position: fixed;
+    z-index: 99;
     top: 80%;
     right: calc(var(--spacing-auto-card) / 2);
     float: right;

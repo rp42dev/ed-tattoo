@@ -8,23 +8,14 @@ import Footer from '../../components/footer';
 
 const photographs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
-	const [isLoaded, setIsLoaded] = useState(false);
-
-
-	useEffect(() => {
-		if (!isLoading) {
-			setIsLoaded(true);
-		}
-	}, [isLoading]);
 
 	return (
 		<>
-			<Header link={['home', 'facebook', 'instagram']} />
+			<Header links={['home', 'facebook', 'instagram']} />
 			<main>
 				<div class={style.content}>
-					{isLoaded && <Hero hero={data.data.cover} isLoaded={isLoaded} displayScroll={true}>
+					{!isLoading && <Hero hero={data.data.cover} displayScroll={true}>
 						<ContactForm />
-
 					</Hero>}
 				</div>
 			</main>

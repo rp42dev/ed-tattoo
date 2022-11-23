@@ -12,7 +12,7 @@ const Gallery = ({...props}) => {
 
 	return (
 		<>
-			<Header links="home" />
+			<Header links={["home"]} />
 
 			<section classList={style.section}>
 				<div class={style.gallery}>
