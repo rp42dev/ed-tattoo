@@ -84,7 +84,7 @@ module.exports = () => {
 					...item,
 					content,
 					seo: {
-						title: item.details.seotitle,
+						title: `Gallery - ${item.details.seotitle} | Ed Tattoo`,
 						description: item.details.seodescription,
 					}
 				};
@@ -100,7 +100,7 @@ module.exports = () => {
 			url: `/gallery/${item.id}/`,
 			seo: {
 				cover: item.details.cover,
-				title: item.details.seotitle,
+				title: `Tattoo ${item.details.name} by Ed | ${item.details.seotitle}`,
 				description: item.details.seodescription,
 			},
 			data: {
