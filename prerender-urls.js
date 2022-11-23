@@ -103,7 +103,7 @@ module.exports = () => {
 			url: `/gallery/${item.id}/`,
 			seo: {
 				cover: item.details.cover,
-				title: `Tattoo ${item.details.name} by Ed | ${item.details.seotitle}`,
+				title: `Tattoo ${item.details.title} by Ed | ${item.details.seotitle}`,
 				description: item.details.seodescription,
 			},
 			data: {
