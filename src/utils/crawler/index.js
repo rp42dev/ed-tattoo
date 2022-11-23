@@ -21,7 +21,7 @@ function getDetails(format, data) {
 		}
 
 		default: {
-			console.error('File format not recognised');
+			console.error('File format not recognized');
 		}
 	}
 }

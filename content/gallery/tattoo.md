@@ -1,7 +1,9 @@
----
-title: tattoo
-date: 2022-11-09T21:01:12.287Z
-isDisplay: false
-cover: assets/images/img76.jpeg
-tags: tattoo
----
+--- 
+title: tattoo 
+date: 2022-11-23T17:36:12.685Z 
+seotitle: Old school tattoos Lørenskog 
+seodescription: I specialize in old school tattoos. I love the old school style and I love to create new designs and styles. I can create a custom tattoo design for you. 
+isDisplay: false 
+cover: assets/images/img76.jpeg 
+tags: tattoo 
+--- 
