@@ -7,5 +7,5 @@ seodescription: I am a tattoo artist in Lørenskog near Oslo. I specialize in
   custom tattoos.
 isDisplay: false
 cover: assets/images/img6.jpg
-tags: Rose tattoo, arm tattoo, black and gray
+tags: Rose tattoo, arm tattoo, black and gray, traditional tattoo, custom tattoo
 ---

@@ -131,8 +131,8 @@ module.exports = () => {
 
 		...gallery.edges.map((item) => {
 			return {
-				url: `/gallery/${item.id}`,
-				changefreq: 'yearly',
+				url: `/gallery/${item.slug}`,
+				changefreq: 'monthly',
 				priority: 0.6,
 				img: [
 					{
