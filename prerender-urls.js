@@ -103,7 +103,7 @@ module.exports = () => {
 			data = fs.readFileSync(join('content', 'gallery', item.id), 'utf-8').replace(/---(.*(\r)?\n)*---/, '');
 		}
 		return {
-			url: `/gallery/${item.id}`,
+			url: `/gallery/${item.slug}`,
 			seo: {
 				cover: item.details.cover,
 				title: `Tattoo ${item.details.title} by Ed | ${item.details.seotitle}`,

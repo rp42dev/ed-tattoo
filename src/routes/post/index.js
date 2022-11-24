@@ -71,7 +71,7 @@ function getBlogBody(data) {
 					<img src={jpg} alt={details.title} />
 				</picture>}
 				{next &&
-					<Link href={`/gallery/${next.id}`}>
+					<Link href={`/gallery/${next.slug}`}>
 						<div class={style.goNext}>
 							<div class={style.next}>
 								<i class="fa-solid fa-chevron-right"></i>
@@ -80,7 +80,7 @@ function getBlogBody(data) {
 					</Link>
 				}
 				{prev &&
-					<Link href={`/gallery/${prev.id}`}>
+					<Link href={`/gallery/${prev.slug}`}>
 						<div class={style.goPrev}>
 							<div class={style.prev}>
 								<i class="fa-solid fa-chevron-left"></i>

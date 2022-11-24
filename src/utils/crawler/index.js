@@ -42,9 +42,11 @@ function getFolders(source) {
 	const edges = allContent.filter(isAValidFile).map(file => {
 		const data = fs.readFileSync(file, 'utf-8');
 		const id = file.substr(file.lastIndexOf(sep) + 1);
+		const slug = id.substr(0, id.lastIndexOf('.'));
 		const format = getExtensionFromFilename(id);
 		return {
 			id,
+			slug,
 			format,
 			path: file,
 			details: getDetails(format, data),
