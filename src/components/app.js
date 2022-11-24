@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { Router, route } from 'preact-router';
 import { Provider } from '@preact/prerender-data-provider';
 
