@@ -1,5 +1,4 @@
 import { usePrerenderData } from '@preact/prerender-data-provider';
-import { useState, useEffect } from 'preact/hooks';
 import style from './style';
 import Header from '../../components/header';
 import Hero from '../../components/hero';

@@ -4,38 +4,54 @@ import style from './style';
 const ImageFeature = ({ ...props }) => {
     const { images } = props;
 
-    if (images.length > 2) {
-        return null
-    }
+    if (!images.length) return null;
+    if (images.length > 2) images.slice(0, 2);
 
-    const jpg1 = '../' + images[0].image.replace('.jpg', '-thumbnail.jpg');
-    const jpeg2 = '../' + images[1].image.replace('.jpg', '-thumbnail.jpg');
-    const webp1 = jpg1 + '.webp';
-    const webp2 = jpeg2 + '.webp';
+    const imageUrlsJpg = [];
+    const imageUrlsWebp = [];
+
+    for (let i = 0; i < images.length; i++) {
+        let image = '../' + images[i]
+            .image.replace('.jpg', '-thumbnail.jpg');
+        let webp = `${image}.webp`;
+        imageUrlsJpg.push(image);
+        imageUrlsWebp.push(webp);
+    }
 
     return (
         <FadeEffect>
-            <div class={style.imageFeature}>
-                <div class={style.card}>
-                    <picture>
-                        <source srcset={webp1} type="image/webp" />
-                        <source srcset={jpg1} type="image/jpeg" />
-                        <img src={jpg1} alt={images[0]} />
-                    </picture>
-                    <div class={style.overlay}>
+            {images.length === 1 ? (
+                <div class={style.imageFeatureSingle}>
+                    <div class={style.card}>
+                        <picture>
+                            <source srcset={imageUrlsWebp[0]} type="image/webp" />
+                            <img src={imageUrlsJpg[0]} alt={images[0].alt} />
+                        </picture>
+                        <div class={style.overlay}>
+                        </div>
                     </div>
                 </div>
-                <div class={style.card}>
-                    <picture>
-                        <source srcset={webp2} type="image/webp" />
-                        <source srcset={jpeg2} type="image/jpeg" />
-                        <img src={jpeg2} alt={images[1]} />
-                    </picture>
-                    <div class={style.overlay}>
+            ) : (
+                <div class={style.imageFeature}>
+                    <div class={style.card}>
+                        <picture>
+                            <source srcset={imageUrlsWebp[0]} type="image/webp" />
+                            <img src={imageUrlsJpg[0]} alt={images[0].alt} />
+                        </picture>
+                        <div class={style.overlay}>
+                        </div>
+                    </div>
+                    <div class={style.card}>
+                        <picture>
+                            <source srcset={imageUrlsWebp[1]} type="image/webp" />
+                            <img src={imageUrlsJpg[1]} alt={images[1].alt} />
+                        </picture>
+                        <div class={style.overlay}>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </FadeEffect>
+            )}
+        </FadeEffect >
     );
 }
 

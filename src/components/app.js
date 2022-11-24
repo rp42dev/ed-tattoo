@@ -13,6 +13,8 @@ import NotFoundPage from '../routes/notfound';
 
 
 const removeTrailingSlach = (url) => {
+	console.log(url);
+	if (url === '/') return url;
 	if (url.endsWith('/')) {
 		route(url.slice(0, -1), true);
 	}

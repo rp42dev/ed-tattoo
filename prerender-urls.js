@@ -64,6 +64,9 @@ module.exports = () => {
 			seo: {
 				title: 'Black and grey realism tattoos Lørenskog | Ed Tattoo',
 				description: 'I specialize in black and grey realism tattoos.I love contrast and dept that black and gray can give and I love to create new designs and styles.',
+			},
+			data: {
+				cover: cover.edges[1].details.cover,
 			}
 		}];
 
@@ -100,7 +103,7 @@ module.exports = () => {
 			data = fs.readFileSync(join('content', 'gallery', item.id), 'utf-8').replace(/---(.*(\r)?\n)*---/, '');
 		}
 		return {
-			url: `/gallery/${item.id}/`,
+			url: `/gallery/${item.id}`,
 			seo: {
 				cover: item.details.cover,
 				title: `Tattoo ${item.details.title} by Ed | ${item.details.seotitle}`,

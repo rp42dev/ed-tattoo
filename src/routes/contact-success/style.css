@@ -1,18 +1,22 @@
-.pageContact {
-  padding: 0 5%;
+
+
+.content {
+  height: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pageTitle {
   position: relative;
-  display: inline-block;
-  font-weight: 500;
+  z-index: 100;
 }
 
-.pageTitle:after {
-  position: absolute;
-  bottom: -5px;
-  left: 0px;
-  content: '';
-  width: 75%;
-  border-bottom: 2px solid #FFC107;
+@media screen and (max-width: 600px) {
+  .content {
+
+    padding-top: 3rem;
+  }
 }

@@ -6,15 +6,15 @@ function getGalleryListing(data, display) {
 
     let gallery;
 
-    switch (display) {
-        case null || undefined:
-            gallery = data.edges;
-            break;
-        case true:
-            gallery = data.edges.filter(item => item.details.isDisplay === true);
-            break;
-        default:
-            gallery = data.edges;
+    if (!data || !data.edges) return null;
+
+    if (!display) {
+        gallery = data.edges
+    }
+    else {
+        gallery = data.edges
+            .filter(item => item.details.isDisplay === true)
+            .slice(0, 7);
     }
 
     return (

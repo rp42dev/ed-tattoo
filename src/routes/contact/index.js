@@ -1,12 +1,11 @@
 import { usePrerenderData } from '@preact/prerender-data-provider';
-import { useState, useEffect } from 'preact/hooks';
 import style from './style';
 import Header from '../../components/header';
 import Hero from '../../components/hero';
 import ContactForm from '../../components/forms/contact';
 import Footer from '../../components/footer';
 
-const photographs = (props) => {
+const Contact = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 
 	return (
@@ -14,7 +13,7 @@ const photographs = (props) => {
 			<Header links={['home', 'facebook', 'instagram']} />
 			<main>
 				<div class={style.content}>
-					{!isLoading && <Hero hero={data.data.cover} displayScroll={true}>
+					{!isLoading && <Hero hero={data.data.cover}>
 						<ContactForm />
 					</Hero>}
 				</div>
@@ -25,4 +24,4 @@ const photographs = (props) => {
 	);
 };
 
-export default photographs;
+export default Contact;

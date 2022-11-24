@@ -9,10 +9,10 @@ import Header from '../../components/header';
 import FadeEffect from '../../components/fadeEffect';
 
 
-
-
 const Post = ({ ...props }) => {
 	const [data, isLoading] = usePrerenderData(props);
+
+	// console.log(data.url);
 
 
 	if (!data && !isLoading) {
@@ -25,7 +25,7 @@ const Post = ({ ...props }) => {
 
 	return (
 		<>
-			<Header links='gallery' />
+			<Header links={['gallery']} />
 			{!isLoading &&
 				< main class={style.blogcontainer}>
 					{getBlogBody(data)}
