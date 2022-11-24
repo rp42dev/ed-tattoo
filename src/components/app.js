@@ -12,7 +12,7 @@ import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
 
-const removeTrailingSlach = (url) => {
+const removeTrailingSlah = (url) => {
 	console.log(url);
 	if (url === '/') return url;
 	if (url.endsWith('/')) {
@@ -28,7 +28,7 @@ export default class App extends Component {
 	 */
 	handleRoute = e => {
 		this.currentUrl = e.url;
-		removeTrailingSlach(e.url)
+		removeTrailingSlah(e.url)
 	};
 
 	render(props) {
