@@ -4,8 +4,6 @@ import style from './style';
 const ImageFeature = ({ ...props }) => {
     const { images } = props;
 
-    console.log(images);
-
     if (!images.length) return null;
     if (images.length > 2) images.slice(0, 2);
 
