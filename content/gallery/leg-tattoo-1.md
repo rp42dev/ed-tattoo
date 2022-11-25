@@ -1,9 +1,10 @@
 --- 
-title: Image 
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Color realism tattoos Lørenskog 
-seodescription: Fancy a color realism tattoo? I can help you with the design and the process. Contact me for a free consultation. And let me help you with your next tattoo. 
+title: Leg Tattoo Black bird 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Leg Tattoo Black bird 
+seodescription: Studio is located in Lørenskog. I will make sure that the Leg Tattoo Black bird tattoo is a perfect match. Contact me for a free consultation... 
 isDisplay: true 
 cover: assets/images/img12.jpeg 
-tags: tag 
+tags: leg tattoo, black bird tattoo, custom tattoo, tattoo design, realism tattoo 
 --- 
+ 

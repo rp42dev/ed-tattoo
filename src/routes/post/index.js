@@ -7,6 +7,7 @@ import style from './style';
 import Notfound from '../notfound';
 import Header from '../../components/header';
 import FadeEffect from '../../components/fadeEffect';
+import Tooltip from '../../components/tooltip';
 
 
 const Post = ({ ...props }) => {
@@ -38,6 +39,7 @@ const Post = ({ ...props }) => {
 
 function getBlogBody(data) {
 	const { details, prev, next } = data.data;
+	if (!details) return null;
 
 	const redirect = (url) => {
 		route(url);
@@ -58,7 +60,6 @@ function getBlogBody(data) {
 	}, [prev, next]);
 
 
-	if (!details) return null;
 
 	const jpg = details.cover
 	const webp = jpg + '.webp';
@@ -67,23 +68,28 @@ function getBlogBody(data) {
 			<div class={style.blogcover}>
 				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
-					<img src={jpg} alt={`Image of Ed's tattoo ${details.title}`} />
+					<img src={jpg} alt={`A picture of ${details.title}`} />
 				</picture>}
 				{next &&
-					<Link href={`/gallery/${next.slug}/`}>
+
+					<Link href={`/gallery/${next.slug}/`} aria-label={`Next: Image`}>
 						<div class={style.goNext}>
-							<div class={style.next}>
-								<i class="fa-solid fa-chevron-right"></i>
-							</div>
+							<Tooltip text="Next: Image" position="left">
+								<div class={style.next}>
+									<i class="fa-solid fa-chevron-right"></i>
+								</div>
+							</Tooltip>
 						</div>
 					</Link>
 				}
 				{prev &&
-					<Link href={`/gallery/${prev.slug}/`}>
+					<Link href={`/gallery/${prev.slug}/`} aria-label={`Previous: Image`}>
 						<div class={style.goPrev}>
-							<div class={style.prev}>
-								<i class="fa-solid fa-chevron-left"></i>
-							</div>
+							<Tooltip text="Previous: Image">
+								<div class={style.prev}>
+									<i class="fa-solid fa-chevron-left"></i>
+								</div>
+							</Tooltip>
 						</div>
 					</Link>
 				}

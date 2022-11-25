@@ -1,9 +1,10 @@
 --- 
-title: Rose Tattoo
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Ed Tattoo studio Lørenskog near Oslo 
-seodescription: Ready for the next tattoo? Get in touch with me for a free consultation. I can help you with the design and the process. 100% satisfaction. 
+title: Rose Tattoo 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Rose Tattoo 
+seodescription: Fancy a new tattoo? Tattoo artist in Lørenskog. I can make a Rose Tattoo tattoo design based on your ideas. Don't hesitate to contact me... 
 isDisplay: false 
 cover: assets/images/immg567.jpeg 
 tags: tattoo 
 --- 
+ 

@@ -1,9 +1,10 @@
 --- 
-title: Tattoo Monkey
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Tattoo artist Lørenskog near Oslo 
-seodescription: I am a tattoo artist in Lørenskog near Oslo. I specialize in black and grey tattoos, color tattoos, traditional tattoos, cover ups and custom tattoos. 
+title: Tattoo Monkey 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Tattoo Monkey 
+seodescription: We are a tattoo studio in Lørenskog, near Oslo. I will make sure that the Tattoo Monkey tattoo is a perfect match. If you have any questions, contact me... 
 isDisplay: false 
 cover: assets/images/img98.jpeg 
-tags: tattoo, black and gray, monkey tattoo, traditional tattoo, custom tattoo, finger
+tags: tattoo, black and gray, monkey tattoo, traditional tattoo, custom tattoo, finger 
 --- 
+ 

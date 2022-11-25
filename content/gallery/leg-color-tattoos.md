@@ -1,9 +1,10 @@
 --- 
-title: Two tattoos on the leg
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Ed Tattoo studio Lørenskog near Oslo 
-seodescription: Ready for the next tattoo? Get in touch with me for a free consultation. I can help you with the design and the process. 100% satisfaction. 
+title: Two tattoos on the leg 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Two tattoos on the leg 
+seodescription: I am a tattoo artist in Lørenskog, near Oslo. I will make sure 100% satisfaction with Two tattoos on the leg tattoo design. Make an appointment. Contact me... 
 isDisplay: false 
 cover: assets/images/img56.jpeg 
-tags: tattoo, leg tattoo, color tattoo, custom tattoo, abstract tattoo, realistic tattoo
+tags: tattoo, leg tattoo, color tattoo, custom tattoo, abstract tattoo, realistic tattoo 
 --- 
+ 

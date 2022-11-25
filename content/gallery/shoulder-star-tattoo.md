@@ -1,9 +1,10 @@
 --- 
-title: Shoulder star tattoo
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Tattoo designs Lørenskog 
-seodescription: I can create a custom tattoo design for you. I can also make a tattoo design based on your ideas. We can work together to create a unique tattoo design. 
+title: Shoulder star tattoo 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Shoulder star tattoo 
+seodescription: I am a tattoo artist in Lørenskog. I love the contrast and dept that Shoulder star tattoo can give. Contact me for a free consultation... 
 isDisplay: false 
 cover: assets/images/img4444.jpeg 
-tags: tattoo, shoulder tattoo, star tattoo, tribal tattoo, black tattoo, custom tattoo
+tags: tattoo, shoulder tattoo, star tattoo, tribal tattoo, black tattoo, custom tattoo 
 --- 
+ 

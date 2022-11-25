@@ -3,7 +3,6 @@ title: Ed Tattoo
 date: 2022-11-22T17:21:58.860Z
 homeSections:
   - type: about-section
-    date: 2022-11-22T17:22:38.631Z
     title: About
     body: >-
       I'm a Tattoo Artist, I have been tattooing for years. My style is black

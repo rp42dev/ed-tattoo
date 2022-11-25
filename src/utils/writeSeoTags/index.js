@@ -1,51 +1,136 @@
 const { generateFileList } = require('../crawler');
 const parseMD = require('parse-md').default;
+const util = require('node:util');
 const { join } = require('path');
 const fs = require('fs');
 
+const tags = [
+    'Black and grey tattoo',
+    'color tattoo',
+    'traditional tattoo',
+    'cover up',
+    'custom tattoo',
+    'tattoo design',
+    'tattoo artist',
+    'tattoo studio',
+    'full body tattoo',
+    'full sleeve tattoo',
+    'full back tattoo',
+    'full leg tattoo',
+    'full arm tattoo',
+    'tattoo in',
+    'realism tattoo',
+    'gray wash tattoo',
+    'new school tattoo',
+    'old school tattoo',
+    'tribal tattoo',
+    'japanese tattoo',
+    'abstract tattoo',
+    'new tattoo',
+    'scar cover up',
+    'color realism tattoo',
+    'black and grey realism tattoo',
+    'lettering tattoo',
+    'tattoo studio',
+    'get tattooed',
+];
 
-const list_of_descriptions = {
-    'Black and grey tattoos Lørenskog': 'I specialize in black and grey tattoos. I love contrast and dept that black and gray can give and I love to create new designs and styles.',
-    'Tattoo cover ups Lørenskog': 'We cover up old tattoos, and make them look new again. we will make sure that the new tattoo is a perfect match for the old one.',
-    'Tattoo designs Lørenskog': 'I can create a custom tattoo design for you. I can also make a tattoo design based on your ideas. We can work together to create a unique tattoo design.',
-    'Traditional tattoo Lørenskog': 'I specialize in traditional tattoos. I love the old school style and I love to create new designs and styles. I can create a custom tattoo design for you.',
-    'Custom tattoos Lørenskog': 'I create unique custom tattoos. I can also make a tattoo design based on your ideas. Or We can work together to create a unique tattoo design.',
-    'Color tattoos Lørenskog': 'I specialize in color tattoos. I love the bright colors and I love to create new designs and styles. I can create a custom tattoo design for you.',
-    'Tattoo studio Lørenskog': 'We specialize in custom tattoos. We can create a custom tattoo design for you. We can also make a tattoo design based on your ideas.',
-    'Tattoo artist Lørenskog': 'I specialize in black and grey tattoos, color tattoos, traditional tattoos, cover ups and custom tattoos, I can create a custom tattoo design for you.',
-    'Tattoo artist Lørenskog near Oslo': 'I am a tattoo artist in Lørenskog near Oslo. I specialize in black and grey tattoos, color tattoos, traditional tattoos, cover ups and custom tattoos.',
-    'Tattoo studio Lørenskog near Oslo': 'We specialize in custom tattoos. We can create a custom tattoo design for you. We can also make a tattoo design based on your ideas.',
-    'Full body tattoos Lørenskog': 'I specialize in full body tattoos. Tattooing the whole body is a big project, let me help you with the design and the process.',
-    'Full sleeve tattoos Lørenskog': 'Tattoo a full sleeve is a big project, let me help you with the design and the process. Contact me for a free consultation.',
-    'Full back tattoos Lørenskog': 'Fancy a full back tattoo? I can help you with the design and the process. Contact me for a free consultation. And let me help you with your next tattoo.',
-    'Full leg tattoos Lørenskog': 'I specialize in full leg tattoos. Tattooing the whole leg is a big project, let me help you with the design and the process.',
-    'Full arm tattoos Lørenskog': 'I specialize in full arm tattoos. Visit my studio for a free consultation. I can help you with the design and the process. Contact me for a free consultation.',
-    'Tattoo in Lørenskog': 'I am a tattoo artist in Lørenskog. Is it your first tattoo? I can help you with the design and the process. Contact me for a free consultation.',
-    'Tattoo in Lørenskog near Oslo': 'I am a tattoo artist in Lørenskog near Oslo. Book a free consultation. I can help you with the design and the process. Contact me for a free consultation.',
-    'Tattoo near Oslo': 'My studio is located in Lørenskog, near Oslo, Car parking is available. Clean and safe environment. Contact me for a free consultation.',
-    'Realism tattoos Lørenskog': 'I specialize in realism tattoos. I love the contrast and dept that realism can give and I love to create new designs and styles.',
-    'Gray wash tattoos Lørenskog': 'I specialize in gray wash tattoos. Gray wash is a technique that can give a tattoo a very realistic look. I love to create new designs and styles.',
-    'New school tattoos Lørenskog': 'I specialize in new school tattoos. I love the bright colors and I love to create new designs and styles. I can create new school tattoo designs for you.',
-    'Old school tattoos Lørenskog': 'I specialize in old school tattoos. I love the old school style and I love to create new designs and styles. I can create a custom tattoo design for you.',
-    'Tribal tattoos Lørenskog': 'One of my favorite styles is tribal tattoos. I love the contrast and dept that tribal tattoos can give, get a custom tribal tattoo design for you.',
-    'Japanese tattoos Lørenskog': 'I specialize in japanese tattoos. Japanese tattoos are very popular and I love to create new designs and styles. I can create a custom tattoo design for you.',
-    'Abstract tattoos Lørenskog': 'I specialize in abstract tattoos. I will create a custom abstract tattoo design for you. I can also make a tattoo design based on your ideas.',
-    'New Tattoos in Lørenskog': 'I am a tattoo artist in Lørenskog. I will design and tattoo a new tattoo for you. Or we can work together to create a unique tattoo design.',
-    'Scar cover ups in Lørenskog': 'We cover up scars that you want to hide. Boost your confidence and get a new tattoo. We will make sure that the new tattoo is a perfect match.',
-    'Color realism tattoos Lørenskog': 'Fancy a color realism tattoo? I can help you with the design and the process. Contact me for a free consultation. And let me help you with your next tattoo.',
-    'Black and grey realism tattoos Lørenskog': 'I specialize in black and grey realism tattoos. I love contrast and dept that black and gray can give and I love to create new designs and styles.',
-    'Lørenskog tattoo artist': 'Ed is a tattoo artist in Lørenskog. He specializes in black and grey tattoos, color tattoos, traditional tattoos, cover ups and custom tattoos.',
-    'Lettering tattoos Lørenskog': 'Is it time for a new tattoo? Minimalist Tattoos and lettering tattoos are very popular. I can create a custom tattoo design for you. Contact me.',
-    'Ed Tattoo studio Lørenskog': 'Ed Tattoo studio is located in Lørenskog, near Oslo, Clean and safe environment for clients and artists. Contact me for a free consultation.',
-    'Ed Tattoo studio Lørenskog near Oslo': 'Ready for the next tattoo? Get in touch with me for a free consultation. I can help you with the design and the process. 100% satisfaction.',
-    'Get tattooed in Loerskog': 'Ready to make changes? Thinking about getting a new tattoo? Contact me for a free consultation. I can help you with the design and the process.',
+const alsoList = [
+    'Black and grey tattoo Lørenskog',
+    'color tattoo Lørenskog',
+    'traditional tattoo Lørenskog',
+    'cover up Lørenskog',
+    'custom tattoo Lørenskog',
+    'tattoo design Lørenskog',
+    'tattoo artist Lørenskog',
+    'tattoo studio Lørenskog',
+    'full body tattoo Lørenskog',
+    'full sleeve tattoo Lørenskog',
+    'full back tattoo Lørenskog',
+    'full leg tattoo Lørenskog',
+    'full arm tattoo Lørenskog',
+    'tattoo in Lørenskog',
+    'realism tattoo Lørenskog',
+    'gray wash tattoo Lørenskog',
+    'new school tattoo Lørenskog',
+    'old school tattoo Lørenskog',
+    'tribal tattoo Lørenskog',
+    'japanese tattoo Lørenskog',
+    'abstract tattoo Lørenskog',
+    'new tattoo Lørenskog',
+    'scar cover up Lørenskog',
+    'color realism tattoo Lørenskog',
+    'black and grey realism tattoo Lørenskog',
+    'lettering tattoo Lørenskog',
+    'tattoo studio Lørenskog',
+    'get tattooed Lørenskog',
+];
+
+
+const designList = [
+    '%s I can create a %s tattoo design for you. %s',
+    '%s I can make a %s tattoo design based on your ideas. %s',
+    '%s I will design and tattoo a %s for you. %s',
+    '%s We can work together to create a unique s% tattoo design. %s',
+    '%s I will create a custom %s tattoo design for you. %s',
+    '%s I can help you with the %s design and the process. %s',
+    '%s I love to create new %s designs and styles. %s',
+    "%s Let me help you with %s tattoo design.",
+    "%s I will make sure 100% satisfaction with %s tattoo design. %s",
+    "%s My goal is to make customer happy with %s tattoo design. %s",
+    "%s I will make sure that the %s tattoo is a perfect match. %s",
+    "%s I do tattoos in various styles. one of my styles is %s. %s",
+    "%s %s tattoos are very popular. Contact me for a consultation. %s",
+    "%s The %s tattoo is a great way to express yourself. %s",
+    "%s If you are looking for a %s tattoo, I can help you. %s",
+    "%s Love %s tattoos and I love to create new designs %s",
+    "%s I love the contrast and dept that %s can give. %s",
+
+];
+
+const aboutList = [
+    "The tattoo studio is located in Lørenskog.",
+    "The tattoo studio is located in Lørenskog, near Oslo.",
+    "I'm located in Lørenskog, near Oslo.",
+    "I am a tattoo artist in Lørenskog.",
+    "I am a tattoo artist in Lørenskog, near Oslo.",
+    "We are a tattoo studio in Lørenskog, near Oslo.",
+    "Who is Ed? Ed is a tattoo artist in Lørenskog.",
+    "Who is Ed? Ed is a tattoo artist in Lørenskog, near Oslo.",
+    "Tattoo artist in Lørenskog.",
+    "Ed Tattoo is a tattoo artist in Lørenskog, near Oslo.",
+    "Studio is located in Lørenskog, near Oslo.",
+    "Studio is located in Lørenskog.",
+    "I do tattoos that are custom made for you.",
+    "Looking for a tattoo artist in Lørenskog?",
+    "Fancy a new tattoo? Tattoo artist in Lørenskog.",
+    "Looking for a tattoo artist in Lørenskog?",
+    "Change is good. Get a new tattoo in Lørenskog.",
+    "Ready for a new tattoo? Tattoo artist in Lørenskog.",
+];
+
+const callToActionList = [
+    "Contact me for a free consultation",
+    "Free consultation. Contact me",
+    "Do you have any questions? Contact me",
+    "Don't hesitate to contact me",
+    "Feel free to contact me",
+    "If you have any questions, contact me",
+    "For more information, contact me",
+    "Contact me for more information",
+    "Make an appointment. Contact me",
+    "Contact me for an appointment",
+    "Are you ready for a new tattoo? Contact me",
+    "Ready for a new tattoo? Contact me",
+    "Make it happen. Contact me",
+    "I'm ready to help you. Contact me",
+    "I'm here to help you. Contact me",
+];
+
+const getRandom = (list) => {
+    return list[Math.floor(Math.random() * list.length)];
 };
-
-function getRandomTitle(obj) {
-    const keys = Object.keys(obj);
-    const key = keys[keys.length * Math.random() << 0];
-    return key;
-}
+    
 
 const getGalleyContent = (src) => {
     const gallery = generateFileList(src).nodes.find(item => item.id === 'gallery');
@@ -69,14 +154,17 @@ const writeSeoTags = (src) => {
                 return;
             }
             
-            const getseotitle = getRandomTitle(list_of_descriptions);
             const description = data.replace(/---(.*(\r)?\n)*---/, '').replace(/\[.*\]\(.*\)/g, '').replace(/(\r)?\n/, '') || '';
+            const seoTitleTemplate = 'Ed Tattoo Lørenskog - %s';
+            const seoTitle = util.format(seoTitleTemplate, metadata.title).slice(0, 60);
+            const seoDescription = util.format(getRandom(designList), getRandom(aboutList), metadata.title, getRandom(callToActionList)).slice(0, 157)+ '...';
+            
             
             const fields = {
                 title: metadata.title,
                 date: newDate.toISOString(),
-                seotitle: getseotitle,
-                seodescription: list_of_descriptions[getseotitle],
+                seotitle: seoTitle,
+                seodescription: seoDescription,
                 isDisplay: metadata.isDisplay,
                 cover: metadata.cover,
                 tags: metadata.tags,

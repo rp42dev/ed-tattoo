@@ -32,6 +32,9 @@
 	<% if(htmlWebpackPlugin.options.seo && 'description' in htmlWebpackPlugin.options.seo) {%>
 	<meta property="description" content="<%= htmlWebpackPlugin.options.seo.description %>" />
 	<% } %>
+	<% if(htmlWebpackPlugin.options.seo && 'description' in htmlWebpackPlugin.options.seo) {%>
+	<meta property="og:keywords" content="<%= htmlWebpackPlugin.options.seo.keywords %>" />
+	<% } %>
 	<meta name="twitter:card"
 		content="<%= (htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) ? 'summary_large_image' : 'summary'%>" />
 	<% if(htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) {%>

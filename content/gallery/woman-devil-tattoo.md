@@ -1,9 +1,10 @@
 --- 
-title: Traditional Tattoo woman with devil
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Lettering tattoos Lørenskog 
-seodescription: Is it time for a new tattoo? Minimalist Tattoos and lettering tattoos are very popular. I can create a custom tattoo design for you. Contact me. 
+title: Traditional Tattoo woman with devil 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Traditional Tattoo woman with devil 
+seodescription: Who is Ed? Ed is a tattoo artist in Lørenskog, near Oslo. I do tattoos in various styles. one of my styles is Traditional Tattoo woman with devil. Do you hav... 
 isDisplay: false 
 cover: assets/images/img11.jpeg 
-tags: tattoo, traditional tattoo, black and gray, woman tattoo, devil tattoo, custom tattoo, shoulder tattoo
+tags: tattoo, traditional tattoo, black and gray, woman tattoo, devil tattoo, custom tattoo, shoulder tattoo 
 --- 
+ 

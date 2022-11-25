@@ -98,12 +98,14 @@ module.exports = () => {
 		} else {
 			data = fs.readFileSync(join('content', 'gallery', item.id), 'utf-8').replace(/---(.*(\r)?\n)*---/, '');
 		}
+
 		return {
 			url: `/gallery/${item.slug}`,
 			seo: {
+				keywords: item.details.tags.slice(0, 147)+ '...',
 				canonical: `https://www.edtattoo.no/gallery/${item.slug}/`,
 				cover: item.details.cover,
-				title: `Tattoo ${item.details.title} by Ed | ${item.details.seotitle}`,
+				title: item.details.seotitle,
 				description: item.details.seodescription,
 			},
 			data: {
@@ -114,24 +116,20 @@ module.exports = () => {
 			}
 		};
 	}));
-
 	// An array with your links
 	const links = [
-		{ url: '/', changefreq: 'monthly', priority: 1 },
-		{ url: '/about/', changefreq: 'monthly', priority: 0.5 },
-		{ url: '/contact/', changefreq: 'monthly', priority: 0.3 },
-		{ url: '/contact/success/', changefreq: 'monthly', priority: 0.3 },
+		{ url: '', lastmod: home.edges[0].details.date },
+		{ url: '/about/', lastmod: about.edges[0].details.date },
+		{ url: '/contact/', lastmod: contact.edges[0].details.date },
 		{
 			url: '/gallery/',
-			changefreq: 'weekly',
-			priority: 0.8,
+			lastmod: new Date().toISOString()
 		},
 
 		...gallery.edges.map((item) => {
 			return {
 				url: `/gallery/${item.slug}/`,
-				changefreq: 'monthly',
-				priority: 0.6,
+				lastmod: item.details.date,
 				img: [
 					{
 						url: item.details.cover,

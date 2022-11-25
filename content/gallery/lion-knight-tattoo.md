@@ -1,9 +1,10 @@
 --- 
-title: Abstract Tattoo Lion head and knight
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Custom tattoos Lørenskog 
-seodescription: I create unique custom tattoos. I can also make a tattoo design based on your ideas. Or We can work together to create a unique tattoo design. 
+title: Abstract Tattoo Lion head and knight 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Abstract Tattoo Lion head and knight 
+seodescription: Fancy a new tattoo? Tattoo artist in Lørenskog. I love the contrast and dept that Abstract Tattoo Lion head and knight can give. Do you have any questions? C... 
 isDisplay: false 
 cover: assets/images/img25.jpeg 
-tags: tattoo, abstract tattoo, lion tattoo, knight tattoo, gray and black tattoo, leg tattoo, realism tattoo
+tags: tattoo, abstract tattoo, lion tattoo, knight tattoo, gray and black tattoo, leg tattoo, realism tattoo 
 --- 
+ 

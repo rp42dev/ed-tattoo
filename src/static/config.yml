@@ -39,7 +39,6 @@ collections:
             widget: object
             fields:
               - { label: "Title", name: "title", widget: "string"}
-              - { label: "Publish Date", name: "date", widget: "datetime" }
               - { label: "Cover", name: "cover", widget: "image", required: false }
               - { label: "Body", name: "body", widget: "markdown", required: false }
               - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
@@ -49,7 +48,6 @@ collections:
             widget: object
             fields:
               - { label: "Title", name: "title", widget: "string"}
-              - { label: "Publish Date", name: "date", widget: "datetime" }
               - { label: "Cover", name: "cover", widget: "image", required: false }
               - { label: "Body", name: "body", widget: "markdown", required: false }
 
@@ -73,7 +71,6 @@ collections:
             widget: object
             fields:
               - { label: "Title", name: "title", widget: "string"}
-              - { label: "Publish Date", name: "date", widget: "datetime" }
               - { label: "Body", name: "body", widget: "markdown", required: false }
               - { label: "About images", name: "aboutImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
       - label: "Studio Sections"
@@ -85,7 +82,6 @@ collections:
             widget: object
             fields:
               - { label: "Title", name: "title", widget: "string"}
-              - { label: "Publish Date", name: "date", widget: "datetime" }
               - { label: "Body", name: "body", widget: "markdown", required: false }
               - { label: "Studio images", name: "studioImages", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}], required: false }
   

@@ -1,5 +1,5 @@
 import { Component } from 'preact';
-import { Router, route } from 'preact-router';
+import { Router } from 'preact-router';
 import { Provider } from '@preact/prerender-data-provider';
 
 // Code-splitting is automated for routes
@@ -17,16 +17,6 @@ export default class App extends Component {
 	 *	@param {Object} event		"change" event from [preact-router](https://github.com/preactjs/preact-router)
 	 *	@param {string} event.url	The newly routed URL
 	 */
-	// handleRoute = async e => {
-	// 	this.currentUrl = e.url;
-	// 	if (e.url === '/') return;
-	// 	if (e.url.endsWith('/')) return;
-	// 	else {
-	// 		route(e.url + '/', true);
-	// 		this.render()
-	// 		{ return null };
-	// 	}
-	// };
 
 	render(props) {
 		return (

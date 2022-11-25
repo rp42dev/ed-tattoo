@@ -1,9 +1,10 @@
 --- 
-title: White bird tattoo
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Color tattoos Lørenskog 
-seodescription: I specialize in color tattoos. I love the bright colors and I love to create new designs and styles. I can create a custom tattoo design for you. 
+title: White bird tattoo 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - White bird tattoo 
+seodescription: The tattoo studio is located in Lørenskog. I love to create new White bird tattoo designs and styles. Contact me for an appointment... 
 isDisplay: true 
 cover: assets/images/screenshot-2022-11-12-204031.jpg 
-tags: tattoo on arm, white bird tattoo, gray wash tattoo, realism, custom tattoo
+tags: tattoo on arm, white bird tattoo, gray wash tattoo, realism, custom tattoo 
 --- 
+ 

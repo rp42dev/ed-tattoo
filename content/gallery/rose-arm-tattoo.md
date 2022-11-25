@@ -1,11 +1,9 @@
----
-title: Rose arm Tattoo
-date: 2022-11-23T17:21:24.541Z
-seotitle: Tattoo artist Lørenskog near Oslo
-seodescription: I am a tattoo artist in Lørenskog near Oslo. I specialize in
-  black and grey tattoos, color tattoos, traditional tattoos, cover ups and
-  custom tattoos.
-isDisplay: false
-cover: assets/images/img6.jpg
-tags: Rose tattoo, arm tattoo, black and gray, traditional tattoo, custom tattoo
----
+--- 
+title: Rose arm Tattoo 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Rose arm Tattoo 
+seodescription: Who is Ed? Ed is a tattoo artist in Lørenskog. We can work together to create a unique s% tattoo design. Rose arm Tattoo Don't hesitate to contact me... 
+isDisplay: false 
+cover: assets/images/img6.jpg 
+tags: Rose tattoo, arm tattoo, black and gray, traditional tattoo, custom tattoo 
+--- 

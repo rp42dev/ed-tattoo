@@ -1,9 +1,10 @@
 --- 
-title: Leg flower color tattoo
-date: 2022-11-23T17:36:12.685Z 
-seotitle: Ed Tattoo studio Lørenskog near Oslo 
-seodescription: Ready for the next tattoo? Get in touch with me for a free consultation. I can help you with the design and the process. 100% satisfaction. 
+title: Leg flower color tattoo 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Leg flower color tattoo 
+seodescription: I am a tattoo artist in Lørenskog. My goal is to make customer happy with Leg flower color tattoo tattoo design. I'm here to help you. Contact me... 
 isDisplay: true 
 cover: assets/images/img57.jpeg 
-tags: tattoo, leg tattoo, color tattoo, custom tattoo, flower tattoo
+tags: tattoo, leg tattoo, color tattoo, custom tattoo, flower tattoo 
 --- 
+ 

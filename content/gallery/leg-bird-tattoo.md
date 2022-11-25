@@ -1,10 +1,9 @@
----
-title: Leg bird Tattoo
-date: 2022-11-23T17:36:12.685Z
-seotitle: Tattoo near Oslo
-seodescription: My studio is located in Lørenskog, near Oslo, Car parking is
-  available. Clean and safe environment. Contact me for a free consultation.
-isDisplay: false
-cover: assets/images/imgg20.jpeg
-tags: tattoo, leg tattoo, bird tattoo, black and gray tattoo, custom tattoo, traditional tattoo
----
+--- 
+title: Leg bird Tattoo 
+date: 2022-11-25T17:33:27.036Z 
+seotitle: Ed Tattoo Lørenskog - Leg bird Tattoo 
+seodescription: Ready for a new tattoo? Tattoo artist in Lørenskog. I love the contrast and dept that Leg bird Tattoo can give. For more information, contact me... 
+isDisplay: false 
+cover: assets/images/imgg20.jpeg 
+tags: tattoo, leg tattoo, bird tattoo, black and gray tattoo, custom tattoo, traditional tattoo 
+--- 

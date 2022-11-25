@@ -3,13 +3,14 @@ import style from './style';
 
 const Tooltip = ({ children, ...props }) => {
 
-    const tooltipRef = useRef(null);
+    const { text, position } = props
 
+    const tooltipRef = useRef(null);
 
     return (
         <div ref={tooltipRef} class={style.tooltip}>
             {children}
-            <span class={style.tooltipText}>{props.text}</span>
+            <span class={`${style.tooltipText}` + (position ? ` ${style[position]}` : '')}>{text}</span>
         </div>
     );
 };

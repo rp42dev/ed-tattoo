@@ -36,8 +36,19 @@
 .tooltip:hover .tooltipText {
     visibility: visible;
     opacity: 1;
-} 
+}
 
+.tooltipText.left {
+    left: 0;
+    transform: translateX(-100%);
+}
+.tooltipText.left::after {
+    
+    right: 1px;
+    border-color: transparent transparent transparent var(--color-secondary-lighter);
+    transform: translateX(100%);
+ 
+}
 
 
 /* Language: css */

@@ -4,7 +4,6 @@ date: 2022-11-22T17:25:29.676Z
 
 studioSections:
   - type: studio-section
-    date: 2022-11-22T17:29:50.750Z
     body: >-
       The studio has a very relaxed and friendly atmosphere, and is easily
       accessible by public transport. My goal is to create a space where people
@@ -21,7 +20,6 @@ cover: assets/images/bg/bgabout.png
 seotitle: Tattoo artist Lørenskog near Oslo | Ed Tattoo
 aboutSections:
   - type: about-section
-    date: 2022-11-22T17:26:23.157Z
     body: >-
       I'm a Tattoo Artist, I have been tattooing for years. My style is black
       and grey realism, as I love the contrast and the depth that black and grey
