@@ -13,17 +13,17 @@ const HeaderData = {
 		"target": "_self"
 	},
 	"gallery": {
-		"link": '/gallery',
+		"link": '/gallery/',
 		"label": "Gallery",
 		"target": "_self"
 	},
 	"about": {
-		"link": '/about',
+		"link": '/about/',
 		"label": "About",
 		"target": "_self"
 	},
 	"contact": {
-		"link": '/contact',
+		"link": '/contact/',
 		"label": "Contact",
 		"target": "_self"
 	},

@@ -21,6 +21,7 @@ module.exports = () => {
 		{
 			url: '/',
 			seo: {
+				canonical: 'https://www.edtattoo.no/',
 				cover: cover.edges[2].details.cover,
 				title: home.edges[0].details.seotitle,
 				description: home.edges[0].details.seodescription,
@@ -33,8 +34,9 @@ module.exports = () => {
 			galleryData: gallery
 		},
 		{
-			url: '/about',
+			url: '/about/',
 			seo: {
+				canonical: 'https://www.edtattoo.no/about/',
 				cover: cover.edges[0].details.cover,
 				title: about.edges[0].details.seotitle,
 				description: about.edges[0].details.seodescription,
@@ -49,6 +51,7 @@ module.exports = () => {
 		{
 			url: '/contact/',
 			seo: {
+				canonical: 'https://edtattoo.no/contact/',
 				cover: cover.edges[1].details.cover,
 				title: contact.edges[0].details.seotitle,
 				description: contact.edges[0].details.seodescription,
@@ -59,9 +62,10 @@ module.exports = () => {
 
 		},
 		{
-			url: '/contact/success',
+			url: '/contact/success/',
 			path: './build/contact/success/index.html',
 			seo: {
+				canonical: 'https://edtattoo.no/contact/success/',
 				title: 'Black and grey realism tattoos Lørenskog | Ed Tattoo',
 				description: 'I specialize in black and grey realism tattoos.I love contrast and dept that black and gray can give and I love to create new designs and styles.',
 			},
@@ -74,6 +78,7 @@ module.exports = () => {
 	pages.push({
 		url: '/gallery/',
 		seo: {
+			canonical: 'https://www.edtattoo.no/gallery/',
 			title: 'Gallery - Custom tattoos Lørenskog | Ed Tattoo',
 			description: 'I create unique custom tattoos.I can also make a tattoo design based on your ideas.Or We can work together to create a unique tattoo design.',
 		},
@@ -86,15 +91,6 @@ module.exports = () => {
 		if (item.format === 'md') {
 			try {
 				const { content } = parseMD(fs.readFileSync(join('content', 'gallery', item.id), 'utf-8'));
-				data = {
-					...item,
-					content,
-					seo: {
-						title: `Gallery - ${item.details.seotitle} | Ed Tattoo`,
-						description: item.details.seodescription,
-					}
-				};
-
 				data = content;
 			} catch (e) {
 				data = {};
@@ -105,6 +101,7 @@ module.exports = () => {
 		return {
 			url: `/gallery/${item.slug}`,
 			seo: {
+				canonical: `https://www.edtattoo.no/gallery/${item.slug}/`,
 				cover: item.details.cover,
 				title: `Tattoo ${item.details.title} by Ed | ${item.details.seotitle}`,
 				description: item.details.seodescription,
@@ -121,17 +118,18 @@ module.exports = () => {
 	// An array with your links
 	const links = [
 		{ url: '/', changefreq: 'monthly', priority: 1 },
-		{ url: '/about', changefreq: 'monthly', priority: 0.5 },
-		{ url: '/contact', changefreq: 'monthly', priority: 0.3 },
+		{ url: '/about/', changefreq: 'monthly', priority: 0.5 },
+		{ url: '/contact/', changefreq: 'monthly', priority: 0.3 },
+		{ url: '/contact/success/', changefreq: 'monthly', priority: 0.3 },
 		{
-			url: '/gallery',
+			url: '/gallery/',
 			changefreq: 'weekly',
 			priority: 0.8,
 		},
 
 		...gallery.edges.map((item) => {
 			return {
-				url: `/gallery/${item.slug}`,
+				url: `/gallery/${item.slug}/`,
 				changefreq: 'monthly',
 				priority: 0.6,
 				img: [

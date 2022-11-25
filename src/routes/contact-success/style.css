@@ -20,3 +20,9 @@
     padding-top: 3rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .content {
+   min-height: 60vh;
+  }
+}

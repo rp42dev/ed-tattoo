@@ -47,12 +47,12 @@ function getBlogBody(data) {
 		const swipe = new SwipeEventDispatcher(document.body, { triggerPercent: 0.3 });
 		swipe.on('SWIPE_LEFT', () => {
 			if (next) {
-				redirect(`/gallery/${next.id}`);
+				redirect(`/gallery/${next.slug}/`);
 			}
 		});
 		swipe.on('SWIPE_RIGHT', () => {
 			if (prev) {
-				redirect(`/gallery/${prev.id}`);
+				redirect(`/gallery/${prev.slug}/`);
 			}
 		});
 	}, [prev, next]);
@@ -60,18 +60,17 @@ function getBlogBody(data) {
 
 	if (!details) return null;
 
-	const jpg = '../' + details.cover
+	const jpg = details.cover
 	const webp = jpg + '.webp';
 	return (
 		<FadeEffect>
 			<div class={style.blogcover}>
 				{details.cover && <picture >
 					<source srcset={webp} type="image/webp" />
-					<source srcset={jpg} type="image/jpeg" />
-					<img src={jpg} alt={details.title} />
+					<img src={jpg} alt={`Image of Ed's tattoo ${details.title}`} />
 				</picture>}
 				{next &&
-					<Link href={`/gallery/${next.slug}`}>
+					<Link href={`/gallery/${next.slug}/`}>
 						<div class={style.goNext}>
 							<div class={style.next}>
 								<i class="fa-solid fa-chevron-right"></i>
@@ -80,7 +79,7 @@ function getBlogBody(data) {
 					</Link>
 				}
 				{prev &&
-					<Link href={`/gallery/${prev.slug}`}>
+					<Link href={`/gallery/${prev.slug}/`}>
 						<div class={style.goPrev}>
 							<div class={style.prev}>
 								<i class="fa-solid fa-chevron-left"></i>

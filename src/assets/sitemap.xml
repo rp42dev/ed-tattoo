@@ -10,22 +10,27 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://edtattoo.no/about</loc>
+        <loc>https://edtattoo.no/about/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://edtattoo.no/contact</loc>
+        <loc>https://edtattoo.no/contact/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery</loc>
+        <loc>https://edtattoo.no/contact/success/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://edtattoo.no/gallery/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/tattoo-wolf</loc>
+        <loc>https://edtattoo.no/gallery/tattoo-wolf/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -34,7 +39,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/eagle-shoulder-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/eagle-shoulder-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -43,7 +48,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/abstract-tattoo-face-flower</loc>
+        <loc>https://edtattoo.no/gallery/abstract-tattoo-face-flower/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -52,7 +57,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/abstrast-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/abstrast-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -61,7 +66,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/aye-eagle-leg-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/aye-eagle-leg-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -70,7 +75,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/feather-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/feather-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -79,7 +84,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/flower-leg-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/flower-leg-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -88,7 +93,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/leg-bird-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/leg-bird-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -97,7 +102,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/leg-color-tattoos</loc>
+        <loc>https://edtattoo.no/gallery/leg-color-tattoos/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -106,7 +111,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/leg-flower-color-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/leg-flower-color-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -115,7 +120,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/leg-tattoo-1</loc>
+        <loc>https://edtattoo.no/gallery/leg-tattoo-1/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -124,7 +129,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/Leg-tattoo-2</loc>
+        <loc>https://edtattoo.no/gallery/Leg-tattoo-2/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -133,7 +138,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/lion-knight-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/lion-knight-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -142,7 +147,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/rose-sword-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/rose-sword-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -151,7 +156,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/rose-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/rose-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -160,7 +165,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/shoulder-star-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/shoulder-star-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -169,7 +174,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/skull-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/skull-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -178,7 +183,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/skull-with-a-gun-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/skull-with-a-gun-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -187,7 +192,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/tattoo-lettering</loc>
+        <loc>https://edtattoo.no/gallery/tattoo-lettering/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -196,7 +201,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/tattoo-monkey</loc>
+        <loc>https://edtattoo.no/gallery/tattoo-monkey/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -205,7 +210,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/tribal-head-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/tribal-head-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -214,7 +219,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/tribal-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/tribal-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -223,7 +228,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/white-bird-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/white-bird-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -232,7 +237,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/woman-and-skull-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/woman-and-skull-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -241,7 +246,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/woman-devil-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/woman-devil-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -250,7 +255,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/woman-skull-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/woman-skull-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -259,7 +264,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/rose-arm-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/rose-arm-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -268,7 +273,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/tribal-arm-tattoo</loc>
+        <loc>https://edtattoo.no/gallery/tribal-arm-tattoo/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -277,7 +282,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://edtattoo.no/gallery/lettering-design-tatto</loc>
+        <loc>https://edtattoo.no/gallery/lettering-design-tatto/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>

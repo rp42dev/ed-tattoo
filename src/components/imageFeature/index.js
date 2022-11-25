@@ -4,6 +4,8 @@ import style from './style';
 const ImageFeature = ({ ...props }) => {
     const { images } = props;
 
+    console.log(images);
+
     if (!images.length) return null;
     if (images.length > 2) images.slice(0, 2);
 
@@ -11,7 +13,7 @@ const ImageFeature = ({ ...props }) => {
     const imageUrlsWebp = [];
 
     for (let i = 0; i < images.length; i++) {
-        let image = '../' + images[i]
+        let image = images[i]
             .image.replace('.jpg', '-thumbnail.jpg');
         let webp = `${image}.webp`;
         imageUrlsJpg.push(image);
@@ -36,7 +38,7 @@ const ImageFeature = ({ ...props }) => {
                     <div class={style.card}>
                         <picture>
                             <source srcset={imageUrlsWebp[0]} type="image/webp" />
-                            <img src={imageUrlsJpg[0]} alt={images[0].alt} />
+                            <img src={imageUrlsJpg[0]} alt={images[0].title} />
                         </picture>
                         <div class={style.overlay}>
                         </div>
@@ -44,7 +46,7 @@ const ImageFeature = ({ ...props }) => {
                     <div class={style.card}>
                         <picture>
                             <source srcset={imageUrlsWebp[1]} type="image/webp" />
-                            <img src={imageUrlsJpg[1]} alt={images[1].alt} />
+                            <img src={imageUrlsJpg[1]} alt={images[1].title} />
                         </picture>
                         <div class={style.overlay}>
                         </div>

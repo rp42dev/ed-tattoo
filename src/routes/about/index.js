@@ -19,20 +19,12 @@ import Footer from '../../components/footer';
 const About = ({ ...props }) => {
     const [data, isLoading] = usePrerenderData(props);
 
-    const cover = data.cover
-    const aboutImages = data.aboutSection.aboutImages;
-    const aboutContent = data.aboutSection.body;
-    const aboutTitle = data.aboutSection.title;
-    const studioImages = data.studioSection.studioImages;
-    const studioContent = data.studioSection.body;
-    const studioTitle = data.studioSection.title;
-
     return (
         <>
             <Header links={['home', 'facebook', 'instagram']} />
             <main class={style.main}>
                 {!isLoading && (
-                    <Hero hero={cover} displayScroll={true}>
+                    <Hero hero={data.cover} displayScroll={true}>
 
                         <Container width={900}>
                             <div className={style.aboutContent}>
@@ -77,12 +69,12 @@ const About = ({ ...props }) => {
 
                             <Container width="900" >
                                 <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
-                                    <HeadingColor>{aboutTitle}</HeadingColor>
+                                    <HeadingColor>{data.aboutSection.title}</HeadingColor>
                                 </ScaledText>
                                 <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
                                     <Markdown>
-                                        {aboutContent}
+                                        {data.aboutSection.body}
                                     </Markdown>
 
                                 </ScaledText>
@@ -91,23 +83,23 @@ const About = ({ ...props }) => {
                             </Container>
                         </FadeEffect>
                     </div>
-                    <ImageFeature images={aboutImages} />
+                    {data.aboutSection.aboutImages && <ImageFeature images={data.aboutSection.aboutImages} />}
                 </section>
 
                 <section class={style.about}>
                     <div class={style.image}>
-                        <ImageFeature images={studioImages} />
+                        {data.studioSection.studioImages && <ImageFeature images={data.studioSection.studioImages} />}
                     </div>
                     <div class={style.text}>
                         <FadeEffect>
                             <Container width="900" >
                                 <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
-                                    <HeadingColor>{studioTitle}</HeadingColor>
+                                    <HeadingColor>{data.studioSection.title}</HeadingColor>
                                 </ScaledText>
                                 <ScaledText maxFontSize={26} maxContainerWidth={900} minContainerWidth={0} minFontSize={16}>
 
                                     <Markdown>
-                                        {studioContent}
+                                        {data.studioSection.body}
                                     </Markdown>
 
                                 </ScaledText>

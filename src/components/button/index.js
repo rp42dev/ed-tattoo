@@ -11,13 +11,13 @@ const LinkData = {
         label: "Go Back",
     },
     more: {
-        link: "about",
+        link: "/about/",
         icon: <Icon name="more" />,
         label: "Read More",
     },
     send: {
         icon: <Icon name="send" />,
-        link: "/contact/success",
+        link: "/contact/success/",
         label: "Send",
     },
     map: {
@@ -32,17 +32,17 @@ const LinkData = {
         label: "Home",
     },
     gallery: {
-        link: '/gallery',
+        link: '/gallery/',
         icon: <Icon name="gallery" />,
         label: "Gallery",
     },
     about: {
-        link: '/about',
+        link: '/about/',
         icon: <Icon name="about" />,
         label: "About",
     },
     contact: {
-        link: '/contact',
+        link: '/contact/',
         icon: <Icon name="contact" />,
         label: "Contact",
     },

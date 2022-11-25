@@ -17,7 +17,7 @@ const ContactSuccess = (props) => {
 			<main>
 
 				<div class={style.content}>
-					<Hero hero={data.data.cover}>
+					{!isLoading && <Hero hero={data.data.cover}>
 						<Container width={900} >
 							<ScaledText maxFontSize={78.5} maxContainerWidth={900} minFontSize={17} tag='h1'>
 							<span>Thanks</span> for message!</ScaledText>
@@ -27,7 +27,7 @@ const ContactSuccess = (props) => {
 							</ScaledText>
 							<ButtonWrapper links={["facebook", 'instagram']} text="connect" />
 						</Container>
-					</Hero>
+					</Hero>}
 				</div>
 			</main>
 			<Footer />

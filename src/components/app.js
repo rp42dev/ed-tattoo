@@ -11,25 +11,22 @@ import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
-
-const removeTrailingSlah = (url) => {
-	console.log(url);
-	if (url === '/') return url;
-	if (url.endsWith('/')) {
-		route(url.slice(0, -1), true);
-	}
-};
-
 export default class App extends Component {
 
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](https://github.com/preactjs/preact-router)
 	 *	@param {string} event.url	The newly routed URL
 	 */
-	handleRoute = e => {
-		this.currentUrl = e.url;
-		removeTrailingSlah(e.url)
-	};
+	// handleRoute = async e => {
+	// 	this.currentUrl = e.url;
+	// 	if (e.url === '/') return;
+	// 	if (e.url.endsWith('/')) return;
+	// 	else {
+	// 		route(e.url + '/', true);
+	// 		this.render()
+	// 		{ return null };
+	// 	}
+	// };
 
 	render(props) {
 		return (
@@ -37,11 +34,11 @@ export default class App extends Component {
 				<div id="app">
 					<Router onChange={this.handleRoute}>
 						<Home path="/" />
-						<Gallery path="/gallery" />
-						<Post path="/gallery/:slug" />
-						<Contact path="/contact" />
-						<About path="/about" />
-						<ContactSuccess path="/contact/success" />
+						<Gallery path="/gallery/" />
+						<Post path="/gallery/:slug/" />
+						<Contact path="/contact/" />
+						<About path="/about/" />
+						<ContactSuccess path="/contact/success/" />
 						<NotFoundPage type="404" default />
 					</Router>
 				</div>

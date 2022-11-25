@@ -22,7 +22,7 @@ function getGalleryListing(data, display) {
             {gallery ?
                 gallery.map((image, index) => {
                     return (
-                        <Link key={index} href={`/gallery/${image.slug}`}>
+                        <Link key={index} href={`/gallery/${image.slug}/`}>
                             <CardComponent details={image.details} />
                         </Link>
                     )

@@ -23,17 +23,17 @@ const LinkData = {
         areaLabel: "Home",
     },
     gallery: {
-        link: '/gallery',
+        link: '/gallery/',
         icon: <Icon name="gallery" />,
         areaLabel: "Gallery",
     },
     about: {
-        link: '/about',
+        link: '/about/',
         icon: <Icon name="about" />,
         areaLabel: "About",
     },
     contact: {
-        link: '/contact',
+        link: '/contact/',
         icon: <Icon name="contact" />,
         areaLabel: "Contact",
     },

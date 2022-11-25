@@ -1,9 +1,8 @@
 import FadeEffect from '../fadeEffect';
 import style from './style';
-import ScrollDown from '../scrollDown';
 
 const Hero = ({ children, ...props }) => {
-    const { hero, displayScroll } = props;
+    const { hero } = props;
 
     return (
         <FadeEffect>
@@ -11,9 +10,8 @@ const Hero = ({ children, ...props }) => {
                 <div className={style.heroImage}>
                    
                     <picture>
-                        <source srcset={`../${hero}.webp`} type="image/webp" />
-                        <source srcset={`../${hero}`} type="image/jpeg" />
-                        <img src={`../${hero}`} alt="hero" />
+                        <source srcset={`${hero}.webp`} type="image/webp" />
+                        <img src={hero} alt="hero" />
                     </picture>
                 
                 </div>
