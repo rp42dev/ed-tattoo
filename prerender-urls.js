@@ -147,7 +147,7 @@ module.exports = () => {
 	streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
 		data.toString()
 	).then((data) => {
-		fs.writeFileSync('src/assets/sitemap.xml', data);
+		fs.writeFileSync('src/static/sitemap.xml', data);
 	})
 
 	return pages;

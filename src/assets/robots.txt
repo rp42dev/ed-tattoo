@@ -1,2 +1,0 @@
-Sitemap: https://www.edtattoo.no/sitemap.xml
-User-agent: *
