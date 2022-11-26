@@ -2,7 +2,7 @@ import FadeEffect from '../fadeEffect';
 import style from './style';
 
 const ImageFeature = ({ ...props }) => {
-    const { images } = props;
+    const { images, titles } = props;
 
     if (!images.length) return null;
     if (images.length > 2) images.slice(0, 2);
@@ -11,12 +11,13 @@ const ImageFeature = ({ ...props }) => {
     const imageUrlsWebp = [];
 
     for (let i = 0; i < images.length; i++) {
-        let image = images[i]
-            .image.replace('.jpg', '-thumbnail.jpg');
+        const extenstion = images[i].image.split('.').pop();
+        let image = images[i].image.replace(`.${extenstion}`, `-thumbnail.${extenstion}`);
         let webp = `${image}.webp`;
         imageUrlsJpg.push(image);
         imageUrlsWebp.push(webp);
     }
+
 
     return (
         <FadeEffect>
@@ -25,7 +26,7 @@ const ImageFeature = ({ ...props }) => {
                     <div class={style.card}>
                         <picture>
                             <source srcset={imageUrlsWebp[0]} type="image/webp" />
-                            <img src={imageUrlsJpg[0]} alt={images[0].alt} />
+                            <img src={imageUrlsJpg[0]} alt={!titles[0] ? 'An image of Ed Tattoo' : titles[0]} />
                         </picture>
                         <div class={style.overlay}>
                         </div>
@@ -36,7 +37,7 @@ const ImageFeature = ({ ...props }) => {
                     <div class={style.card}>
                         <picture>
                             <source srcset={imageUrlsWebp[0]} type="image/webp" />
-                            <img src={imageUrlsJpg[0]} alt={images[0].title} />
+                            <img src={imageUrlsJpg[0]} alt={!titles[0] ? 'An image of Ed Tattoo' : titles[0]} />
                         </picture>
                         <div class={style.overlay}>
                         </div>
@@ -44,7 +45,7 @@ const ImageFeature = ({ ...props }) => {
                     <div class={style.card}>
                         <picture>
                             <source srcset={imageUrlsWebp[1]} type="image/webp" />
-                            <img src={imageUrlsJpg[1]} alt={images[1].title} />
+                            <img src={imageUrlsJpg[1]} alt={!titles[1] ? 'An image of Ed Tattoo' : titles[1]} />
                         </picture>
                         <div class={style.overlay}>
                         </div>

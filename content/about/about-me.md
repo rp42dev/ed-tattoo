@@ -1,7 +1,6 @@
 ---
 title: About Me
 date: 2022-11-22T17:25:29.676Z
-
 studioSections:
   - type: studio-section
     body: >-

@@ -7,7 +7,7 @@ const { settings } = require('cluster');
 
 const dirs = {
     'images': {
-        'src':  'src/assets',
+        'src': 'src/assets',
         'dest': 'src/assets/images',
     },
     'cover': {
@@ -26,7 +26,7 @@ const imageSettings = {
             },
             'horizontal': {
                 'width': 1920,
-                'height': 1920,
+                'height': 1080,
             },
         },
         'settings': {
@@ -134,9 +134,12 @@ const processor = (dir, dest, file, imagesToProcess) => {
         const fileName = imageSettings[size].rename ? `${file.split('.')[0]}-${size}.${file.split('.')[1]}` : file;
         const destination = path.resolve(dest, fileName);
 
-        const image = sharp(filePath, getSettings(size));
+
+
+        const image = sharp(filePath, getSettings(size)).flatten({ background: '#121212' }).withMetadata();
 
         const metadata = image.metadata()
+     
 
         metadata.then(function (data) {
             const width = data.width
@@ -144,10 +147,12 @@ const processor = (dir, dest, file, imagesToProcess) => {
 
             image.clone()
                 .resize(getSizing(size, width, height))
-                .jpeg({ quality: 80, mozjpeg: true })
                 .toFormat('jpeg')
+                .jpeg({
+                    quality: 80,
+                    mozjpeg: true,
+                })
                 .toFile(destination)
-
                 .then(() => {
                     console.log(`Image ${destination} resized to ${getSizing(size, width, height).width || getSizing(size, width, height).height} px`);
                 })
@@ -157,7 +162,6 @@ const processor = (dir, dest, file, imagesToProcess) => {
             image.clone()
                 .resize(getSizing(size, width, height))
                 .webp({ quality: 80 })
-                .flatten()
                 .toFile(`${destination}.webp`)
                 .then(() => {
                     console.log(`Image ${destination}.webp resized to ${getSizing(size, width, height).width || getSizing(size, width, height).height} px`);
@@ -166,13 +170,12 @@ const processor = (dir, dest, file, imagesToProcess) => {
                     console.log(err);
 
                 });
-            
-            });
-        });
-        if (filePath) {
 
-            setTimeout(deleteSourceImages, 1000, filePath);
-        }
+        });
+    });
+    if (filePath) {
+        setTimeout(deleteSourceImages, 1000, filePath);
+    }
 };
 
 
@@ -185,13 +188,13 @@ function processImages() {
     * @param {array} imagesToProcess - The images to process
     * */
     for (const [key, value] of Object.entries(dirs)) {
-        const dir =  value.src;
+        const dir = value.src;
         const dest = value.dest;
 
         //  resoleve the path to the directory
         const directoryPath = path.resolve(dir);
         const destinationPath = path.resolve(dest);
-        
+
         if (!fs.existsSync(directoryPath)) {
             // if the directory doesn't exist, create it
             try {

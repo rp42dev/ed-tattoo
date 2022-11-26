@@ -3,13 +3,27 @@
 
 <head>
 	<meta charset="utf-8">
-
-	<title>Ed Tattoo Oslo</title>
-
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="author" content="RP42 dev">
+	<base href="/">
+	<% if(htmlWebpackPlugin.options.seo && 'canonical' in htmlWebpackPlugin.options.seo) {%>
+	<link rel="canonical" href="<%= htmlWebpackPlugin.options.seo.canonical %>" />
+	<% } %>
+	<% if(htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) {%>
+	<meta property="og:image" content="<%= htmlWebpackPlugin.options.seo.cover %>" />
+	<% } %>
+	<% if(htmlWebpackPlugin.options.seo && 'title' in htmlWebpackPlugin.options.seo) {%>
+	<meta property="og:title" content="<%= htmlWebpackPlugin.options.seo.title %>" />
+	<meta property="title" content="<%= htmlWebpackPlugin.options.seo.title %>" />
+	<% } %>
+	<% if(htmlWebpackPlugin.options.seo && 'description' in htmlWebpackPlugin.options.seo) {%>
+	<meta property="description" content="<%= htmlWebpackPlugin.options.seo.description %>" />
+	<% } %>
+	<% if(htmlWebpackPlugin.options.seo && 'keywords' in htmlWebpackPlugin.options.seo) {%>
+	<meta property="keywords" content="<%= htmlWebpackPlugin.options.seo.keywords %>" />
+	<% } %>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -19,30 +33,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<base href="/">
-	<% if(htmlWebpackPlugin.options.seo && 'canonical' in htmlWebpackPlugin.options.seo) {%>
-	<link rel="canonical" href="<%= htmlWebpackPlugin.options.seo.canonical %>" />
-	<% } %>
-	<% if(htmlWebpackPlugin.options.seo && 'title' in htmlWebpackPlugin.options.seo) {%>
-	<meta property="og:title" content="<%= htmlWebpackPlugin.options.seo.title %>" />
-	<% } %>
-	<% if(htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) {%>
-	<meta property="og:image" content="<%= htmlWebpackPlugin.options.seo.cover %>" />
-	<% } %>
-	<% if(htmlWebpackPlugin.options.seo && 'description' in htmlWebpackPlugin.options.seo) {%>
-	<meta property="description" content="<%= htmlWebpackPlugin.options.seo.description %>" />
-	<% } %>
-	<% if(htmlWebpackPlugin.options.seo && 'description' in htmlWebpackPlugin.options.seo) {%>
-	<meta property="og:keywords" content="<%= htmlWebpackPlugin.options.seo.keywords %>" />
-	<% } %>
-	<meta name="twitter:card"
-		content="<%= (htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) ? 'summary_large_image' : 'summary'%>" />
-	<% if(htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) {%>
-	<meta name="twitter:image" content="<%= htmlWebpackPlugin.options.seo.cover %>">
-	<% } %>
-	<% if(htmlWebpackPlugin.options.seo && 'subtitle' in htmlWebpackPlugin.options.seo) {%>
-	<meta property="twitter:description" content="<%= htmlWebpackPlugin.options.seo.subtitle %>" />
-	<% } %>
 	<% preact.headEnd %>
 </head>
 

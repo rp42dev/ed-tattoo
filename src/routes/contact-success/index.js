@@ -10,6 +10,7 @@ import Footer from '../../components/footer';
 const ContactSuccess = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 
+	if (isLoading) return null;
 
 	return (
 		<>

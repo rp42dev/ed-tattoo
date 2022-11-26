@@ -1,4 +1,3 @@
-import { useEffect } from 'preact/hooks';
 import style from './style';
 import FadeEffect from '../../../../components/fadeEffect';
 import Container from '../../../../components/container';
@@ -11,6 +10,7 @@ import ImageFeature from '../../../../components/imageFeature';
 const AboutSection = ({ ...props }) => {
 
     const { data } = props;
+    const imageTitles = ['An Image of Ed tattooing bird on client arm', 'An image of tattoo studio Ed Tattoo'];
 
     return (
         <div class={style.about}>
@@ -29,7 +29,7 @@ const AboutSection = ({ ...props }) => {
                     </Container>
                 </FadeEffect>
             </section>
-            <ImageFeature images={data.aboutImages} />
+            <ImageFeature images={data.aboutImages} titles={imageTitles} />
         </div>
     );
 };

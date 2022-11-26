@@ -8,14 +8,16 @@ import Footer from '../../components/footer';
 const Contact = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
 
+	if (isLoading) return null;
+
 	return (
 		<>
 			<Header links={['home', 'facebook', 'instagram']} />
 			<main>
 				<div class={style.content}>
-					{!isLoading && <Hero hero={data.data.cover}>
+					<Hero hero={data.data.cover}>
 						<ContactForm />
-					</Hero>}
+					</Hero>
 				</div>
 			</main>
 			<Footer />

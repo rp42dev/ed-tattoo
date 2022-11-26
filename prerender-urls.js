@@ -22,7 +22,7 @@ module.exports = () => {
 			url: '/',
 			seo: {
 				canonical: 'https://www.edtattoo.no/',
-				cover: cover.edges[2].details.cover,
+				cover: home.edges[0].details.homeSections[0].aboutImages[0].image,
 				title: home.edges[0].details.seotitle,
 				description: home.edges[0].details.seodescription,
 			},
@@ -37,11 +37,11 @@ module.exports = () => {
 			url: '/about/',
 			seo: {
 				canonical: 'https://www.edtattoo.no/about/',
-				cover: cover.edges[0].details.cover,
+				cover: about.edges[0].details.aboutSections[0].aboutImages[0].image,
 				title: about.edges[0].details.seotitle,
 				description: about.edges[0].details.seodescription,
 			},
-
+			title: about.edges[0].details.title,
 			cover: cover.edges[0].details.cover,
 			about: parseMD(fs.readFileSync(join('content', 'about', 'about-me.md'), 'utf-8')),
 			aboutSection: about.edges[0].details.aboutSections[0],

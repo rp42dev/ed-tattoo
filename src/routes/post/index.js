@@ -13,25 +13,15 @@ import Tooltip from '../../components/tooltip';
 const Post = ({ ...props }) => {
 	const [data, isLoading] = usePrerenderData(props);
 
-	// console.log(data.url);
-
-
-	if (!data && !isLoading) {
-		return (
-			<>
-				<Notfound type="404" />
-			</>
-		);
-	}
+	if (isLoading) return null;
+	if (!data.data) return (<><Notfound /></>);
 
 	return (
 		<>
 			<Header links={['gallery']} />
-			{!isLoading &&
-				< main class={style.blogcontainer}>
-					{getBlogBody(data)}
-				</main>
-			}
+			< main class={style.blogcontainer}>
+				{getBlogBody(data)}
+			</main>
 		</>
 	);
 };
@@ -59,37 +49,33 @@ function getBlogBody(data) {
 		});
 	}, [prev, next]);
 
-
-
 	const jpg = details.cover
 	const webp = jpg + '.webp';
 	return (
 		<FadeEffect>
 			<div class={style.blogcover}>
-				{details.cover && <picture >
-					<source srcset={webp} type="image/webp" />
-					<img src={jpg} alt={`A picture of ${details.title}`} />
-				</picture>}
+				<div class={style.blogcoverimg}>
+					<picture >
+						<source srcset={webp} type="image/webp" />
+						<img src={jpg} alt={`A picture of ${details.title}`} />
+					</picture>
+					<div className={style.overlay}></div>
+				</div>
 				{next &&
-
 					<Link href={`/gallery/${next.slug}/`} aria-label={`Next: Image`}>
 						<div class={style.goNext}>
-							<Tooltip text="Next: Image" position="left">
-								<div class={style.next}>
-									<i class="fa-solid fa-chevron-right"></i>
-								</div>
-							</Tooltip>
+							<div class={style.next}>
+								<i class="fa-solid fa-chevron-right"></i>
+							</div>
 						</div>
 					</Link>
 				}
 				{prev &&
 					<Link href={`/gallery/${prev.slug}/`} aria-label={`Previous: Image`}>
 						<div class={style.goPrev}>
-							<Tooltip text="Previous: Image">
-								<div class={style.prev}>
-									<i class="fa-solid fa-chevron-left"></i>
-								</div>
-							</Tooltip>
+							<div class={style.prev}>
+								<i class="fa-solid fa-chevron-left"></i>
+							</div>
 						</div>
 					</Link>
 				}

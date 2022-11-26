@@ -26,6 +26,7 @@
     z-index: 1;
     width: auto;
     height: 100%;
+    overflow: hidden;
     transform: rotate(20deg) translate(-130px, 40px);
     z-index: 2;
 }
@@ -38,7 +39,8 @@
 }
 
 
-.card .overlay {
+.imageFeature  .card::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -46,28 +48,19 @@
     height: 100%;
     color: transparent;
     background-color: var(--overlay-color-light);
+    background: radial-gradient(circle, rgba(18, 2, 1, 0) 52%, rgba(18, 18, 18, 1) 96%);
     z-index: 10;
     transition: var(--transition)
-}
-
-.card:hover .overlay {
-    background-color: var(--overlay-color-hover);
-    transform: scale(1.1);
 }
 
 .imageFeature .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: var(--border-radius-large);
     transition: var(--transition);
     box-shadow: var(--box-shadow);
-}
-
-@media (hover: hover) {
-    .imageFeature .card:hover img {
-        transform: scale(1.01);
-    }
 }
 
 @media screen and (max-width: 500px) {

@@ -12,6 +12,15 @@
   position: relative;
 }
 
+.blogcover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
 
 .blogcover picture img {
   position: absolute;
@@ -19,6 +28,17 @@
   left: 50%;
   transform: translateX(-50%);
   height: 100vh;
+}
+
+.blogcover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(18, 2, 1, 0) 52%, rgba(18, 18, 18, 1) 96%);
+
+  z-index: 10;
 }
 
 .goNext,
@@ -33,6 +53,7 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 10000;
 }
 
 .goNext {

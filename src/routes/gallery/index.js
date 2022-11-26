@@ -1,14 +1,12 @@
-
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import style from './style';
 import Header from '../../components/header';
 import getGalleryListing from '../../components/getGallery';
 
 
-
 const Gallery = ({...props}) => {
-
 	const [data, isLoading] = usePrerenderData(props);
+	if (isLoading) return null;
 
 	return (
 		<>
@@ -16,10 +14,10 @@ const Gallery = ({...props}) => {
 
 			<section classList={style.section}>
 				<div class={style.gallery}>
-					{!isLoading && getGalleryListing(data.galleryData)}
-					{!isLoading && getGalleryListing(data.galleryData)}
-					{!isLoading && getGalleryListing(data.galleryData)}
-					{!isLoading && getGalleryListing(data.galleryData)}
+					{getGalleryListing(data.galleryData)}
+					{getGalleryListing(data.galleryData)}
+					{getGalleryListing(data.galleryData)}
+					{getGalleryListing(data.galleryData)}
 				</div>
 			</section>
 		</>

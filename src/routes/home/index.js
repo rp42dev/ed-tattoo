@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect } from 'preact/hooks';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 
 import style from "./style";
@@ -17,30 +17,29 @@ import Footer from '../../components/footer';
 
 const Home = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
+	if (isLoading) return null;
 	/**
 	 * Netlify CMS's accept invite link land on home page.
 	 * This redirection takes it to the right place(/admin).
 	 */
+
 	useEffect(() => {
 		if (window !== undefined && window.location.href.includes('#invite_token')) {
 			const { href } = window.location;
 			window.location.href = `${href.substring(0, href.indexOf('#'))}admin${href.substring(href.indexOf('#'))}`;
 		}
-
 	}, []);
 
 	return (
 		<>
 			<Header links={['gallery', 'facebook', 'instagram']} />
-
 			<main class={style.home}>
-				{!isLoading && (
 					<Hero hero={data.cover} displayScroll={true}>
 						<Container width={900}>
 							<div class={style.content}>
 								<div>
 									<ScaledText maxFontSize={197} maxContainerWidth={900} minFontSize={54} tag='h1'>
-										<HeadingColor>{data.home.edges[0].details.title}</HeadingColor>
+										<HeadingColor>{data.title}</HeadingColor>
 									</ScaledText>
 								</div>
 								<div>
@@ -58,7 +57,6 @@ const Home = (props) => {
 										</a>
 									</ScaledText>
 								</div>
-
 								<ScaledText maxFontSize={124} maxContainerWidth={900} minFontSize={30} tag='h2'>
 									<a href='tel:+47 465 88 983'>
 										<HeadingColor>+47 465 88 983</HeadingColor>
@@ -67,26 +65,13 @@ const Home = (props) => {
 								<div class={style.button}>
 									<Button link="contact" text="Message" type="link" />
 								</div>
-
 							</div>
-
 						</Container>
-
 					</Hero>
-				)}
-
-				{/* About Section */}
-
-				{!isLoading && <AboutSection data={data.aboutSection} />}
-
-				{/* Latest work */}
-
-				{!isLoading && <Work data={data.galleryData} display={true} />}
-
-				{/* Contact */}
-
-				{!isLoading && <ContactHome data={data.contactCover} />}
-
+			
+				<AboutSection data={data.home.edges[0].details.homeSections[0]} />
+				<Work data={data.galleryData} display={true} />
+				<ContactHome data={data.contactCover} />
 				<Footer />
 			</main>
 		</>

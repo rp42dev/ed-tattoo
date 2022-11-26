@@ -11,7 +11,7 @@ const Hero = ({ children, ...props }) => {
                    
                     <picture>
                         <source srcset={`${hero}.webp`} type="image/webp" />
-                        <img src={hero} alt="hero" />
+                        <img src={hero} alt="hero image" />
                     </picture>
                 
                 </div>
