@@ -1,7 +1,6 @@
 .card {
     height: 100%;
     width: 100%;
-    background-color: var(--color-secondary);
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow);
     position: relative;
@@ -15,25 +14,6 @@
     transition: var(--transition);
     border-radius: var(--border-radius-large);
 }
-
-
-.imgOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: var(--color-white);
-background: radial-gradient(rgba(33, 2, 0, 0) 25%, rgba(21, 15, 14, 1) 95%, rgba(18, 18, 18, 1) 100%);
-    z-index: 1;
-    transition: var(--transition)
-}
-
-.card:hover .imgOverlay {
-    background-color: var(--overlay-color-hover);
-    color: white;
-}
-
 
 .card:hover img {
     transform: scale(1.05);

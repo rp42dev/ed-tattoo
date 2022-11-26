@@ -54,13 +54,10 @@ function getBlogBody(data) {
 	return (
 		<FadeEffect>
 			<div class={style.blogcover}>
-				<div class={style.blogcoverimg}>
-					<picture >
-						<source srcset={webp} type="image/webp" />
-						<img src={jpg} alt={`A picture of ${details.title}`} />
-					</picture>
-					<div className={style.overlay}></div>
-				</div>
+				<picture >
+					<source srcset={webp} type="image/webp" />
+					<img src={jpg} alt={`A picture of ${details.title}`} />
+				</picture>
 				{next &&
 					<Link href={`/gallery/${next.slug}/`} aria-label={`Next: Image`}>
 						<div class={style.goNext}>

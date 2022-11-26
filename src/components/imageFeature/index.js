@@ -28,8 +28,6 @@ const ImageFeature = ({ ...props }) => {
                             <source srcset={imageUrlsWebp[0]} type="image/webp" />
                             <img src={imageUrlsJpg[0]} alt={!titles[0] ? 'An image of Ed Tattoo' : titles[0]} />
                         </picture>
-                        <div class={style.overlay}>
-                        </div>
                     </div>
                 </div>
             ) : (
@@ -39,16 +37,12 @@ const ImageFeature = ({ ...props }) => {
                             <source srcset={imageUrlsWebp[0]} type="image/webp" />
                             <img src={imageUrlsJpg[0]} alt={!titles[0] ? 'An image of Ed Tattoo' : titles[0]} />
                         </picture>
-                        <div class={style.overlay}>
-                        </div>
                     </div>
                     <div class={style.card}>
                         <picture>
                             <source srcset={imageUrlsWebp[1]} type="image/webp" />
                             <img src={imageUrlsJpg[1]} alt={!titles[1] ? 'An image of Ed Tattoo' : titles[1]} />
                         </picture>
-                        <div class={style.overlay}>
-                        </div>
                     </div>
                 </div>
             )}

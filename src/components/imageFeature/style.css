@@ -38,21 +38,6 @@
     transform: translate(0px, -0px) rotate(-10deg);
 }
 
-
-.imageFeature  .card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: transparent;
-    background-color: var(--overlay-color-light);
-background: radial-gradient(rgba(33, 2, 0, 0) 25%, rgba(21, 15, 14, 1) 95%, rgba(18, 18, 18, 1) 100%);
-    z-index: 10;
-    transition: var(--transition)
-}
-
 .imageFeature .card img {
     width: 100%;
     height: 100%;
