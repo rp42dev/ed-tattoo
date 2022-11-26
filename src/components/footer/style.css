@@ -1,13 +1,18 @@
-.footer {
+footer {
     width: 100%;
-    max-width: 1920px;
-    margin: auto;
+    height: 100%;
     height: auto;
-    background: var(--gradient);
+    background: var(--color-secondary-light);
     color: var(--color-primary-darker);
     letter-spacing: var(--letter-spacing-small);
     z-index: 1000;
     padding: var(--spacing-auto);
+}
+
+.footer {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 a {
