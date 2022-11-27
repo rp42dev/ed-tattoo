@@ -39,7 +39,7 @@ const Home = (props) => {
 							<div class={style.content}>
 								<div>
 									<ScaledText maxFontSize={197} maxContainerWidth={900} minFontSize={54} tag='h1'>
-										<HeadingColor>{data.title}</HeadingColor>
+										<HeadingColor>Ed Tattoo</HeadingColor>
 									</ScaledText>
 								</div>
 								<div>
