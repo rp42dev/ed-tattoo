@@ -15,11 +15,13 @@
     gap: 1rem;
 }
 
+.gallery div:nth-child(6n+4),
 .gallery a:nth-child(6n+4) {
     grid-column: span 2;
     grid-row: span 2;
 }
 
+.gallery div:nth-child(6n+1),
 .gallery a:nth-child(6n+1) {
     grid-column: span 2;
 }
@@ -67,26 +69,30 @@
 
     }
 
+    .gallery div:nth-child(n+6),
     .gallery a:nth-child(n+6) {
         display: none;
     }
 
+    .gallery div:nth-child(6n+4),
     .gallery a:nth-child(6n+4) {
         grid-column: unset;
         grid-row: unset;
     }
 
+    .gallery div:nth-child(6n+1),
     .gallery a:nth-child(6n+1) {
         grid-column: unset;
     }
 
 
-
+    .gallery div:nth-child(11n+7),
     .gallery a:nth-child(11n+7) {
         grid-column: span 2;
         grid-row: span 2;
     }
 
+    .gallery div:nth-child(11n+1),
     .gallery a:nth-child(11n+1) {
         grid-column: span 2;
     }

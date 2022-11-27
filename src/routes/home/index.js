@@ -70,7 +70,7 @@ const Home = (props) => {
 					</Hero>
 			
 				<AboutSection data={data.home.edges[0].details.homeSections[0]} />
-				<Work data={data.galleryData} display={true} />
+				<Work data={data.galleryData} display={true}/>
 				<ContactHome data={data.contactCover} />
 				<Footer />
 			</main>

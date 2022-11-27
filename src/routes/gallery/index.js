@@ -2,22 +2,31 @@ import { usePrerenderData } from '@preact/prerender-data-provider';
 import style from './style';
 import Header from '../../components/header';
 import getGalleryListing from '../../components/getGallery';
+import CardPlaceholder from '../../components/cardPlaceholder';
 
 
-const Gallery = ({...props}) => {
+const Gallery = ({ ...props }) => {
 	const [data, isLoading] = usePrerenderData(props);
-	if (isLoading) return null;
 
+	let placeholders = [];
+	for (let i = 0; i < 20; i++) placeholders.push(i);
+	
 	return (
 		<>
 			<Header links={["home"]} />
 
 			<section classList={style.section}>
 				<div class={style.gallery}>
-					{getGalleryListing(data.galleryData)}
-					{getGalleryListing(data.galleryData)}
-					{getGalleryListing(data.galleryData)}
-					{getGalleryListing(data.galleryData)}
+					{!isLoading ? getGalleryListing(data.galleryData) :
+						placeholders.map((item, index) => {
+							return (
+								
+								<CardPlaceholder key={index} />
+								
+							);
+						}
+						)}
+
 				</div>
 			</section>
 		</>

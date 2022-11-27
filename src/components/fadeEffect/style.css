@@ -4,11 +4,11 @@
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: opacity 600ms;
+    transition: opacity 400ms;
 }
 
 .visible {
-    animation: fade-in 600ms ease-in-out both;
+    animation: fade-in 400ms ease-in-out both;
 }
 
 @keyframes fade-in {

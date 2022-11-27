@@ -1,19 +1,23 @@
 .gallery {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   max-width: 1920px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: minmax(170px, calc(50vh));
   gap: 1rem;
+  z-index: 1;
 }
 
+.gallery div:nth-child(6n+4),
 .gallery a:nth-child(6n+4) {
   grid-column: span 2;
   grid-row: span 2;
 }
 
+.gallery div:nth-child(6n+1),
 .gallery a:nth-child(6n+1) {
   grid-column: span 2;
 }
@@ -23,12 +27,6 @@
   margin-top: min(5vw, 2rem) ;
 }
 
-@media screen and (max-width: 1800px) {
-  .gallery {
-    grid-auto-rows: minmax(170px, calc(20vw));
-  }
-
-}
 
 @media screen and (max-width: 900px) {
   .gallery {
@@ -37,22 +35,25 @@
 
   }
 
+  .gallery div:nth-child(6n+4),
   .gallery a:nth-child(6n+4) {
     grid-column: unset;
     grid-row: unset;
   }
 
+  .gallery div:nth-child(6n+1),
   .gallery a:nth-child(6n+1) {
     grid-column: unset;
   }
 
 
-
+  .gallery div:nth-child(11n+7),
   .gallery a:nth-child(11n+7) {
     grid-column: span 2;
     grid-row: span 2;
   }
 
+  .gallery div:nth-child(11n+1),
   .gallery a:nth-child(11n+1) {
     grid-column: span 2;
   }
@@ -63,5 +64,4 @@
   .gallery {
     grid-auto-rows: minmax(170px, calc(20vh));
   }
-
 }
