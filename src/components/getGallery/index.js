@@ -4,22 +4,8 @@ import CardComponent from '../cardComponent';
 
 
 function getGalleryListing(data, display) {
-
-
-
     if (!data || !data.edges) return null;
 
-    // if (!display) {
-    //     gallery = data.edges
-    // }
-    // else {
-    //     gallery = data.edges
-    //         .filter(item => item.details.isDisplay === true)
-    //         .slice(0, 7);
-    // }
-
-
-    // pagination logic load more if scroll to bottom of page
     const [pageNum, setPageNum] = useState(1);
     const [gallery, setGallery] = useState([]);
 
@@ -41,27 +27,24 @@ function getGalleryListing(data, display) {
         if (display) {
             setGallery(data.edges.filter(item => item.details.isDisplay === true).slice(0, 7));
         } else {
-            if(pageNum === 6) setPageNum(1);
+            if (gallery.length > 100) return;
+            if (pageNum === 6) setPageNum(1);
             setGallery(prevGallery => {
                 return [...prevGallery, ...data.edges.slice((pageNum - 1) * 7, pageNum * 7)]
             });
         }
     }, [pageNum, data, display]);
 
-
     return (
         <>
             {gallery.map((image, index) => {
-
                 return (
                     <div ref={lastItemRef} key={index}>
-                        <Link key={index} href={`/gallery/${image.slug}/`}>
+                        <Link href={`/gallery/${image.slug}/`}>
                             <CardComponent details={image.details} />
                         </Link>
                     </div>
-
                 );
-
             })}
         </>
     );

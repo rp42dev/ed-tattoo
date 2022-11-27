@@ -14,15 +14,12 @@ const Gallery = ({ ...props }) => {
 	return (
 		<>
 			<Header links={["home"]} />
-
 			<section classList={style.section}>
 				<div class={style.gallery}>
 					{!isLoading ? getGalleryListing(data.galleryData) :
 						placeholders.map((item, index) => {
 							return (
-								
 								<CardPlaceholder key={index} />
-								
 							);
 						}
 						)}

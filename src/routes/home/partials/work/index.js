@@ -14,28 +14,27 @@ const Work = ({ ...props }) => {
     const placeholders = [1, 2, 3, 4, 5, 6, 7];
 
     return (
-
-        <FadeEffect>
-            <section class={style.latestWork}>
-                <div class={style.latestWorkHeader}>
+        <section class={style.latestWork}>
+            <div class={style.latestWorkHeader}>
+                <FadeEffect>
                     <ScaledText maxFontSize={55} maxContainerWidth={400} minFontSize={38} tag='h2'>
                         <span>Latest</span> Work
                     </ScaledText>
-                </div>
-                <div class={style.gallery}>
-                    {data ? getGalleryListing(data, display) :
-						placeholders.map((item, index) => {
-							return (
-								<CardPlaceholder key={index} />
-							);
-						}
-						)}
-                </div>
-                <div class={style.navItem}>
-                    <Button link="gallery" text="View Gallery" type="link" />
-                </div>
-            </section>
-        </FadeEffect>
+                </FadeEffect>
+            </div>
+            <div class={style.gallery}>
+                {data ? getGalleryListing(data, display) :
+                    placeholders.map((item, index) => {
+                        return (
+                            <CardPlaceholder key={index} />
+                        );
+                    }
+                    )}
+            </div>
+            <div class={style.navItem}>
+                <Button link="gallery" text="View Gallery" type="link" />
+            </div>
+        </section>
 
     );
 };
