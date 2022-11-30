@@ -9,7 +9,12 @@ const CardComponent = (props) => {
 
     const extenstion = details.cover.split('.').pop();
     const image = details.cover.replace(`.${extenstion}`, `-thumbnail.${extenstion}`);
+    const image_small = details.cover.replace(`.${extenstion}`, `-thumbnail-small.${extenstion}`);
+    const image_large = details.cover.replace(`.${extenstion}`, `-thumbnail-large.${extenstion}`);
+
     const webp = `${image}.webp`;
+    const webp_small = `${image_small}.webp`;
+    const webp_large = `${image_large}.webp`;
 
     const handleLoad = () => {
         setIsLoaded(true);
@@ -19,7 +24,7 @@ const CardComponent = (props) => {
         <div class={style.card}>
             <FadeEffect>
                 {details.cover && <picture class={style.loader}>
-                    <source srcset={webp} type="image/webp" />
+                    <source srcset={`${webp_large} 800w, ${webp} 600w, ${webp_small} 400w`} type="image/webp" />
                     <img src={image} alt={details.title} onLoad={handleLoad} />
                 </picture>}
                 <div class={!isLoaded ? style.loading : ''}></div>

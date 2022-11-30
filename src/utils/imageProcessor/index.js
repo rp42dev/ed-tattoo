@@ -43,11 +43,30 @@ const imageSettings = {
             'density': 72,
         }
     },
+    'thumbnail-large': {
+        'rename': true,
+        'size': {
+            'width': 800,
+            'height': 1200,
+        },
+        'settings': {
+            'density': 72,
+        }
+    },
     'thumbnail': {
         'rename': true,
         'size': {
             'width': 600,
             'height': 900,
+        },
+        'settings': {
+            'density': 72,
+        }
+    }, 'thumbnail-small': {
+        'rename': true,
+        'size': {
+            'width': 400,
+            'height': 600,
         },
         'settings': {
             'density': 72,
@@ -75,8 +94,8 @@ const getSizing = (size, width, height) => {
             return { width: imageSettings[size].size.horizontal.width, height: imageSettings[size].size.horizontal.height };
         } else {
             return { width: imageSettings[size].size.vertical.width, height: imageSettings[size].size.vertical.height };
-        };
-    } else if (size === 'thumbnail') {
+        }
+    } else {
         return { width: imageSettings[size].size.width, height: imageSettings[size].size.height };
     }
 };
@@ -91,7 +110,7 @@ const getSettings = (size) => {
         return imageSettings[size].settings;
     } else if (size === 'images') {
         return imageSettings[size].settings;
-    } else if (size === 'thumbnail') {
+    } else {
         return imageSettings[size].settings;
     }
 };
@@ -218,7 +237,7 @@ function processImages() {
         if (key === 'cover') {
             imagesToProcess = ['cover'];
         } else {
-            imagesToProcess = ['images', 'thumbnail'];
+            imagesToProcess = ['images', 'thumbnail', 'thumbnail-large', 'thumbnail-small'];
         }
 
         fs.readdirSync(directoryPath).forEach(file => {
