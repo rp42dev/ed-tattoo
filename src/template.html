@@ -16,7 +16,7 @@
 	<% } %>
 	<% if(htmlWebpackPlugin.options.seo && 'title' in htmlWebpackPlugin.options.seo) {%>
 	<meta property="og:title" content="<%= htmlWebpackPlugin.options.seo.title %>" />
-	<title>"<%= htmlWebpackPlugin.options.seo.title %>"</title>
+	<title><%= htmlWebpackPlugin.options.seo.title %></title>
 	<% } %>
 	<% if(htmlWebpackPlugin.options.seo && 'description' in htmlWebpackPlugin.options.seo) {%>
 	<meta name="description" content="<%= htmlWebpackPlugin.options.seo.description %>" />
