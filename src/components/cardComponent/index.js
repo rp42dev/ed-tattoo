@@ -24,7 +24,7 @@ const CardComponent = (props) => {
         <div class={style.card}>
             <FadeEffect>
                 {details.cover && <picture class={style.loader}>
-                    <source srcset={`${webp_large} 800w, ${webp} 600w, ${webp_small} 400w`} type="image/webp" />
+                    <source srcset={`${webp_large} 1200w, ${webp} 600w, ${webp_small} 600w`} type="image/webp" />
                     <img src={image} alt={details.title} onLoad={handleLoad} />
                 </picture>}
                 <div class={!isLoaded ? style.loading : ''}></div>
