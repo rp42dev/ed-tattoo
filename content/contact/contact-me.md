@@ -1,6 +1,6 @@
 ---
 title: Contact Me
-cover: assets/images/bg/contactbg.png
+cover: assets/images/bg/contactBg.jpg
 date: 2022-11-22T17:35:04.010Z
 seotitle: " Contast -Tattoo designs Lørenskog | Ed Tattoo"
 seodescription: I can create a custom tattoo design for you. I can also make
