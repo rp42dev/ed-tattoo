@@ -11,7 +11,17 @@ import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
+// accept url params in the form of /?fbclid=1234
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('fbclid')) {
+	window.history.replaceState({}, document.title, window.location.pathname);
+}
+
 export default class App extends Component {
+
+	handleRoute = e => {
+		this.currentUrl = e.url;
+	};
 
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](https://github.com/preactjs/preact-router)
