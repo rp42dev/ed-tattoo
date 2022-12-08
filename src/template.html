@@ -8,7 +8,11 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="author" content="RP42 dev">
 	<base href="/">
+	<link property="og:type" content="website" />
+	<link property="og:site_name" content="Ed Tattoo Lorenskog" />
+	<link property="og:app_id" content="PAAabJWtiF0KKK46F-nFZol8F50kmtnOm71pDNGtm-3bImVEjHl1Z8AI4tKgw" />
 	<% if(htmlWebpackPlugin.options.seo && 'canonical' in htmlWebpackPlugin.options.seo) {%>
+	<link propert="og:url" href="<%= htmlWebpackPlugin.options.seo.canonical %>" />
 	<link rel="canonical" href="<%= htmlWebpackPlugin.options.seo.canonical %>" />
 	<% } %>
 	<% if(htmlWebpackPlugin.options.seo && 'cover' in htmlWebpackPlugin.options.seo) {%>
