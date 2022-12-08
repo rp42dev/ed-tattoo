@@ -23,7 +23,10 @@
 	<meta property="og:description" content="<%= htmlWebpackPlugin.options.seo.description %>" />
 	<% } %>
 	<% if(htmlWebpackPlugin.options.seo && 'keywords' in htmlWebpackPlugin.options.seo) {%>
-	<meta property="keywords" content="<%= htmlWebpackPlugin.options.seo.keywords %>" />
+	<meta name="keywords" content="<%= htmlWebpackPlugin.options.seo.keywords %>" />
+	<% } %>
+	<% if(htmlWebpackPlugin.options.seo && 'imageTitle' in htmlWebpackPlugin.options.seo) {%>
+	<meta property="og:image:alt" content="<%= htmlWebpackPlugin.options.seo.imageTitle %>" />
 	<% } %>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

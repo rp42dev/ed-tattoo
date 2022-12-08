@@ -22,8 +22,9 @@ module.exports = () => {
 			url: '/',
 			seo: {
 				canonical: 'https://www.edtattoo.no/',
-				cover: home.edges[0].details.homeSections[0].aboutImages[0].image,
+				cover: `https://www.edtattoo.no/${home.edges[0].details.homeSections[0].aboutImages[0].image}`,
 				title: home.edges[0].details.seotitle,
+				imageAlt: 'Black and grey realism tattoos Lørenskog | Ed Tattoo',
 				description: home.edges[0].details.seodescription,
 			},
 
@@ -37,8 +38,9 @@ module.exports = () => {
 			url: '/about/',
 			seo: {
 				canonical: 'https://www.edtattoo.no/about/',
-				cover: about.edges[0].details.aboutSections[0].aboutImages[0].image,
+				cover: `https://www.edtattoo.no/${about.edges[0].details.aboutSections[0].aboutImages[0].image}`,
 				title: about.edges[0].details.seotitle,
+				imageAlt: 'Tattoo studio Lørenskog | Ed Tattoo',
 				description: about.edges[0].details.seodescription,
 			},
 			title: about.edges[0].details.title,
@@ -52,8 +54,9 @@ module.exports = () => {
 			url: '/contact/',
 			seo: {
 				canonical: 'https://edtattoo.no/contact/',
-				cover: cover.edges[1].details.cover,
+				cover: `https://www.edtattoo.no/${cover.edges[1].details.cover}`,
 				title: contact.edges[0].details.seotitle,
+				imageAlt: 'Tattoo studio Lørenskog | Ed Tattoo',
 				description: contact.edges[0].details.seodescription,
 			},
 			data: {
@@ -104,7 +107,8 @@ module.exports = () => {
 			seo: {
 				keywords: item.details.tags.slice(0, 147)+ '...',
 				canonical: `https://www.edtattoo.no/gallery/${item.slug}/`,
-				cover: item.details.cover,
+				cover: `https://www.edtattoo.no/${item.details.cover}`,
+				imageAlt: item.details.title + ' | Ed Tattoo',
 				title: item.details.seotitle,
 				description: item.details.seodescription,
 			},

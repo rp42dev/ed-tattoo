@@ -1,5 +1,4 @@
 import { Component } from 'preact';
-import { useEffect } from 'preact/hooks';
 import { Router } from 'preact-router';
 import { Provider } from '@preact/prerender-data-provider';
 
