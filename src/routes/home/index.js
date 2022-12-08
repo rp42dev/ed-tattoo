@@ -22,7 +22,7 @@ const Home = (props) => {
 	 * Netlify CMS's accept invite link land on home page.
 	 * This redirection takes it to the right place(/admin).
 	 */
-
+	if (!data) return null;
 	useEffect(() => {
 		if (window !== undefined && window.location.href.includes('#invite_token')) {
 			const { href } = window.location;
@@ -34,7 +34,7 @@ const Home = (props) => {
 		<>
 			<Header links={['gallery', 'facebook', 'instagram']} />
 			<main class={style.home}>
-					<Hero hero={data.cover} displayScroll={true}>
+				<Hero hero={data.cover} displayScroll={true}>
 						<Container width={900}>
 							<div class={style.content}>
 								<div>

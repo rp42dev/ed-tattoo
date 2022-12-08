@@ -4,6 +4,9 @@ import style from './style';
 const Hero = ({ children, ...props }) => {
     const { hero } = props;
 
+    if (!hero) {
+        return null;
+    }
     return (
         <FadeEffect>
             <div className={style.hero}>

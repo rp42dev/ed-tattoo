@@ -1,4 +1,5 @@
 import { Component } from 'preact';
+import { useEffect } from 'preact/hooks';
 import { Router } from 'preact-router';
 import { Provider } from '@preact/prerender-data-provider';
 
@@ -11,22 +12,23 @@ import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
-// accept url params in the form of /?fbclid=1234
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.has('fbclid')) {
-	window.history.replaceState({}, document.title, window.location.pathname);
-}
 
 export default class App extends Component {
-
-	handleRoute = e => {
-		this.currentUrl = e.url;
-	};
 
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](https://github.com/preactjs/preact-router)
 	 *	@param {string} event.url	The newly routed URL
 	 */
+
+	handleRoute = e => {
+		this.currentUrl = e.url;
+		if (e.url.includes('?fbclid=')) {
+			const newUrl = e.url.split('?fbclid=')[0];
+			window.location
+				.replace(newUrl);
+		}
+	};
+
 
 	render(props) {
 		return (
