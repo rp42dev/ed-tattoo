@@ -12,8 +12,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "SEO Title", name: "seotitle", widget: "string"}
-      - { label: "SEO Description", name: "seodescription", widget: "string"}
+      - { label: "SEO Title", name: "seotitle", widget: "string", required: false }
+      - { label: "SEO Description", name: "seodescription", widget: "string", required: false }
       - { label: "isDisplay", name: "isDisplay", widget: "boolean", default: false }
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "Tags", name: "tags", widget: "string" }
