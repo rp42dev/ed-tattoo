@@ -1,6 +1,6 @@
 # Edd Tattoo Portfolio
 
-### Live Site: [https://ed-tattoo.netlify.app/](https://ed-tattoo.netlify.app/)
+### Live Site: [https://www.edtattoo.no/](https://www.edtattoo.no/)
 ## Description
 This is a portfolio of Ed-Tattoo work. Ed is a tattoo artist in the Oslo area of Norway.
 
