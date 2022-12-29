@@ -59,7 +59,7 @@ const IconsData = {
     },
     instagram: {
         icon: <i class="fab fa-instagram"></i>,
-        link: 'https://www.instagram.com/edtattoo_oslo/',
+        link: 'https://www.instagram.com/edtattoo_ed/',
         label: "Instagram",
     },
 };

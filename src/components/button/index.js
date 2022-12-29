@@ -59,7 +59,7 @@ const LinkData = {
         nenwTab: true,
     },
     instagram: {
-        link: 'https://www.instagram.com/edtattoo_oslo/',
+        link: 'https://www.instagram.com/edtattoo_ed/',
         icon: <Icon name="instagram" />,
         label: "Instagram",
         nenwTab: true,
