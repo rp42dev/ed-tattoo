@@ -14,7 +14,6 @@ const Popup = (props) => {
 
     const closePopup = () => {
         const popup = document.getElementById('popup');
-        popup.classList.remove(style.show);
         setTimeout(() => {
             setShow(false);
         }, 500);

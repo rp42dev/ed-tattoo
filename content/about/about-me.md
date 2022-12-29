@@ -30,8 +30,9 @@ aboutSections:
     aboutImages:
       - image: assets/images/img3.jpg
       - image: assets/images/img1.jpg
-seodescription: Tattoo studio in Lørenskog with a focus on quality and customer satisfaction.
-We have a wide range of styles and are always open to new ideas and challenges.
+seodescription: I specialize in black and grey tattoos, color tattoos,
+  traditional tattoos, cover ups and custom tattoos, I can create a custom
+  tattoo design for you
 ---
 Tattoo studio in Lørenskog with a focus on quality and customer satisfaction.
 We have a wide range of styles and are always open to new ideas and challenges.

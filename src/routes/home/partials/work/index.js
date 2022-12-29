@@ -7,7 +7,6 @@ import CardPlaceholder from "../../../../components/cardPlaceholder";
 import Button from "../../../../components/button";
 
 
-
 const Work = ({ ...props }) => {
     const { data, display } = props;
 
