@@ -13,6 +13,7 @@ import AboutSection from './partials/about';
 import Work from './partials/work';
 import ContactHome from './partials/contact';
 import Footer from '../../components/footer';
+import Popup from '../../components/popup';
 
 
 const Home = (props) => {
@@ -29,11 +30,13 @@ const Home = (props) => {
 			window.location.href = `${href.substring(0, href.indexOf('#'))}admin${href.substring(href.indexOf('#'))}`;
 		}
 	}, []);
-
+	
 	return (
 		<>
 			<Header links={['gallery', 'facebook', 'instagram']} />
 			<main class={style.home}>
+		
+									<Popup />
 				<Hero hero={data.cover} displayScroll={true}>
 						<Container width={900}>
 							<div class={style.content}>
@@ -47,7 +50,7 @@ const Home = (props) => {
 								</div>
 								<div className={style.paddingTop}>
 									<ScaledText maxFontSize={47} maxContainerWidth={900} minFontSize={11.5}>
-										<h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
+									<h3 className={style.spanColor}> <span>Great </span> Art Starts with<span>Great</span> Rate</h3>
 									</ScaledText>
 									<ScaledText maxFontSize={45.4} maxContainerWidth={900} minFontSize={15}>
 										<a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">

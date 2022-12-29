@@ -11,7 +11,6 @@ import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 import NotFoundPage from '../routes/notfound';
 
-
 export default class App extends Component {
 
 	/** Gets fired when the route changes.
@@ -27,8 +26,7 @@ export default class App extends Component {
 				.replace(newUrl);
 		}
 	};
-
-
+	
 	render(props) {
 		return (
 			<Provider value={props}>
