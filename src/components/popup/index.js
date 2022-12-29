@@ -13,7 +13,6 @@ const Popup = (props) => {
     }, []);
 
     const closePopup = () => {
-        document.body.style.overflow = 'unset';
         const popup = document.getElementById('popup');
         popup.classList.remove(style.show);
         setTimeout(() => {
