@@ -14,11 +14,6 @@ homeSections:
     aboutImages:
       - image: assets/images/img3.jpg
       - image: assets/images/img5.jpeg
-  - type: special-section
-    title: alien
-    cover: assets/images/alien.jpeg
-    body: >-
-      Available Project, Best Price.
 cover: assets/images/bg/bghome2.png
 seotitle: Tattoo studio Lørenskog near Oslo | Ed Tattoo
 seodescription: We specialize in custom tattoos. We can create a custom tattoo
