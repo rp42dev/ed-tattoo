@@ -63,6 +63,7 @@
 
 .popup .popupHeader h1 {
     line-height: 0;
+    text-transform: capitalize;
 
 }
 
@@ -141,8 +142,9 @@
 .popup .popupInner .popupContent .popupText h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 0px;
+    margin-bottom: 6px;
     color: var(--color-cherries-light);
+     text-transform: uppercase;
 }
 
 .popup .popupInner .popupTitle {

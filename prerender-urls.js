@@ -31,6 +31,7 @@ module.exports = () => {
 			cover: cover.edges[2].details.cover,
 			contactCover: cover.edges[1].details.cover,
 			aboutSection: home.edges[0].details.homeSections[0],
+			specialSection: home.edges[0].details.homeSections[1],
 			home: home,
 			galleryData: gallery
 		},

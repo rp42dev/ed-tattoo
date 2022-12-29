@@ -36,7 +36,7 @@ const Home = (props) => {
 			<Header links={['gallery', 'facebook', 'instagram']} />
 			<main class={style.home}>
 		
-									<Popup />
+				<Popup special={data.specialSection} />
 				<Hero hero={data.cover} displayScroll={true}>
 						<Container width={900}>
 							<div class={style.content}>

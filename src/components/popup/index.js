@@ -29,11 +29,14 @@ const Popup = (props) => {
                 </div>
                 <div className={style.popupContent}>
                     <div className={style.popupImage}>
-                        <img src="../../assets/alien.jpeg" alt="popup" />
+                        <picture>
+                            <source srcset={`${props.special.cover}.webp`} type="image/webp" />
+                            <img src={props.special.cover} alt="hero image" />
+                        </picture>
                     </div>
                     <div className={style.popupText}>
-                        <h2>Alien</h2>
-                        <p>Available project, best price.</p>
+                        <h2>{props.special.title}</h2>
+                        <>{props.special.body}</>
                     </div>
                 </div>
                 <div className={style.popupFooter}>
