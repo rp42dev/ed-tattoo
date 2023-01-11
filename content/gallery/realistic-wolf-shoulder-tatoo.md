@@ -9,6 +9,6 @@ seodescription: "ealism is a style of tattooing that is very popular at the
   shading is very realistic. The wolf is also very well placed on the shoulder.
   "
 isDisplay: true
-cover: assets/images/wolf.jpg
+cover: assets/images/wolf.jpeg
 tags: Tattoo, shoulder tattoo, wolf tattoo
 ---
