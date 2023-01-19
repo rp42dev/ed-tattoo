@@ -13,10 +13,13 @@ studioSections:
       The environment is important to me, and I want to make sure that my clients feel safe and comfortable. It has all the equipment needed to create a safe and sterile environment for both the artist and the client.
     title: The Studio
     studioImages:
-      - image: assets/images/img5.jpeg
-      - image: assets/images/img55.jpg
+      - image: assets/images/f2e56ce4-feba-479a-a95d-b93cc7e25de6.jpeg
+      - image: assets/images/b2c2c7be-5fee-4554-bbb7-306f782158d7.jpeg
 cover: assets/images/bg/bgabout.png
 seotitle: Tattoo artist Lørenskog near Oslo | Ed Tattoo
+seodescription: I specialize in black and grey tattoos, color tattoos,
+  traditional tattoos, cover ups and custom tattoos, I can create a custom
+  tattoo design for you
 aboutSections:
   - type: about-section
     body: >-
@@ -29,10 +32,7 @@ aboutSections:
     title: About Me
     aboutImages:
       - image: assets/images/img3.jpg
-      - image: assets/images/img1.jpg
-seodescription: I specialize in black and grey tattoos, color tattoos,
-  traditional tattoos, cover ups and custom tattoos, I can create a custom
-  tattoo design for you
+      - image: assets/images/5b037ab2-f950-456c-b740-47550c34bbd0.jpeg
 ---
 Tattoo studio in Lørenskog with a focus on quality and customer satisfaction.
 We have a wide range of styles and are always open to new ideas and challenges.
