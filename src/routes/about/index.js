@@ -75,9 +75,11 @@ const About = ({ ...props }) => {
                     <ImageFeature images={data.aboutSection.aboutImages} titles={imageAboutTitles} />
                 </section>
                 <section class={style.about}>
-                    <FadeEffect>
-                        <ImageFeature images={data.studioSection.studioImages} titles={imageStudioTitles} />
-                    </FadeEffect>
+                    <div class={style.image}>
+                        <FadeEffect>
+                            <ImageFeature images={data.studioSection.studioImages} titles={imageStudioTitles} />
+                        </FadeEffect>
+                    </div>
                     <div class={style.text}>
                         <FadeEffect>
                             <Container width="900" >
