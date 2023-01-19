@@ -20,7 +20,7 @@ const ImageFeature = ({ ...props }) => {
 
 
     return (
-        <>
+        <div class={style.width}>
             {images.length === 1 ? (
                 <div class={style.imageFeatureSingle}>
                     <div class={style.card}>
@@ -46,7 +46,7 @@ const ImageFeature = ({ ...props }) => {
                     </div>
                 </div>
             )}
-        </ >
+        </div>
     );
 }
 

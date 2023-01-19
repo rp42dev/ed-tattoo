@@ -29,7 +29,9 @@ const AboutSection = ({ ...props }) => {
                     </Container>
                 </FadeEffect>
             </section>
-            <ImageFeature images={data.aboutImages} titles={imageTitles} />
+            <FadeEffect>
+                <ImageFeature images={data.aboutImages} titles={imageTitles} />
+            </FadeEffect>
         </div>
     );
 };
