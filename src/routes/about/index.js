@@ -31,9 +31,9 @@ const About = ({ ...props }) => {
                             <ScaledText maxFontSize={197} maxContainerWidth={900} minFontSize={54} tag='h1'>
                                 <span>Ed </span>Tattoo
                             </ScaledText>
-                            <div>
+                            <FadeEffect>
                                 <FeatureHome />
-                            </div>
+                            </FadeEffect>
                             <div className={style.paddingTop}>
                                 <ScaledText maxFontSize={45.4} maxContainerWidth={900} minFontSize={15}>
                                     <a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">
@@ -75,9 +75,9 @@ const About = ({ ...props }) => {
                     <ImageFeature images={data.aboutSection.aboutImages} titles={imageAboutTitles} />
                 </section>
                 <section class={style.about}>
-                    <div class={style.image}>
+                    <FadeEffect>
                         <ImageFeature images={data.studioSection.studioImages} titles={imageStudioTitles} />
-                    </div>
+                    </FadeEffect>
                     <div class={style.text}>
                         <FadeEffect>
                             <Container width="900" >

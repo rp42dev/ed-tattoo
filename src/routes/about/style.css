@@ -71,6 +71,13 @@
   user-select: text;
 }
 
+.text {
+  position: relative;
+  z-index:2;
+  backdrop-filter: blur(10px);
+  padding: .5rem 1rem;	
+}
+
 @media screen and (max-width: 890px) {
 
   .aboutContent {
