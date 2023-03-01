@@ -31,9 +31,7 @@ const About = ({ ...props }) => {
                             <ScaledText maxFontSize={197} maxContainerWidth={900} minFontSize={54} tag='h1'>
                                 <span>Ed </span>Tattoo
                             </ScaledText>
-                            <FadeEffect>
-                                <FeatureHome />
-                            </FadeEffect>
+
                             <div className={style.paddingTop}>
                                 <ScaledText maxFontSize={45.4} maxContainerWidth={900} minFontSize={15}>
                                     <a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">

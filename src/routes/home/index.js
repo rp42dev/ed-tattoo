@@ -61,13 +61,9 @@ const Home = (props) => {
 										</a>
 									</ScaledText>
 								</div>
-								<ScaledText maxFontSize={124} maxContainerWidth={900} minFontSize={30} tag='h2'>
-									<a href='tel:+47 465 88 983'>
-										<HeadingColor>+47 465 88 983</HeadingColor>
-									</a>
-								</ScaledText>
+								
 								<div class={style.button}>
-									<Button link="contact" text="Message" type="link" />
+									<Button link="contact" text="Contact me" type="link" />
 								</div>
 							</div>
 						</Container>
