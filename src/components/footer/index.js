@@ -26,10 +26,9 @@ const Footer = () => {
                                         </a>
                                     </div>
                                     <div className={style.footerContentText}>
-                                        <h3><span>&#8203; Address</span></h3>
+                                        <h3><span>&#8203; Ed Tattoo</span></h3>
                                         <p className={style.footerContentAddress}>
-                                            <span>Hans Egedes vei 12,</span> <br />
-                                            <span>Lorenskog 1470, Norway</span>
+                                            Tattoo studio, Tattoos that last a lifetime! <br />
                                         </p>
                                     </div>
                                 </div>
@@ -82,8 +81,8 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className={style.footerBottom}>
-                            <p>© 2022 Ed Tattoo</p>
-                            <p>Website Developed by | <a href="https://www.rp42.cloud" target="_blank" rel="noopener noreferrer">RP<span>42</span></a></p>
+                            <p>© 2023 Ed Tattoo</p>
+                            <p>Website Developed by | <a href="https://iammobilefriendly.dev/" target="_blank" rel="noopener noreferrer">I Am Mobile Friendly</a></p>
                         </div>
                     </Container>
                 </div>

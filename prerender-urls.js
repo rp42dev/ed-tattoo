@@ -24,7 +24,7 @@ module.exports = () => {
 				canonical: 'https://www.edtattoo.no/',
 				cover: `https://www.edtattoo.no/${home.edges[0].details.homeSections[0].aboutImages[0].image}`,
 				title: home.edges[0].details.seotitle,
-				imageAlt: 'Black and grey realism tattoos Lørenskog | Ed Tattoo',
+				imageAlt: 'Black and grey realism tattoos | Ed Tattoo',
 				description: home.edges[0].details.seodescription,
 			},
 
@@ -41,7 +41,7 @@ module.exports = () => {
 				canonical: 'https://www.edtattoo.no/about/',
 				cover: `https://www.edtattoo.no/${about.edges[0].details.aboutSections[0].aboutImages[0].image}`,
 				title: about.edges[0].details.seotitle,
-				imageAlt: 'Tattoo studio Lørenskog | Ed Tattoo',
+				imageAlt: 'Tattoo studio | Ed Tattoo',
 				description: about.edges[0].details.seodescription,
 			},
 			title: about.edges[0].details.title,
@@ -57,7 +57,7 @@ module.exports = () => {
 				canonical: 'https://edtattoo.no/contact/',
 				cover: `https://www.edtattoo.no/${cover.edges[1].details.cover}`,
 				title: contact.edges[0].details.seotitle,
-				imageAlt: 'Tattoo studio Lørenskog | Ed Tattoo',
+				imageAlt: 'Tattoo studio | Ed Tattoo',
 				description: contact.edges[0].details.seodescription,
 			},
 			data: {
@@ -70,8 +70,8 @@ module.exports = () => {
 			path: './build/contact/success/index.html',
 			seo: {
 				canonical: 'https://edtattoo.no/contact/success/',
-				title: 'Black and grey realism tattoos Lørenskog | Ed Tattoo',
-				description: 'I specialize in black and grey realism tattoos.I love contrast and dept that black and gray can give and I love to create new designs and styles.',
+				title: 'Black and grey realism tattoos | Ed Tattoo',
+				description: 'I specialize in black and grey realism tattoos. I love contrast and dept that black and gray can give and I love to create new designs and styles.',
 			},
 			data: {
 				cover: cover.edges[1].details.cover,
@@ -83,8 +83,8 @@ module.exports = () => {
 		url: '/gallery/',
 		seo: {
 			canonical: 'https://www.edtattoo.no/gallery/',
-			title: 'Gallery - Custom tattoos Lørenskog | Ed Tattoo',
-			description: 'I create unique custom tattoos.I can also make a tattoo design based on your ideas.Or We can work together to create a unique tattoo design.',
+			title: 'Gallery - Custom tattoos | Ed Tattoo',
+			description: 'I create unique custom tattoos. I can also make a tattoo design based on your ideas.Or We can work together to create a unique tattoo design.',
 		},
 		galleryData: gallery
 	});

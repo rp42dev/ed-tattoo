@@ -36,7 +36,7 @@ const About = ({ ...props }) => {
                                 <ScaledText maxFontSize={45.4} maxContainerWidth={900} minFontSize={15}>
                                     <a href="https://goo.gl/maps/tpki7Zt725WVUs8b8" target="_blank">
                                         <span className={style.address}>
-                                            Hans Egedes vei 12, Lørenskog, 1470, Norway
+                                            Tattoo studio, Tattoos that last a lifetime!
                                         </span>
                                     </a>
                                 </ScaledText>
